@@ -43,7 +43,7 @@
         <Block Type="MyObjectBuilder_ConveyorSorter" Subtype="MA_T2PDX"/>
         <Block Type="MyObjectBuilder_LargeMissileTurret" Subtype="LaserDesignatorTurret"/>
         <Block Type="MyObjectBuilder_LargeMissileTurret" Subtype="ReceptorTurret"/>
-        <Block Type="MyObjectBuilder_ConveyorSorter" Subtype="ARYXLargeRadar"/>
+        <Block Type="MyObjectBuilder_LargeMissileTurret" Subtype="honir_designator_01"/>
       </Blocks>
 		</BlockVariantGroup>
 	</BlockVariantGroups>

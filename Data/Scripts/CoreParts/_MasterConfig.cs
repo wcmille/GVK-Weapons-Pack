@@ -42,8 +42,8 @@ namespace Scripts
 							SentinelTurret,
 							LaserDesignator,
 							LaserDesignatorTurret,
-							AryxRadar
-							);
+                            honir_designator_01_def
+                            );
             ArmorDefinitions(AdditionalLightArmors);
         }
     }

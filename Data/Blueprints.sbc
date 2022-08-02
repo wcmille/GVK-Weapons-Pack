@@ -151,7 +151,7 @@
 				<TypeId>BlueprintDefinition</TypeId>
 				<SubtypeId>Missiles_Torpedo</SubtypeId>
 			</Id>
-			<DisplayName>[Torpedo] Crusader EMP x1</DisplayName>
+			<DisplayName>[Torpedo] Crusader x1</DisplayName>
 			<Icon>Textures\GUI\Icons\CrusaderMissile.png</Icon>
 			<Prerequisites>
 				<Item Amount="2500" TypeId="Ingot" SubtypeId="Iron"/>
@@ -169,7 +169,7 @@
 				<TypeId>BlueprintDefinition</TypeId>
 				<SubtypeId>Missiles_HeavyMissile</SubtypeId>
 			</Id>
-			<DisplayName>[Heavy Missile] Tuukka HE x1</DisplayName>
+			<DisplayName>[Heavy Missile] HE x1</DisplayName>
 			<Icon>Textures\GUI\Icons\Items\mediumMissile01_model.png</Icon>
 			<Prerequisites>
 				<Item Amount="45" TypeId="Ingot" SubtypeId="Iron"/>
