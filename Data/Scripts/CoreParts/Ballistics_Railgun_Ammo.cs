@@ -154,7 +154,6 @@ namespace Scripts
                     Ammo = new ParticleDef
                     {
                         Name = "MD_BulletGlowBigBlue", //ShipWelderArc
-                        ShrinkByDistance = false,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
@@ -170,7 +169,6 @@ namespace Scripts
                     {
                         Name = "RailgunHitBlue",
                         ApplyToShield = true,
-                        ShrinkByDistance = false,
                         Color = Color(red: 1f, green: 1f, blue: 1f, alpha: 1),
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
@@ -365,7 +363,6 @@ namespace Scripts
                     Ammo = new ParticleDef
                     {
                         Name = "MD_BulletGlowBigBlue", //ShipWelderArc
-                        ShrinkByDistance = false,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
@@ -381,7 +378,6 @@ namespace Scripts
                     {
                         Name = "RailgunHitBlue",
                         ApplyToShield = true,
-                        ShrinkByDistance = false,
                         Color = Color(red: 1f, green: 1f, blue: 1f, alpha: 1),
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef

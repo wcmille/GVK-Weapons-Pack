@@ -6,11 +6,9 @@
 				<TypeId>LargeMissileTurret</TypeId>
 				<SubtypeId>LargeCalibreTurret</SubtypeId>
 			</Id>
-			<DisplayName>[Cannon] Dual 155mm Artillery Turret</DisplayName>
+			<DisplayName>DisplayName_Block_LargeCalibreTurret</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\HeavyCalibreTurret.dds</Icon>
-			<Description>Large caliber anti-capital ship cannon in turret mount. Effective against heavy armor frigates and cruisers.
-				[2200m Auto Range]
-				[Uses 155mm AP]</Description>
+			<Description>Description_LargeCalibreTurret</Description>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>false</GuiVisible>
 			<PlaceDecals>false</PlaceDecals>
@@ -32,7 +30,7 @@
 				<Component Subtype="SteelPlate" Count="350"/>
 			</Components>
 			<BuildTimeSeconds>135</BuildTimeSeconds>
-			<PCU>30000</PCU>
+			<PCU>275</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0.5" StartY="1" EndX="2.5" EndY="2"/>
@@ -107,11 +105,9 @@
 				<TypeId>SmallMissileLauncher</TypeId>
 				<SubtypeId>LargeBlockLargeCalibreGun</SubtypeId>
 			</Id>
-			<DisplayName>[Cannon] Large 155mm Artillery Gun</DisplayName>
+			<DisplayName>DisplayName_Block_HeavyCalibreGun</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\HeavyCalibreGun.dds</Icon>
-			<Description>Large caliber anti-capital ship cannon in fixed mount. Effective against heavy armor frigates and cruisers.
-				[2400m Manual Range]
-				[Uses 155mm AP]</Description>
+			<Description>Description_HeavyCalibreGun</Description>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>false</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -130,7 +126,7 @@
 				<Component Subtype="SteelPlate" Count="52"/>
 			</Components>
 			<BuildTimeSeconds>20</BuildTimeSeconds>
-			<PCU>30000</PCU>
+			<PCU>275</PCU>
 			<OverlayTexture>Textures\GUI\Screens\camera_overlay.dds</OverlayTexture>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>

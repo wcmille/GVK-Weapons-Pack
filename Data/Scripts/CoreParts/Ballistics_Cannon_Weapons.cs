@@ -14,6 +14,7 @@ namespace Scripts
 {
     partial class Parts
     {
+        const int CannonBaseRoF = 10;
 
 		private TargetingDef Ballistics_Cannons_Targeting_LargeTurret => new TargetingDef {
 			Threats = new[] {
@@ -82,7 +83,7 @@ namespace Scripts
 			
             HardPoint = new HardPointDef {
                 PartName = "155mm Artillery Turret", // name of weapon in terminal
-                DeviateShotAngle = 0.3f,
+                DeviateShotAngle = 0.05f,
                 AimingTolerance = 0.8f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
@@ -128,7 +129,7 @@ namespace Scripts
                 },
 				
                 Loading = new LoadingDef {
-                    RateOfFire = 240, //180 // visual only, 0 disables and uses RateOfFire
+                    RateOfFire = CannonBaseRoF * 2, //180 // visual only, 0 disables and uses RateOfFire
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,
@@ -273,11 +274,11 @@ namespace Scripts
                 },
 
                 Loading = new LoadingDef {
-                    RateOfFire = 40, //180 // visual only, 0 disables and uses RateOfFire
+                    RateOfFire = CannonBaseRoF, //180 // visual only, 0 disables and uses RateOfFire
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,
-                    ReloadTime = 90, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = 4*60, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     DelayUntilFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 0, //heat generated per shot
                     MaxHeat = 0, //max heat before weapon enters cooldown (70% of max heat)
@@ -418,7 +419,7 @@ namespace Scripts
                 },
 
                 Loading = new LoadingDef {
-                    RateOfFire = 40,
+                    RateOfFire = CannonBaseRoF,
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,
@@ -564,7 +565,7 @@ namespace Scripts
                 },
 
                 Loading = new LoadingDef {
-                    RateOfFire = 40, //180 // visual only, 0 disables and uses RateOfFire
+                    RateOfFire = CannonBaseRoF, //180 // visual only, 0 disables and uses RateOfFire
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,

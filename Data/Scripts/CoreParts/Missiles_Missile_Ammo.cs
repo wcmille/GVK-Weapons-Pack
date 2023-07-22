@@ -181,7 +181,6 @@ namespace Scripts
 					Ammo = new ParticleDef
                     {
                         Name = "Archer_MissileSmokeTrail", //Archer_MissileSmokeTrail MD_BulletGlowMedRed
-                        ShrinkByDistance = false,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
                         Offset = Vector(x: 0, y: 0, z: 0f),
                         Extras = new ParticleOptionDef
@@ -197,7 +196,6 @@ namespace Scripts
                     {
                         Name = "MD_FlakExplosion", //MXA_MissileExplosion
                         ApplyToShield = true,
-                        ShrinkByDistance = false,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
@@ -410,7 +408,6 @@ namespace Scripts
 					Ammo = new ParticleDef
                     {
                         Name = "Archer_MissileSmokeTrail", //Archer_MissileSmokeTrail MD_BulletGlowMedRed
-                        ShrinkByDistance = false,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
                         Offset = Vector(x: 0, y: 0, z: 0f),
                         Extras = new ParticleOptionDef
@@ -426,7 +423,6 @@ namespace Scripts
                     {
                         Name = "MD_FlakExplosion", //MXA_MissileExplosion
                         ApplyToShield = true,
-                        ShrinkByDistance = false,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef

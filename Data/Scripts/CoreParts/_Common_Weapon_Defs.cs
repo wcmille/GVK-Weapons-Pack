@@ -660,7 +660,6 @@ namespace Scripts
 				Particle = new ParticleDef // Particle effect to generate at the field's position.
 				{
 					Name = "", // SubtypeId of field particle effect.
-					ShrinkByDistance = false, // Deprecated.
 					Extras = new ParticleOptionDef
 					{
 						Scale = 1, // Scale of effect.

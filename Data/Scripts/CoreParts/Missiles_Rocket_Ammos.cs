@@ -158,7 +158,6 @@ namespace Scripts
                     Ammo = new ParticleDef
                     {
                         Name = "MD_BulletGlowMedYellow", //Archer_MissileSmokeTrail
-                        ShrinkByDistance = false,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
                         Offset = Vector(x: 0, y: 0, z: 0f),
                         Extras = new ParticleOptionDef
@@ -174,7 +173,6 @@ namespace Scripts
                     {
                         Name = "MD_HydraRocketExplosion", //MD_HydraRocketExplosion MD_InstallationExplosion
                         ApplyToShield = true,
-                        ShrinkByDistance = false,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef

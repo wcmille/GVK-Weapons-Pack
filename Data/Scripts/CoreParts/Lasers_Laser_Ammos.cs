@@ -152,7 +152,6 @@ namespace Scripts
                     Ammo = new ParticleDef
                     {
                         Name = "MD_BulletGlowBigBlue", //Archer_MissileSmokeTrail
-                        ShrinkByDistance = false,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
                         Offset = Vector(x: 0, y: 0, z: 0f),
                         Extras = new ParticleOptionDef
@@ -168,7 +167,6 @@ namespace Scripts
                     {
                         Name = "Lasers_Laser_BlueHit",//MD_BulletGlowBigBlue
                         ApplyToShield = true,
-                        ShrinkByDistance = true,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1f),
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
@@ -755,7 +753,6 @@ namespace Scripts
                     Ammo = new ParticleDef
                     {
                         Name = "", //Archer_MissileSmokeTrail
-                        ShrinkByDistance = false,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
                         Offset = Vector(x: 0, y: 0, z: 0f),
                         Extras = new ParticleOptionDef
@@ -771,7 +768,6 @@ namespace Scripts
                     {
                         Name = "",//MD_BulletGlowBigBlue
                         ApplyToShield = true,
-                        ShrinkByDistance = true,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1f),
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
@@ -910,7 +906,6 @@ namespace Scripts
                     Ammo = new ParticleDef
                     {
                         Name = "", //Archer_MissileSmokeTrail
-                        ShrinkByDistance = false,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
                         Offset = Vector(x: 0, y: 0, z: 0f),
                         Extras = new ParticleOptionDef
@@ -926,7 +921,6 @@ namespace Scripts
                     {
                         Name = "",//MD_BulletGlowBigBlue
                         ApplyToShield = true,
-                        ShrinkByDistance = true,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1f),
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
@@ -1079,7 +1073,6 @@ namespace Scripts
                     Ammo = new ParticleDef
                     {
                         Name = "MD_BulletGlowBigBlue", //Archer_MissileSmokeTrail
-                        ShrinkByDistance = false,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
                         Offset = Vector(x: 0, y: 0, z: 0f),
                         Extras = new ParticleOptionDef
@@ -1095,7 +1088,6 @@ namespace Scripts
                     {
                         Name = "Lasers_Laser_BlueHit",//MD_BulletGlowBigBlue
                         ApplyToShield = true,
-                        ShrinkByDistance = true,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1f),
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
@@ -1275,7 +1267,6 @@ namespace Scripts
                     Ammo = new ParticleDef
                     {
                         Name = "MD_BulletGlowBigBlue", //Archer_MissileSmokeTrail
-                        ShrinkByDistance = false,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
                         Offset = Vector(x: 0, y: 0, z: 0f),
                         Extras = new ParticleOptionDef
@@ -1291,7 +1282,6 @@ namespace Scripts
                     {
                         Name = "Lasers_Laser_BlueHit",//MD_BulletGlowBigBlue
                         ApplyToShield = true,
-                        ShrinkByDistance = true,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1f),
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef

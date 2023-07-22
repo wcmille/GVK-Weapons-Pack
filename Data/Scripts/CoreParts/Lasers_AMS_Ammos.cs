@@ -93,7 +93,6 @@ namespace Scripts
                     {
                         Name = "LaserHitParticlesPDT",//LaserHitParticlesGimbal
                         ApplyToShield = true,
-                        ShrinkByDistance = true,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1f),
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef

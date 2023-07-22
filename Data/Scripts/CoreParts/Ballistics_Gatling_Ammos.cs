@@ -108,7 +108,7 @@ namespace Scripts
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
-                DesiredSpeed = 1000,
+                DesiredSpeed = 1100.0f * 0.75f,
                 MaxTrajectory = 1700f,
                 DeaccelTime = 0, // 0 is disabled, a value causes the projectile to come to rest overtime, (Measured in game ticks, 60 = 1 second)
                 GravityMultiplier = 0f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable. Natural Gravity Only.                SpeedVariance = Random(start: 0, end: 50), // subtracts value from DesiredSpeed
@@ -146,7 +146,6 @@ namespace Scripts
                     {
                         Name = "MaterialHit_Metal_GatlingGun", //MaterialHit_Metal
                         ApplyToShield = true,
-                        ShrinkByDistance = true,
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
