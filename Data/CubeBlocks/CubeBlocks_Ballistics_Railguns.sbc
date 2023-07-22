@@ -8,7 +8,7 @@
 			</Id>
 			<DisplayName>[Railgun] Apollo</DisplayName>
 			<Icon>Textures\GUI\Icons\AWERailgunTurret.dds</Icon>
-			<Description>A turreted version of the Artemis railgun, excells at long range, but very poor at short range. 35 degree elevation range. Designed by ARYX Weapon Enterprises.
+			<Description>A turreted version of the Artemis railgun, excels at long range, but very poor at short range. 35 degree elevation range. Designed by ARYX Weapon Enterprises.
 				[3000m Auto Range]
 				[Uses 50mm FeW + 89MW]</Description>
 			<CubeSize>Large</CubeSize>
@@ -64,67 +64,6 @@
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
 			<AiEnabled>false</AiEnabled>
 		</Definition>
-		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
-			<Id>
-				<TypeId>ConveyorSorter</TypeId>
-				<SubtypeId>ARYXRailgun</SubtypeId>
-			</Id>
-			<DisplayName>[Railgun] Artemis</DisplayName>
-			<Description>The Artemis railgun has a higher damage than the 155mm Field Gun but has a high energy use, and slower fire rate. Great for long-range manual fire support, or use on precision strike craft for disabling hardpoints on large targets in the hands of an extremely skilled pilot. Designed by ARYX Weapon Enterprises.
-				[3300m Manual Range]
-				[Uses 50mm FeW + 89MW]</Description>
-			<Icon>Textures\GUI\Icons\AWERailgun.dds</Icon>
-			<Public>true</Public>
-			<GuiVisible>false</GuiVisible>
-			<CubeSize>Large</CubeSize>
-			<BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="1" y="1" z="5"/>
-			<Center x="0" y="0" z="4"/>
-			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\AWERailgun\ARYX_Railgun.mwm</Model>
-			<Components>
-				<Component Subtype="SteelPlate" Count="68"/>
-				<Component Subtype="GVK_LargeCaliber_Tech" Count="3"/>
-				<Component Subtype="GVK_LargeCaliber_Tech" Count="1">
-					<DeconstructId>
-						<TypeId>Ore</TypeId>
-						<SubtypeId>Scrap</SubtypeId>
-					</DeconstructId>
-				</Component>
-				<Component Subtype="MetalGrid" Count="21"/>
-				<Component Subtype="PowerCell" Count="7"/>
-				<Component Subtype="Superconductor" Count="14"/>
-				<Component Subtype="Motor" Count="14"/>
-				<Component Subtype="Reactor" Count="17"/>
-				<Component Subtype="Computer" Count="51"/>
-				<Component Subtype="SteelPlate" Count="110"/>
-			</Components>
-			<BuildTimeSeconds>25</BuildTimeSeconds>
-			<PCU>50000</PCU>
-			<CriticalComponent Subtype="Computer" Index="0"/>
-			<MountPoints>
-				<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0"/>
-				<MountPoint Side="Left" StartX="3.0" StartY="0.0" EndX="5.0" EndY="1"/>
-				<MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="2.0" EndY="1"/>
-				<MountPoint Side="Top" StartX="0.0" StartY="0.0" EndX="1.0" EndY="2.0"/>
-				<MountPoint Side="Bottom" StartX="0.0" StartY="3.0" EndX="1.0" EndY="5.0"/>
-			</MountPoints>
-			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\AWERailgun\ARYX_Railgun_BS1.mwm"/>
-				<Model BuildPercentUpperBound="0.66" File="Models\AWERailgun\ARYX_Railgun_BS2.mwm"/>
-				<Model BuildPercentUpperBound="1.0" File="Models\AWERailgun\ARYX_Railgun_BS3.mwm"/>
-			</BuildProgressModels>
-			<BlockPairName>Railgun</BlockPairName>
-			<MirroringY>Z</MirroringY>
-			<MirroringZ>Y</MirroringZ>
-			<EdgeType>Light</EdgeType>
-			<InventoryMaxVolume>0.284</InventoryMaxVolume>
-			<DamageEffectId>213</DamageEffectId>
-			<!--<WeaponDefinitionId Subtype="Ballistics_Railgun"/>-->
-			<DamagedSound>ParticleWeapExpl</DamagedSound>
-			<ResourceSinkGroup>Defense</ResourceSinkGroup>
-			<EmissiveColorPreset>Default</EmissiveColorPreset>
-		</Definition>
 		<Definition Enabled="false">
 			<Id>
 				<TypeId>SmallMissileLauncherReload</TypeId>
@@ -177,74 +116,6 @@
 			<DestroyEffect>BlockDestroyed_Large3X</DestroyEffect>
 			<DestroySound>PoofExplosionCat3</DestroySound>
 			<PCU>80</PCU>
-			<IsAirTight>false</IsAirTight>
-			<InventoryFillFactorMin>.6</InventoryFillFactorMin>
-			<TargetingGroups>
-				<string>Weapons</string>
-			</TargetingGroups>
-		</Definition>
-		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
-			<Id>
-				<TypeId>ConveyorSorter</TypeId>
-				<SubtypeId>SmallRailgun</SubtypeId>
-			</Id>
-			<DisplayName>[Railgun] Ares</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\RailGun.dds</Icon>
-			<Description>The Ares railgun is the little sibling of the Apollo and Artemis. Great for long-range manual fire support, or use on precision strike craft for disabling hardpoints on large targets in the hands of an extremely skilled pilot.
-				[2300m Manual Range]
-				[Uses 50mm FeW + 24MW]</Description>
-			<CubeSize>Small</CubeSize>
-			<Public>true</Public>
-			<GuiVisible>false</GuiVisible>
-			<BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="1" y="2" z="8"/>
-			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\Cubes\Small\RailGun.mwm</Model>
-			<Components>
-				<Component Subtype="SteelPlate" Count="14"/>
-				<Component Subtype="GVK_LargeCaliber_Tech" Count="2"/>
-				<Component Subtype="GVK_LargeCaliber_Tech" Count="1">
-					<DeconstructId>
-						<TypeId>Ore</TypeId>
-						<SubtypeId>Scrap</SubtypeId>
-					</DeconstructId>
-				</Component>
-				<Component Subtype="MetalGrid" Count="4"/>
-				<Component Subtype="PowerCell" Count="2"/>
-				<Component Subtype="Superconductor" Count="3"/>
-				<Component Subtype="Motor" Count="3"/>
-				<Component Subtype="Reactor" Count="4"/>
-				<Component Subtype="Computer" Count="10"/>
-				<Component Subtype="SteelPlate" Count="20"/>
-			</Components>
-			<BuildTimeSeconds>5</BuildTimeSeconds>
-			<PCU>40000</PCU>
-			<CriticalComponent Subtype="Computer" Index="0"/>
-			<MountPoints>
-				<MountPoint Side="Back" StartX="0.1" StartY="0.6" EndX="0.9" EndY="1.9" Default="true"/>
-				<MountPoint Side="Top" StartX="0.2" StartY="0.2" EndX="0.8" EndY="3.3"/>
-				<MountPoint Side="Bottom" StartX="0.3" StartY="4.9" EndX="0.7" EndY="6.5"/>
-				<MountPoint Side="Right" StartX="0.1" StartY="1" EndX="3.3" EndY="1.8"/>
-				<MountPoint Side="Right" StartX="0.1" StartY="0.6" EndX="2.1" EndY="1"/>
-				<MountPoint Side="Left" StartX="4.7" StartY="1" EndX="7.9" EndY="1.8"/>
-				<MountPoint Side="Left" StartX="5.9" StartY="0.6" EndX="7.9" EndY="1"/>
-			</MountPoints>
-			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\Small\RailGunConstruction_1.mwm"/>
-				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Small\RailGunConstruction_2.mwm"/>
-			</BuildProgressModels>
-			<BlockPairName>Railgun</BlockPairName>
-			<Center x="0" y="1" z="6"/>
-			<MirroringY>Z</MirroringY>
-			<MirroringZ>Y</MirroringZ>
-			<EdgeType>Light</EdgeType>
-			<WeaponDefinitionId Subtype="SmallRailgun"/>
-			<ResourceSinkGroup>DefenseAdative</ResourceSinkGroup>
-			<InventoryMaxVolume>0.048</InventoryMaxVolume>
-			<DamageEffectName>Damage_Railgun_Large</DamageEffectName>
-			<DamagedSound>ParticleElectrical</DamagedSound>
-			<DestroyEffect>BlockDestroyed_Large3X</DestroyEffect>
-			<DestroySound>PoofExplosionCat3</DestroySound>
 			<IsAirTight>false</IsAirTight>
 			<InventoryFillFactorMin>.6</InventoryFillFactorMin>
 			<TargetingGroups>

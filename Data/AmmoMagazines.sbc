@@ -235,48 +235,6 @@
 		<AmmoMagazine>
 			<Id>
 				<TypeId>AmmoMagazine</TypeId>
-				<SubtypeId>Missiles_Siege</SubtypeId>
-			</Id>
-			<DisplayName>[SRBM] Longsword MRV</DisplayName>
-			<Icon>Textures\GUI\Icons\AWESabreMissile.dds</Icon>
-			<Size>
-				<X>4</X>
-				<Y>1</Y>
-				<Z>1</Z>
-			</Size>
-            <Mass>1106</Mass>
-            <Volume>737</Volume>
-			<Model>Models\AWE_Ammo\AryxSabreMissile.mwm</Model>
-			<PhysicalMaterial>Ammo</PhysicalMaterial>
-			<Capacity>1</Capacity>
-			<AmmoDefinitionId Subtype="Blank"/>
-			<MinimalPricePerUnit>0</MinimalPricePerUnit>
-			<CanPlayerOrder>true</CanPlayerOrder>
-		</AmmoMagazine>
-		<AmmoMagazine>
-			<Id>
-				<TypeId>AmmoMagazine</TypeId>
-				<SubtypeId>Ballistics_HeavyCannon</SubtypeId>
-			</Id>
-			<DisplayName>[Heavy Cannon] 480mm APHE</DisplayName>
-			<Icon>Textures\GUI\Icons\ammo\AWEHurricaneAmmo.dds</Icon>
-			<Size>
-				<X>0.8</X>
-				<Y>0.4</Y>
-				<Z>0.4</Z>
-			</Size>
-			<Mass>10000</Mass>
-			<Volume>1000</Volume>
-			<Model>Models\AWE_Ammo\Aryx480mmShell.mwm</Model>
-			<PhysicalMaterial>Ammo</PhysicalMaterial>
-			<Capacity>1</Capacity>
-			<AmmoDefinitionId Subtype="Blank"/>
-			<MinimalPricePerUnit>0</MinimalPricePerUnit>
-			<CanPlayerOrder>true</CanPlayerOrder>
-		</AmmoMagazine>
-		<AmmoMagazine>
-			<Id>
-				<TypeId>AmmoMagazine</TypeId>
 				<SubtypeId>Missiles_HeavyMissile</SubtypeId>
 			</Id>
 			<DisplayName>[Heavy Missile] Tuukka HE</DisplayName>
@@ -289,27 +247,6 @@
 			<Mass>400</Mass>
 			<Volume>200</Volume>
 			<Model>Models\Cubes\Large\missileBattery01\mediumMissile01_model.mwm</Model>
-			<PhysicalMaterial>Ammo</PhysicalMaterial>
-			<Capacity>1</Capacity>
-			<AmmoDefinitionId Subtype="Blank"/>
-			<MinimalPricePerUnit>0</MinimalPricePerUnit>
-			<CanPlayerOrder>true</CanPlayerOrder>
-		</AmmoMagazine>
-		<AmmoMagazine>
-			<Id>
-				<TypeId>AmmoMagazine</TypeId>
-				<SubtypeId>Lasers_Plasma</SubtypeId>
-			</Id>
-			<DisplayName>[Plasma] Plasma Bomb</DisplayName>
-			<Icon>Textures\Icons\MD_Ammo.dds</Icon>
-			<Size>
-				<X>0.25</X>
-				<Y>0.2</Y>
-				<Z>0.2</Z>
-			</Size>
-			<Mass>1110</Mass>
-			<Volume>740</Volume>
-			<Model>Models\Ammo\MD_Ammo.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>1</Capacity>
 			<AmmoDefinitionId Subtype="Blank"/>

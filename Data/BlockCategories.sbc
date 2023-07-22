@@ -12,9 +12,7 @@
 			<IsBlockCategory>false</IsBlockCategory>
 			<SearchCategory>true</SearchCategory>
 			<ItemIds>
-				<string>ARYXRailgun</string>
 				<string>ARYXRailgunTurret</string>
-				<string>MXA_ArcherPods</string>
 				<string>Missile_Torpedo_Large</string>
 				<string>Missile_Torpedo_Small</string>
 				<string>SmallGatlingTurretAutoGatling</string>
@@ -26,7 +24,6 @@
 				<string>SmallGatlingTurret</string>
 				<string>SmallMissileTurret</string>
 				<string>LargeMissileLauncher</string>
-				<string>SmallGatlingGun_Gimbal</string>
 				<string>SmallGatlingGun/(null)</string>
 				<string>SmallMissileLauncher/(null)</string>
 				<string>SmallRocketLauncherReload</string>
@@ -50,15 +47,12 @@
 				<string>SmallMissileLauncherWarfare2</string>
 				<string>SmallGatlingGunWarfare2</string>
 				<string>AutoCannonTurret</string>
-				<string>KhopeshTurret</string>
 				<string>OKIObserverSM</string>
 				<string>OKIDesignator</string>
 				<string>ARYXMissileBattery</string>
 				<string>ARYXHeavyFlakTurret</string>
 				<string>ARYXVulcanTurret</string>
-				<string>ARYXHurricaneCannon</string>
 				<string>ARYXSpartanTurret</string>
-				<string>lokiCannon1</string>
 				<string>missileBattery01</string>
 			</ItemIds>
 		</Category>

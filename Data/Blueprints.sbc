@@ -171,41 +171,6 @@
 		<Blueprint>
 			<Id>
 				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>Ballistics_HeavyCannon</SubtypeId>
-			</Id>
-			<DisplayName>[Heavy Cannon] 480mm APHE x1</DisplayName>
-			<Icon>Textures\GUI\Icons\ammo\AWEHurricaneAmmo.dds</Icon>
-			<Prerequisites>
-				<Item Amount="430" TypeId="Ingot" SubtypeId="Iron"/>
-				<Item Amount="110" TypeId="Ingot" SubtypeId="Nickel"/>
-				<Item Amount="16" TypeId="Ingot" SubtypeId="Magnesium"/>
-				<Item Amount="64" TypeId="Ingot" SubtypeId="Cobalt"/>
-				<Item Amount="11" TypeId="Ingot" SubtypeId="Silver"/>
-			</Prerequisites>
-			<BaseProductionTimeInSeconds>251</BaseProductionTimeInSeconds>
-			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="Ballistics_HeavyCannon"/>
-		</Blueprint>
-		<Blueprint>
-			<Id>
-				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>Missiles_Siege</SubtypeId>
-			</Id>
-			<DisplayName>[SRBM] Longsword MRV x1</DisplayName>
-			<Icon>Textures\GUI\Icons\AWESabreMissile.dds</Icon>
-			<Prerequisites>
-				<Item Amount="1600" TypeId="Ingot" SubtypeId="Iron"/>
-				<Item Amount="230" TypeId="Ingot" SubtypeId="Nickel"/>
-				<Item Amount="4.4" TypeId="Ingot" SubtypeId="Platinum"/>
-				<Item Amount="2.9" TypeId="Ingot" SubtypeId="Uranium"/>
-				<Item Amount="120" TypeId="Ingot" SubtypeId="Silicon"/>
-				<Item Amount="7.3" TypeId="Ingot" SubtypeId="Gold"/>
-			</Prerequisites>
-			<BaseProductionTimeInSeconds>133</BaseProductionTimeInSeconds>
-			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="Missiles_Siege"/>
-		</Blueprint>
-		<Blueprint>
-			<Id>
-				<TypeId>BlueprintDefinition</TypeId>
 				<SubtypeId>Missiles_HeavyMissile</SubtypeId>
 			</Id>
 			<DisplayName>[Heavy Missile] Tuukka HE x1</DisplayName>
@@ -219,40 +184,6 @@
 			</Prerequisites>
 			<BaseProductionTimeInSeconds>69</BaseProductionTimeInSeconds>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="Missiles_HeavyMissile"/>
-		</Blueprint>
-		<Blueprint>
-			<Id>
-				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>Lasers_Plasma</SubtypeId>
-			</Id>
-			<DisplayName>[Plasma] Plasma Bomb x1</DisplayName>
-			<Icon>Textures\Icons\MD_Ammo.dds</Icon>
-			<Prerequisites>
-				<Item Amount="6500" TypeId="Ingot" SubtypeId="Iron"/>
-				<Item Amount="940" TypeId="Ingot" SubtypeId="Nickel"/>
-				<Item Amount="18" TypeId="Ingot" SubtypeId="Platinum"/>
-				<Item Amount="12" TypeId="Ingot" SubtypeId="Uranium"/>
-				<Item Amount="470" TypeId="Ingot" SubtypeId="Silicon"/>
-				<Item Amount="30" TypeId="Ingot" SubtypeId="Gold"/>
-				<Item Amount="4" TypeId="Ingot" SubtypeId="GVK_Relic_Tech"/>
-			</Prerequisites>
-			<BaseProductionTimeInSeconds>197</BaseProductionTimeInSeconds>
-			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="Lasers_Plasma"/>
-		</Blueprint>
-		<Blueprint>
-			<Id>
-				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>ExplosivesComponent</SubtypeId>
-			</Id>
-			<DisplayName>DisplayName_Item_Explosives</DisplayName>
-			<Icon>Textures\GUI\Icons\component\ExplosivesComponent.dds</Icon>
-			<Prerequisites>
-				<Item Amount="0.5" TypeId="Ingot" SubtypeId="Silicon"/>
-				<Item Amount="2.0" TypeId="Ingot" SubtypeId="Magnesium"/>
-				<Item Amount="0.1" TypeId="Ingot" SubtypeId="Uranium"/>
-			</Prerequisites>
-			<Result Amount="1" TypeId="Component" SubtypeId="Explosives"/>
-			<BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
 		</Blueprint>
 	</Blueprints>
 </Definitions>
