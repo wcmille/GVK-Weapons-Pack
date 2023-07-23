@@ -6,12 +6,10 @@
 				<TypeId>SmallMissileLauncherReload</TypeId>
 				<SubtypeId>SmallRocketLauncherReload</SubtypeId>
 			</Id>
-			<DisplayName>[Missile] Small Archer Pod</DisplayName>
+			<DisplayName>Description_RocketLauncherReload</DisplayName>
 			<BlockPairName>SmallRocketLauncherReload</BlockPairName>
 			<Icon>Textures\GUI\Icons\Cubes\RocketLauncherReload.dds</Icon>
-			<Description>The Archer is a ship-to-ship homing missile effective against slow large targets. 
-				[1800m Semi-Auto Range]
-				[Uses Archer HE x4]</Description>
+			<Description>Description_RocketLauncherReload</Description>
 			<CubeSize>Small</CubeSize>
 			<GuiVisible>true</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>

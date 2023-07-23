@@ -196,7 +196,7 @@
 				<Component Subtype="SteelPlate" Count="26"/>
 			</Components>
 			<BuildTimeSeconds>10</BuildTimeSeconds>
-			<PCU>60000</PCU>
+			<PCU>500</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="5" EndY="5"/>
@@ -259,7 +259,7 @@
 				<Component Subtype="SteelPlate" Count="21"/>
 			</Components>
 			<BuildTimeSeconds>8</BuildTimeSeconds>
-			<PCU>30000</PCU>
+			<PCU>500</PCU>
 			<OverlayTexture>Textures\GUI\Screens\camera_overlay.dds</OverlayTexture>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>

@@ -51,7 +51,7 @@
 			<IdleRotation>false</IdleRotation>
 			<MaxRangeMeters>6000</MaxRangeMeters>
 			<MinFov>0.1</MinFov>
-			<MaxFov>2</MaxFov>
+			<MaxFov>1.57</MaxFov>
 			<DeformationRatio>0.2</DeformationRatio>
 			<AiEnabled>false</AiEnabled>
 			<PCU>0</PCU>
@@ -105,7 +105,7 @@
 			<IdleRotation>false</IdleRotation>
 			<MaxRangeMeters>6000</MaxRangeMeters>
 			<MinFov>0.1</MinFov>
-			<MaxFov>2</MaxFov>
+			<MaxFov>1.57</MaxFov>
 			<DeformationRatio>0.2</DeformationRatio>
 			<AiEnabled>false</AiEnabled>
 			<PCU>0</PCU>
