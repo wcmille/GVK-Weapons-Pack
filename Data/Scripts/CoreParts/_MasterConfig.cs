@@ -27,7 +27,7 @@ namespace Scripts
 							LargeBlockArtillery,
 							SmallBlockAutocannon,
 							AutoCannonTurret,
-							LargeAutoCannonTurret,
+							//LargeAutoCannonTurret,
 							LargeBlockAssaultCannonTurret,
 							SmallBlockAssaultCannon,
 							SmallBlockAssaultCannonTurret,
