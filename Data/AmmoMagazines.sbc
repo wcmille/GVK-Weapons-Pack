@@ -27,7 +27,7 @@
 				<TypeId>AmmoMagazine</TypeId>
 				<SubtypeId>NATO_25x184mm</SubtypeId>
 			</Id>
-			<DisplayName>[Gatling] 25mm KE x30</DisplayName>
+			<DisplayName>DisplayName_Item_NATO_25x184mm</DisplayName>
 			<Icon>Textures\GUI\Icons\ammo\Ammo_Box.dds</Icon>
 			<Size>
 				<X>0.25</X>
@@ -48,7 +48,7 @@
 				<TypeId>AmmoMagazine</TypeId>
 				<SubtypeId>NATO_5p56x45mm</SubtypeId>
 			</Id>
-			<DisplayName>[Interior] 5.56mm KE x30</DisplayName>
+			<DisplayName>DisplayName_Item_NATO_5p56x45mm</DisplayName>
 			<Icon>Textures\GUI\Icons\ammo\Rifle_Ammo.dds</Icon>
 			<Size>
 				<X>0.2</X>
@@ -69,15 +69,15 @@
 				<TypeId>AmmoMagazine</TypeId>
 				<SubtypeId>AutocannonClip</SubtypeId>
 			</Id>
-			<DisplayName>[Chaingun] 30mm API x6</DisplayName>
+			<DisplayName>DisplayName_Item_AutoCannonClip</DisplayName>
 			<Icon>Textures\GUI\Icons\ammo\AutoCanonShellBox.dds</Icon>
 			<Size>
 				<X>0.25</X>
 				<Y>0.2</Y>
 				<Z>0.2</Z>
 			</Size>
-			<Mass>50</Mass>
-			<Volume>30</Volume>
+			<Mass>35</Mass>
+			<Volume>16</Volume>
 			<Model>Models\Weapons\AutoCanonShellBox.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>6</Capacity>
@@ -90,15 +90,15 @@
 				<TypeId>AmmoMagazine</TypeId>
 				<SubtypeId>LargeCalibreAmmo</SubtypeId>
 			</Id>
-			<DisplayName>[Cannon] 155mm AP</DisplayName>
+			<DisplayName>DisplayName_Item_LargeCalibreAmmo</DisplayName>
 			<Icon>Textures\GUI\Icons\ammo\LargeCalibreShell.dds</Icon>
 			<Size>
 				<X>1.2</X>
 				<Y>0.3</Y>
 				<Z>0.3</Z>
 			</Size>
-			<Mass>1200</Mass>
-			<Volume>110</Volume>
+			<Mass>100</Mass>
+			<Volume>100</Volume>
 			<Model>Models\Weapons\LargeCalibreShell.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>1</Capacity>
@@ -111,15 +111,15 @@
 				<TypeId>AmmoMagazine</TypeId>
 				<SubtypeId>MediumCalibreAmmo</SubtypeId>
 			</Id>
-			<DisplayName>[Flak] 100mm PROX</DisplayName>
+			<DisplayName>DisplayName_Item_MediumCalibreAmmo</DisplayName>
 			<Icon>Textures\GUI\Icons\ammo\MediumCalibreShell.dds</Icon>
 			<Size>
 				<X>0.25</X>
 				<Y>0.2</Y>
 				<Z>0.2</Z>
 			</Size>
-			<Mass>1120</Mass>
-			<Volume>80</Volume>
+			<Mass>60</Mass>
+			<Volume>30</Volume>
 			<Model>Models\Weapons\MediumCalibreShell.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>1</Capacity>
@@ -132,15 +132,15 @@
 				<TypeId>AmmoMagazine</TypeId>
 				<SubtypeId>LargeRailgunAmmo</SubtypeId>
 			</Id>
-			<DisplayName>[MAC] 200mm DU</DisplayName>
+			<DisplayName>DisplayName_Item_LargeRailgunAmmo</DisplayName>
 			<Icon>Textures\GUI\Icons\ammo\RailgunAmmoLarge.dds</Icon>
 			<Size>
 				<X>1.0</X>
 				<Y>0.3</Y>
 				<Z>0.3</Z>
 			</Size>
-			<Mass>61000</Mass>
-			<Volume>3000</Volume>
+			<Mass>60</Mass>
+			<Volume>40</Volume>
 			<Model>Models\Weapons\RailgunAmmoLarge.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>1</Capacity>
@@ -153,15 +153,15 @@
 				<TypeId>AmmoMagazine</TypeId>
 				<SubtypeId>SmallRailgunAmmo</SubtypeId>
 			</Id>
-			<DisplayName>[Railgun] 50mm FeW</DisplayName>
+			<DisplayName>SmallRailgunAmmo</DisplayName>
 			<Icon>Textures\GUI\Icons\ammo\RailgunAmmo.dds</Icon>
 			<Size>
 				<X>0.25</X>
 				<Y>0.1</Y>
 				<Z>0.1</Z>
 			</Size>
-			<Mass>6700</Mass>
-			<Volume>330</Volume>
+			<Mass>10</Mass>
+			<Volume>8</Volume>
 			<Model>Models\Weapons\RailgunAmmo.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>1</Capacity>
@@ -174,15 +174,15 @@
 				<TypeId>AmmoMagazine</TypeId>
 				<SubtypeId>Missile200mm</SubtypeId>
 			</Id>
-			<DisplayName>[Rocket] Hydra HE</DisplayName>
+			<DisplayName>DisplayName_Item_Missile200mm</DisplayName>
 			<Icon>Textures\GUI\Icons\ammo\Small_Rocket.dds</Icon>
 			<Size>
 				<X>1.2</X>
 				<Y>0.2</Y>
 				<Z>0.2</Z>
 			</Size>
-			<Mass>80</Mass>
-			<Volume>100</Volume>
+			<Mass>45</Mass>
+			<Volume>60</Volume>
 			<Model>Models\Weapons\Projectile_Missile.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>1</Capacity>

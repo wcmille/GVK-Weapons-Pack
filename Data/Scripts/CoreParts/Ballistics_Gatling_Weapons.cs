@@ -60,8 +60,8 @@ namespace Scripts
         };
         private HardwareDef Ballistics_Gatlings_Hardpoint_HardWare = new HardwareDef
         {
-            RotateRate = 0.03f,
-            ElevateRate = 0.03f,
+            RotateRate = 0.05f,
+            ElevateRate = 0.05f,
             MinAzimuth = -180,
             MaxAzimuth = 180,
             MinElevation = -20,
@@ -317,8 +317,8 @@ namespace Scripts
                 Ai = Common_Weapons_Hardpoint_Ai_BasicTurret,
                 HardWare = new HardwareDef
                 {
-                    RotateRate = 0.03f,
-                    ElevateRate = 0.03f,
+                    RotateRate = 0.05f,
+                    ElevateRate = 0.05f,
                     MinAzimuth = -180,
                     MaxAzimuth = 180,
                     MinElevation = -10,
@@ -396,63 +396,6 @@ namespace Scripts
             },
         };
 
-        WeaponDefinition SmallGatlingGun_Gimbal => new WeaponDefinition
-        {
-            Assignments = new ModelAssignmentsDef
-            {
-                MountPoints = new[]
-                {
-                    new MountPointDef
-                    {
-                        SubtypeId = "SmallGatlingGun_Gimbal",
-                        SpinPartId = "Boomsticks", // For weapons with a spinning barrel such as Gatling Guns
-                        MuzzlePartId = "GatlingBarrel",
-                        AzimuthPartId = "GatlingTurretBase1",
-                        ElevationPartId = "GatlingTurretBase2",
-                        DurabilityMod = 0.5f,
-                        IconName = "TestIcon.dds",
-                    },
-                },
-                Muzzles = new[]
-                {
-                    "muzzle_projectile",
-                },
-            },
-            Targeting = Ballistics_Gatlings_Targeting_T2,
-            HardPoint = new HardPointDef
-            {
-                PartName = "Gatling Gimbal", // name of weapon in terminal
-                DeviateShotAngle = 0.3f,
-                AimingTolerance = 7f, // 0 - 180 firing angle
-                AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
-                NpcSafe = true, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.
-                Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
-                Ai = Common_Weapons_Hardpoint_Ai_BasicTurret,
-                HardWare = new HardwareDef
-                {
-                    RotateRate = 0.01f,
-                    ElevateRate = 0.01f,
-                    MinAzimuth = -15,
-                    MaxAzimuth = 15,
-                    MinElevation = -15,
-                    MaxElevation = 15,
-                    InventorySize = 0.2f,
-                    Offset = Vector(x: 0, y: 0, z: 0),
-                    Type = BlockWeapon, // BlockWeapon, HandWeapon, Phantom 
-                    IdlePower = 0.005f, // Power draw in MW while not charging, or for non-energy weapons. Defaults to 0.001.
-                },
-                Other = Ballistics_Gatlings_Hardpoint_Other,
-                Loading = Ballistics_Gatlings_Hardpoint_Loading,
-                Audio = Ballistics_Gatlings_Hardpoint_Audio,
-                Graphics = Ballistics_Gatlings_Hardpoint_Graphics,
-            },
-
-            Ammos = new[]
-            {
-                NATO_25x184mm,
-            },
-        };
-
         WeaponDefinition AryxVulcanTurret => new WeaponDefinition
         {
             Assignments = new ModelAssignmentsDef
@@ -505,8 +448,8 @@ namespace Scripts
                 Ai = Common_Weapons_Hardpoint_Ai_BasicTurret,
                 HardWare = new HardwareDef
                 {
-                    RotateRate = 0.015f,
-                    ElevateRate = 0.015f,
+                    RotateRate = 0.02f,
+                    ElevateRate = 0.02f,
                     MinAzimuth = -180,
                     MaxAzimuth = 180,
                     MinElevation = -15,

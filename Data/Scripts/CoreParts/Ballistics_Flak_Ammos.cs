@@ -39,6 +39,85 @@ namespace Scripts
 { // Don't edit above this line
     partial class Parts
     {
+        private AmmoDef Ballistics_AP => new AmmoDef
+        {
+            AmmoMagazine = "MediumCalibreAmmo",
+            AmmoRound = "Ballistics_AP",
+            BaseDamage = 6000f, // breaks 1 HA or 1 LA cubes in 1 round
+            Mass = 300f, // in kilograms
+            Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
+            BackKickForce = 200000f,
+            HardPointUsable = true, // set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
+            NpcSafe = false, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.
+            NoGridOrArmorScaling = false, // If you enable this you can remove the damagescale section entirely.
+            DamageScales = KineticDamage(4E6f),
+            Trajectory = MakeBasicTrajectory(1500 * 3 / 4),
+            AmmoGraphics = new GraphicDef
+            {
+                ModelName = "",
+                VisualProbability = 1f,
+                Particles = new AmmoParticleDef
+                {
+                    Ammo = new ParticleDef
+                    {
+                        Name = "MD_BulletGlowMedRed", //ShipWelderArc
+                        Offset = Vector(x: 0, y: 0, z: 0),
+                        Extras = new ParticleOptionDef
+                        {
+                            Scale = 1,
+                        },
+                    },
+                    Hit = new ParticleDef
+                    {
+                        Name = "Explosion_AmmunitionSmall", //Explosion_AmmunitionLarge  Collision_Sparks  Explosion_Warhead_50
+                        ApplyToShield = false,
+                        Offset = Vector(x: 0, y: 0, z: 0),
+                        Extras = new ParticleOptionDef
+                        {
+                            Scale = 1.5f,
+                            HitPlayChance = 1f,
+                        },
+                    },
+                },
+                Lines = new LineDef
+                {
+                    ColorVariance = Random(start: 0.75f, end: 2f), // multiply the color by random values within range.
+                    WidthVariance = Random(start: 0f, end: 0f), // adds random value to default width (negatives shrinks width)
+                    DropParentVelocity = true, // If set to true will not take on the parents (grid/player) initial velocity when rendering.
+                    Tracer = new TracerBaseDef
+                    {
+                        Enable = true,
+                        Length = 16f,
+                        Width = 0.45f,
+                        Color = Color(red: 60, green: 20, blue: 5, alpha: 10),
+                        Textures = new[] { "AryxBallisticTracer", },// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
+                    },
+                    Trail = new TrailDef
+                    {
+                        Enable = true,
+                        Textures = new[] { "WeaponLaser", },
+                        DecayTime = 40,
+                        Color = Color(red: 1, green: 1, blue: 1, alpha: 1),
+                        Back = false,
+                        CustomWidth = 0,
+                        UseWidthVariance = true,
+                        UseColorFade = true,
+                    },
+                },
+            },
+            AmmoAudio = new AmmoAudioDef
+            {
+                TravelSound = "MD_Artillary_shell_fly",
+                HitSound = "HWR_SmallExplosion",
+                ShieldHitSound = "",
+                PlayerHitSound = "HWR_SmallExplosion",
+                VoxelHitSound = "ArcHeavyImpactSoil",
+                FloatingHitSound = "",
+                HitPlayChance = 1f,
+                HitPlayShield = true,
+            },
+        };
+
         private AmmoDef Ballistics_Flak => new AmmoDef
         {
             AmmoMagazine = "MediumCalibreAmmo",

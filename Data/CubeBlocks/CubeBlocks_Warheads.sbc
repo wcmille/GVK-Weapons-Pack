@@ -41,7 +41,7 @@
             <ActionSound>WepLrgWarheadExpl</ActionSound>
             <EdgeType>Light</EdgeType>
             <BuildTimeSeconds>30</BuildTimeSeconds>
-            <ExplosionRadius>22.4415</ExplosionRadius>
+            <ExplosionRadius>40</ExplosionRadius>
             <WarheadExplosionDamage>15000</WarheadExplosionDamage>
             <EmissiveColorPreset>Timer</EmissiveColorPreset>
             <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
@@ -85,7 +85,7 @@
             <ActionSound>WepLrgWarheadExpl</ActionSound>
             <EdgeType>Light</EdgeType>
             <BuildTimeSeconds>10</BuildTimeSeconds>
-            <ExplosionRadius> 4.4883 </ExplosionRadius>
+            <ExplosionRadius> 10 </ExplosionRadius>
             <WarheadExplosionDamage>15000</WarheadExplosionDamage>
             <EmissiveColorPreset>Timer</EmissiveColorPreset>
             <DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>

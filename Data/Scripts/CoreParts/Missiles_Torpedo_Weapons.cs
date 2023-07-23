@@ -99,14 +99,14 @@ namespace Scripts
                 },
                 Other = new OtherDef
                 {
-                    ConstructPartCap = 4,
+                    //ConstructPartCap = 4,
                     DisableLosCheck = true, // Do not perform LOS checks at all... not advised for self tracking weapons
                     NoVoxelLosCheck = true, // If set to true this ignores voxels for LOS checking.. which means weapons will fire at targets behind voxels.  However, this can save cpu in some situations, use with caution.
                     MuzzleCheck = false,
                     Debug = false,
-                    RestrictionRadius = 1.25f, // Meters, radius of sphere disable this gun if another is present
-                    CheckInflatedBox = true, // if true, the bounding box of the gun is expanded by the RestrictionRadius
-                    CheckForAnyWeapon = true, // if true, the check will fail if ANY gun is present, false only looks for this subtype
+                    //RestrictionRadius = 1.25f, // Meters, radius of sphere disable this gun if another is present
+                    //CheckInflatedBox = true, // if true, the bounding box of the gun is expanded by the RestrictionRadius
+                    //CheckForAnyWeapon = true, // if true, the check will fail if ANY gun is present, false only looks for this subtype
                 },
                 Loading = new LoadingDef
                 {

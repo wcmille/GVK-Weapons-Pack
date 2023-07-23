@@ -14,7 +14,6 @@ namespace Scripts
 {
     partial class Parts
     {
-
         const int FlakBaseRoF = 15;
         const float FlakWeaponRange = 2400;
 
@@ -93,7 +92,7 @@ namespace Scripts
             HardPoint = new HardPointDef
             {
                 PartName = "Large Assault Cannon Turret", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
-                DeviateShotAngle = 0.75f, // Projectile inaccuracy in degrees.
+                DeviateShotAngle = 0.05f, // Projectile inaccuracy in degrees.
                 AimingTolerance = 2f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
                 AimLeadingPrediction = Accurate, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
                 NpcSafe = true, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.
@@ -141,6 +140,7 @@ namespace Scripts
             },
             Ammos = new[]
             {
+                Ballistics_AP,
                 Ballistics_Flak,
                 Ballistics_Flak_Shrapnel,
             },
@@ -191,7 +191,7 @@ namespace Scripts
             HardPoint = new HardPointDef
             {
                 PartName = "Small Assault Cannon Turret", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
-                DeviateShotAngle = 0.75f, // Projectile inaccuracy in degrees.
+                DeviateShotAngle = 0.05f, // Projectile inaccuracy in degrees.
                 AimingTolerance = 2f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
                 AimLeadingPrediction = Advanced, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
                 NpcSafe = true, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.
@@ -227,6 +227,7 @@ namespace Scripts
             },
             Ammos = new[]
             {
+                Ballistics_AP,
                 Ballistics_Flak,
                 Ballistics_Flak_Shrapnel,
             },
@@ -277,7 +278,7 @@ namespace Scripts
             HardPoint = new HardPointDef
             {
                 PartName = "Flak Cannon", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
-                DeviateShotAngle = 0.5f, // Projectile inaccuracy in degrees.
+                DeviateShotAngle = 0.05f, // Projectile inaccuracy in degrees.
                 NpcSafe = true, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.                Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
                 Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
                 Ai = Common_Weapons_Hardpoint_Ai_BasicFixed_NoTracking,
@@ -302,6 +303,7 @@ namespace Scripts
             },
             Ammos = new[]
             {
+                Ballistics_AP,
                 Ballistics_Flak,
                 Ballistics_Flak_Shrapnel,
             },
