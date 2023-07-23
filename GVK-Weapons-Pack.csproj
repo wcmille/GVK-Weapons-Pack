@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{07363D57-6216-458D-8D5F-9A4281A45422}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GVK_Weapons_Pack</RootNamespace>
+    <AssemblyName>GVK-Weapons-Pack</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ProtoBuf.Net.Core">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\SpaceEngineers\Bin64\ProtoBuf.Net.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Sandbox.Common">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\SpaceEngineers\Bin64\Sandbox.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VRage">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\SpaceEngineers\Bin64\VRage.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Game">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\SpaceEngineers\Bin64\VRage.Game.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Math">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\SpaceEngineers\Bin64\VRage.Math.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Scripts\CoreParts\Armor_Blocks.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Ballistics_Cannon_Ammos.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Ballistics_Cannon_Weapons.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Ballistics_Chaingun_Ammos.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Ballistics_Chaingun_Weapons.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Ballistics_Common_Ammo.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Ballistics_Flak_Ammos.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Ballistics_Flak_Weapons.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Ballistics_Gatling_Ammos.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Ballistics_Gatling_Animations.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Ballistics_Gatling_Animations_Vulcan.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Ballistics_Gatling_Weapons.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Ballistics_Interior_Ammos.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Ballistics_Interior_Weapons.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Ballistics_Railgun_Ammo.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Ballistics_Railgun_Animations.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Ballistics_Railgun_Weapons.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Lasers_AMS_Ammos.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Lasers_AMS_Weapons.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Lasers_Laser_Ammos.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Lasers_Laser_Animations_PDX.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Lasers_Laser_Weapons.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Missiles_Common_Ammo.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Missiles_HeavyMissile_Ammos.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Missiles_HeavyMissile_Animations_Tuukka.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Missiles_HeavyMissile_Weapons.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Missiles_Missile_Ammo.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Missiles_Missile_Animations_Archer.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Missiles_Missile_Weapons.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Missiles_Rocket_Ammos.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Missiles_Rocket_Weapons.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Missiles_Torpedo_Ammos.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Missiles_Torpedo_Animations_Crusader.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Missiles_Torpedo_Weapons.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Other_Radar_Ammos.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Other_Radar_Weapons.cs" />
+    <Compile Include="Data\Scripts\CoreParts\script\PartCompile.cs" />
+    <Compile Include="Data\Scripts\CoreParts\script\Slave.cs" />
+    <Compile Include="Data\Scripts\CoreParts\script\Structure.cs" />
+    <Compile Include="Data\Scripts\CoreParts\_Common_Weapon_Defs.cs" />
+    <Compile Include="Data\Scripts\CoreParts\_MasterConfig.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

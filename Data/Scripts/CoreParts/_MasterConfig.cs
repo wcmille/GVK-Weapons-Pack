@@ -49,7 +49,7 @@ namespace Scripts
 							tukkaLauncher01,
 							AryxSpartanTurret
 							);
-            ArmorDefinitions(BusterArmor, AdditionalLightArmors);
+            ArmorDefinitions(AdditionalLightArmors);
         }
     }
 }

@@ -41,6 +41,9 @@ namespace Scripts
 {
     partial class Parts
     {
+        const float maxTrajectory = 5000.0f;
+        const float scale = 0.75f;
+
         internal DecalDef MakeBulletDecal()
         {
             return new DecalDef
@@ -98,8 +101,7 @@ namespace Scripts
 
         internal TrajectoryDef MakeBasicTrajectory(int desiredSpeed)
         {
-            float maxTrajectory = 5000.0f;
-            float scaledSpeed = Math.Max(0.75f * desiredSpeed, 5000.0f);
+            float scaledSpeed = Math.Min(scale * desiredSpeed, maxTrajectory);
             return new TrajectoryDef
             {
                 Guidance = None, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
@@ -113,8 +115,7 @@ namespace Scripts
 
         internal TrajectoryDef MakeAirburstTrajectory(int desiredSpeed)
         {
-            float maxTrajectory = 5000.0f;
-            float scaledSpeed = Math.Max(0.75f * desiredSpeed, 5000.0f);
+            float scaledSpeed = Math.Min(scale * desiredSpeed, maxTrajectory);
             return new TrajectoryDef
             {
                 Guidance = Smart, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
@@ -122,7 +123,7 @@ namespace Scripts
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 4 * 60, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
                 DesiredSpeed = scaledSpeed, // voxel phasing if you go above 5100
-                MaxTrajectory = Math.Min(desiredSpeed*3.5, maxTrajectory), // Max Distance the projectile or beam can Travel.
+                MaxTrajectory = Math.Min(desiredSpeed*3.5f, maxTrajectory), // Max Distance the projectile or beam can Travel.
                 SpeedVariance = Random(start: -25f, end: 25), // subtracts value from DesiredSpeed
                 RangeVariance = Random(start: 0f, end: 0f), // subtracts value from MaxTrajectory
                 Smarts = new SmartsDef
