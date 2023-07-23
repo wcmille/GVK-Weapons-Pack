@@ -6,7 +6,7 @@
 				<TypeId>BlueprintDefinition</TypeId>
 				<SubtypeId>NATO_25x184mmMagazine</SubtypeId>
 			</Id>
-			<DisplayName>[Gatling] 25mm KE x30</DisplayName>
+			<DisplayName>DisplayName_Item_NATO_25x184mm</DisplayName>
 			<Icon>Textures\GUI\Icons\ammo\Ammo_Box.dds</Icon>
 			<Prerequisites>
 				<Item Amount="20" TypeId="Ingot" SubtypeId="Iron"/>
@@ -21,7 +21,7 @@
 				<TypeId>BlueprintDefinition</TypeId>
 				<SubtypeId>AutocannonClip</SubtypeId>
 			</Id>
-			<DisplayName>[Chaingun] 30mm API x6</DisplayName>
+			<DisplayName>DisplayName_Item_AutoCannonClip</DisplayName>
 			<Icon>Textures\GUI\Icons\ammo\AutoCanonShellBox.dds</Icon>
 			<Prerequisites>
 				<Item Amount="26" TypeId="Ingot" SubtypeId="Iron"/>
@@ -37,7 +37,7 @@
 				<TypeId>BlueprintDefinition</TypeId>
 				<SubtypeId>NATO_5p56x45mmMagazine</SubtypeId>
 			</Id>
-			<DisplayName>[Interior] 5.56mm KE x30</DisplayName>
+			<DisplayName>DisplayName_Item_NATO_5p56x45mm</DisplayName>
 			<Icon>Textures\GUI\Icons\ammo\Rifle_Ammo.dds</Icon>
 			<Prerequisites>
 				<Item Amount="20" TypeId="Ingot" SubtypeId="Iron"/>
@@ -52,7 +52,7 @@
 				<TypeId>BlueprintDefinition</TypeId>
 				<SubtypeId>MediumCalibreAmmo</SubtypeId>
 			</Id>
-			<DisplayName>[Flak] 100mm HE x1</DisplayName>
+			<DisplayName>DisplayName_Item_MediumCalibreAmmo</DisplayName>
 			<Icon>Textures\GUI\Icons\ammo\MediumCalibreShell.dds</Icon>
 			<Prerequisites>
 				<Item Amount="64" TypeId="Ingot" SubtypeId="Iron"/>
@@ -68,7 +68,7 @@
 				<TypeId>BlueprintDefinition</TypeId>
 				<SubtypeId>LargeCalibreAmmo</SubtypeId>
 			</Id>
-			<DisplayName>[Cannon] 155mm AP x1</DisplayName>
+			<DisplayName>DisplayName_Item_LargeCalibreAmmo</DisplayName>
 			<Icon>Textures\GUI\Icons\ammo\LargeCalibreShell.dds</Icon>
 			<Prerequisites>
 				<Item Amount="55" TypeId="Ingot" SubtypeId="Iron"/>
@@ -85,7 +85,7 @@
 				<TypeId>BlueprintDefinition</TypeId>
 				<SubtypeId>SmallRailgunAmmo</SubtypeId>
 			</Id>
-			<DisplayName>[Railgun] 50mm FeW x1</DisplayName>
+			<DisplayName>DisplayName_Item_SmallRailgunAmmo</DisplayName>
 			<Icon>Textures\GUI\Icons\ammo\RailgunAmmo.dds</Icon>
 			<Prerequisites>
 				<Item Amount="1300" TypeId="Ingot" SubtypeId="Iron"/>
@@ -102,7 +102,7 @@
 				<TypeId>BlueprintDefinition</TypeId>
 				<SubtypeId>LargeRailgunAmmo</SubtypeId>
 			</Id>
-			<DisplayName>[MAC] 200mm DU x1</DisplayName>
+			<DisplayName>DisplayName_Item_LargeRailgunAmmo</DisplayName>
 			<Icon>Textures\GUI\Icons\ammo\RailgunAmmoLarge.dds</Icon>
 			<Prerequisites>
 				<Item Amount="22000" TypeId="Ingot" SubtypeId="Iron"/>
@@ -119,12 +119,11 @@
 				<TypeId>BlueprintDefinition</TypeId>
 				<SubtypeId>Missile200mm</SubtypeId>
 			</Id>
-			<DisplayName>[Rocket] Hydra HE x1</DisplayName>
+			<DisplayName>DisplayName_Item_Missile200mm</DisplayName>
 			<Icon>Textures\GUI\Icons\ammo\Small_Rocket.dds</Icon>
 			<Prerequisites>
 				<Item Amount="140" TypeId="Ingot" SubtypeId="Iron"/>
 				<Item Amount="20" TypeId="Ingot" SubtypeId="Nickel"/>
-				<Item Amount="0.25" TypeId="Ingot" SubtypeId="Uranium"/>
 				<Item Amount="10" TypeId="Ingot" SubtypeId="Silicon"/>
 			</Prerequisites>
 			<BaseProductionTimeInSeconds>40</BaseProductionTimeInSeconds>
@@ -140,7 +139,6 @@
 			<Prerequisites>
 				<Item Amount="84" TypeId="Ingot" SubtypeId="Iron"/>
 				<Item Amount="12" TypeId="Ingot" SubtypeId="Nickel"/>
-				<Item Amount="0.15" TypeId="Ingot" SubtypeId="Uranium"/>
 				<Item Amount="6.1" TypeId="Ingot" SubtypeId="Silicon"/>
 				<Item Amount="0.38" TypeId="Ingot" SubtypeId="Gold"/>
 			</Prerequisites>
@@ -175,7 +173,6 @@
 			<Prerequisites>
 				<Item Amount="280" TypeId="Ingot" SubtypeId="Iron"/>
 				<Item Amount="41" TypeId="Ingot" SubtypeId="Nickel"/>
-				<Item Amount="0.5" TypeId="Ingot" SubtypeId="Uranium"/>
 				<Item Amount="20" TypeId="Ingot" SubtypeId="Silicon"/>
 				<Item Amount="1.3" TypeId="Ingot" SubtypeId="Gold"/>
 			</Prerequisites>

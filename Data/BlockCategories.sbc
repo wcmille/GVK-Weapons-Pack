@@ -15,10 +15,8 @@
 				<string>ARYXRailgunTurret</string>
 				<string>Missile_Torpedo_Large</string>
 				<string>Missile_Torpedo_Small</string>
-				<string>SmallGatlingTurretAutoGatling</string>
 				<string>LargeWarhead</string>
 				<string>LargeInteriorTurret</string>
-				<string>SmallInteriorTurret</string>
 				<string>SentinelTurret</string>
 				<string>LargeMissileTurret/(null)</string>
 				<string>SmallGatlingTurret</string>
@@ -32,8 +30,6 @@
 				<string>MA_T2PDX</string>
 				<string>ReceptorCoilGun</string>
 				<string>ReceptorTurret</string>
-				<string>OKI122mmSGfixed</string>
-				<string>OKI122mmVT</string>
 				<string>MA_Fixed_T2</string>
 				<string>ARYXLargeRadar</string>
 				<string>ARYXSmallRadar</string>

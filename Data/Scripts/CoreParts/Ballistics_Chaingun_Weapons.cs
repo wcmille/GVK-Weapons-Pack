@@ -149,62 +149,62 @@ namespace Scripts {
 			},
 		};
 
-        WeaponDefinition LargeAutoCannonTurret => new WeaponDefinition
-        {
-            Assignments = new ModelAssignmentsDef
-            {
-                MountPoints = new[] {
-                    new MountPointDef {
-                        SubtypeId = "LargeAutoCannonTurret", // Block Subtypeid. Your Cubeblocks contain this information
-                        SpinPartId = "None", // For weapons with a spinning barrel such as Gatling Guns. Subpart_Boomsticks must be written as Boomsticks.
-                        MuzzlePartId = "GatlingBarrel", // The subpart where your muzzle empties are located. This is often the elevation subpart. Subpart_Boomsticks must be written as Boomsticks.
-                        AzimuthPartId = "GatlingTurretBase1", // Your Rotating Subpart, the bit that moves sideways.
-                        ElevationPartId = "GatlingBarrel",// Your Elevating Subpart, that bit that moves up.
-                        DurabilityMod = 0.5f, // GeneralDamageMultiplier, 0.25f = 25% damage taken.
-                        IconName = "" // Overlay for block inventory slots, like reactors, refineries, etc.
-                    },
+        //WeaponDefinition LargeAutoCannonTurret => new WeaponDefinition
+        //{
+        //    Assignments = new ModelAssignmentsDef
+        //    {
+        //        MountPoints = new[] {
+        //            new MountPointDef {
+        //                SubtypeId = "LargeAutoCannonTurret", // Block Subtypeid. Your Cubeblocks contain this information
+        //                SpinPartId = "None", // For weapons with a spinning barrel such as Gatling Guns. Subpart_Boomsticks must be written as Boomsticks.
+        //                MuzzlePartId = "GatlingBarrel", // The subpart where your muzzle empties are located. This is often the elevation subpart. Subpart_Boomsticks must be written as Boomsticks.
+        //                AzimuthPartId = "GatlingTurretBase1", // Your Rotating Subpart, the bit that moves sideways.
+        //                ElevationPartId = "GatlingBarrel",// Your Elevating Subpart, that bit that moves up.
+        //                DurabilityMod = 0.5f, // GeneralDamageMultiplier, 0.25f = 25% damage taken.
+        //                IconName = "" // Overlay for block inventory slots, like reactors, refineries, etc.
+        //            },
                     
-                 },
-                Muzzles = new[] {
-                    "muzzle_projectile", // Where your Projectiles spawn. Use numbers not Letters. IE Muzzle_01 not Muzzle_A
-                },
-                Ejector = "", // Optional; empty from which to eject "shells" if specified.
-                Scope = "muzzle_projectile", // Where line of sight checks are performed from. Must be clear of block collision.
-            },
+        //         },
+        //        Muzzles = new[] {
+        //            "muzzle_projectile", // Where your Projectiles spawn. Use numbers not Letters. IE Muzzle_01 not Muzzle_A
+        //        },
+        //        Ejector = "", // Optional; empty from which to eject "shells" if specified.
+        //        Scope = "muzzle_projectile", // Where line of sight checks are performed from. Must be clear of block collision.
+        //    },
             
-            Targeting = Ballistics_Chaingun_Targeting_Large,
+        //    Targeting = Ballistics_Chaingun_Targeting_Large,
 			
-            HardPoint = new HardPointDef
-            {
-                PartName = "Autocannon Turret", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
-                DeviateShotAngle = 0.25f, // Projectile inaccuracy in degrees.
-                AimingTolerance = 2f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
-                AimLeadingPrediction = Accurate, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
-                DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 second, etc..). Length of time the weapon continues firing after trigger is released.
-                AddToleranceToTracking = false, // Allows turret to track to the edge of the AimingTolerance cone instead of dead centre.
-                CanShootSubmerged = false, // Whether the weapon can be fired underwater when using WaterMod.
+        //    HardPoint = new HardPointDef
+        //    {
+        //        PartName = "Autocannon Turret", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
+        //        DeviateShotAngle = 0.25f, // Projectile inaccuracy in degrees.
+        //        AimingTolerance = 2f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
+        //        AimLeadingPrediction = Accurate, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
+        //        DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 second, etc..). Length of time the weapon continues firing after trigger is released.
+        //        AddToleranceToTracking = false, // Allows turret to track to the edge of the AimingTolerance cone instead of dead centre.
+        //        CanShootSubmerged = false, // Whether the weapon can be fired underwater when using WaterMod.
 
-                Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
+        //        Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
 				
-                Ai = Common_Weapons_Hardpoint_Ai_BasicTurret,
+        //        Ai = Common_Weapons_Hardpoint_Ai_BasicTurret,
 				
-                HardWare = Ballistics_Chaingun_Hardpoint_Hardware,
+        //        HardWare = Ballistics_Chaingun_Hardpoint_Hardware,
 
-                Other = Common_Weapons_Hardpoint_Other_Large,
+        //        Other = Common_Weapons_Hardpoint_Other_Large,
 
-                Loading = Ballistics_Chaingun_Hardpoint_Loading_T1,
+        //        Loading = Ballistics_Chaingun_Hardpoint_Loading_T1,
 
-                Audio = Ballistics_Chaingun_Hardpoint_Audio,
+        //        Audio = Ballistics_Chaingun_Hardpoint_Audio,
 
-                Graphics = Ballistics_Chaingun_Hardpoint_Graphics,
+        //        Graphics = Ballistics_Chaingun_Hardpoint_Graphics,
 				
-            },
-            Ammos = new[] {
-                AutocannonClip, // Must list all primary, shrapnel, and pattern ammos.
-            },
-            //Animations = Weapon75_Animation,
-            //Upgrades = UpgradeModules,
-        };
+        //    },
+        //    Ammos = new[] {
+        //        AutocannonClip, // Must list all primary, shrapnel, and pattern ammos.
+        //    },
+        //    //Animations = Weapon75_Animation,
+        //    //Upgrades = UpgradeModules,
+        //};
 
         WeaponDefinition AutoCannonTurret => new WeaponDefinition
         {

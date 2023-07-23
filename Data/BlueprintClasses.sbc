@@ -34,12 +34,9 @@
 		<Entry Class="LargeBlocks" BlueprintSubtypeId="LargeMissileTurret/ARYXSpartanTurret"/>
 		<Entry Class="LargeBlocks" BlueprintSubtypeId="LargeMissileTurret/ARYXVulcanTurret"/>
 		<!--SMALL BLOCKS-->
-		<Entry Class="SmallBlocks" BlueprintSubtypeId="SmallMissileLauncher/OKI122mmSGfixed"/>
-		<Entry Class="SmallBlocks" BlueprintSubtypeId="LargeMissileTurret/OKI122mmVT"/>
 		<Entry Class="SmallBlocks" BlueprintSubtypeId="LargeMissileTurret/ARYXFlakTurret_small"/>
 		<Entry Class="SmallBlocks" BlueprintSubtypeId="InteriorTurret/SmallInteriorTurret"/>
 		<Entry Class="SmallBlocks" BlueprintSubtypeId="ConveyorSorter/ARYXSmallRadar"/>
-		<Entry Class="SmallBlocks" BlueprintSubtypeId="LargeGatlingTurret/SmallGatlingGun_Gimbal"/>
 		<Entry Class="SmallBlocks" BlueprintSubtypeId="LargeMissileTurret/MA_PDT_sm"/>
 		<Entry Class="SmallBlocks" BlueprintSubtypeId="ConveyorSorter/ReceptorCoilGun"/>
 		<Entry Class="SmallBlocks" BlueprintSubtypeId="LargeMissileTurret/ReceptorTurret"/>
