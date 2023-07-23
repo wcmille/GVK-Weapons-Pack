@@ -5,14 +5,14 @@ using static Scripts.Structure.ArmorDefinition.ArmorType;
 namespace Scripts {
     partial class Parts {
         // Don't edit above this line
-        private ArmorDefinition BusterArmor => new ArmorDefinition
-        {
-            SubtypeIds = new[]
-            {
-                "MA_Buster_ArmorBlock",
-            },
-            Kind = Heavy,
-        };
+        //private ArmorDefinition BusterArmor => new ArmorDefinition
+        //{
+        //    SubtypeIds = new[]
+        //    {
+        //        "MA_Buster_ArmorBlock",
+        //    },
+        //    Kind = Heavy,
+        //};
         private ArmorDefinition AdditionalLightArmors => new ArmorDefinition
         {
             SubtypeIds = new[]

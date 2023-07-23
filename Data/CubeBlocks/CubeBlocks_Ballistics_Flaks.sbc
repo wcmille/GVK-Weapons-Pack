@@ -6,9 +6,9 @@
 				<TypeId>LargeMissileTurret</TypeId>
 				<SubtypeId>LargeBlockMediumCalibreTurret</SubtypeId>
 			</Id>
-			<DisplayName>DisplayName_Block_MediumCalibreGun</DisplayName>
+			<DisplayName>DisplayName_Block_MediumCalibreTurret</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\MediumCalibreTurretLarge.dds</Icon>
-			<Description>Description_MediumCalibreGun</Description>
+			<Description>Description_MediumCalibreTurret</Description>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>false</GuiVisible>
 			<PlaceDecals>false</PlaceDecals>
@@ -100,11 +100,9 @@
 				<TypeId>LargeMissileTurret</TypeId>
 				<SubtypeId>SmallBlockMediumCalibreTurret</SubtypeId>
 			</Id>
-			<DisplayName>[Flak] Small Assault Turret</DisplayName>
+			<DisplayName>DisplayName_Block_MediumCalibreGun</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\MediumCalibreTurret_Small.dds</Icon>
-			<Description>Fires proximity-fused explosive shrapnel but with a minimum arm time. Effective as anti-strike and anti-missile screen.
-				[1300m Auto Range (100m min)]
-				[Uses 100mm PROX]</Description>
+			<Description>Description_MediumCalibreGun</Description>
 			<CubeSize>Small</CubeSize>
 			<GuiVisible>false</GuiVisible>
 			<PlaceDecals>false</PlaceDecals>
@@ -193,11 +191,9 @@
 				<TypeId>SmallMissileLauncherReload</TypeId>
 				<SubtypeId>SmallBlockMediumCalibreGun</SubtypeId>
 			</Id>
-			<DisplayName>[Flak] Small Assault Gun</DisplayName>
+			<DisplayName>DisplayName_Block_MediumCalibreGun</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\MediumCaliberGun.dds</Icon>
-			<Description>Fires proximity-fused explosive shrapnel but with a minimum arm time. Effective as anti-strike and anti-missile screen.
-				[2000m Manual Range (100m min)]
-				[Uses 100mm PROX]</Description>
+			<Description>Description_MediumCalibreGun</Description>
 			<CubeSize>Small</CubeSize>
 			<GuiVisible>false</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>
