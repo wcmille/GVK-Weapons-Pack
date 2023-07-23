@@ -7,7 +7,7 @@
 				<SubtypeId/>
 			</Id>
 			<DisplayName>DisplayName_Block_MissileTurret</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\LGMissileBase.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\missile_turret.dds</Icon>
 			<Description>Description_MissileTurret</Description>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>false</GuiVisible>
@@ -16,7 +16,7 @@
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="3" y="3" z="3"/>
 			<ModelOffset x="0" y="-1.25" z="0"/>
-			<Model>Models\Cubes\Large\Missile\LGMissileBase.mwm</Model>
+			<Model>Models\Cubes\Large\MissileTurret.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<Components>
 				<Component Subtype="SteelPlate" Count="78"/>
@@ -35,9 +35,9 @@
 				<MountPoint Side="Bottom" StartX="1" StartY="1" EndX="2" EndY="2"/>
 			</MountPoints>
 			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Missile\LGMissileBase_BS1.mwm"/>
-				<Model BuildPercentUpperBound="0.67" File="Models\Cubes\Large\Missile\LGMissileBase_BS2.mwm"/>
-				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\Missile\LGMissileBase_BS3.mwm"/>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\MissileTurretConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\MissileTurretConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\MissileTurretConstruction_3.mwm" />
 			</BuildProgressModels>
 			<VoxelPlacement>
 				<!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->

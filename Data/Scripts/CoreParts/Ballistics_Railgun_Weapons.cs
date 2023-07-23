@@ -485,7 +485,6 @@ namespace Scripts {
                 SmallRailgunAmmo_Ares,
             },
             Animations = SmallRailgunAnimation,
-            //Upgrades = UpgradeModules,
         };
     }
 }

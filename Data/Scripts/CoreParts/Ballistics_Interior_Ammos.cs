@@ -50,70 +50,12 @@ namespace Scripts
             HardPointUsable = true, // set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
             NpcSafe = true, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.
             NoGridOrArmorScaling = true, // If you enable this you can remove the damagescale section entirely.
-            Trajectory = new TrajectoryDef
-            {
-                Guidance = None,
-                DesiredSpeed = 950,
-                MaxTrajectory = 900f,
-                SpeedVariance = Random(start: 0, end: 20), // subtracts value from DesiredSpeed
-                RangeVariance = Random(start: 0, end: 50), // subtracts value from MaxTrajectory
-            },
+            Trajectory = new MakeBasicTrajectory(950),
             AmmoGraphics = new GraphicDef
             {
                 ModelName = "",
                 VisualProbability = 1f,
-                Decals = new DecalDef
-                {
-                    MaxAge = 3600,
-                    Map = new[]
-                    {
-                        new TextureMapDef
-                        {
-                            HitMaterial = "Metal",
-                            DecalMaterial = "RifleBullet",
-                        },
-                        new TextureMapDef
-                        {
-                            HitMaterial = "Glass",
-                            DecalMaterial = "RifleBullet",
-                        },
-                        new TextureMapDef
-                        {
-                            HitMaterial = "Soil",
-                            DecalMaterial = "RifleBullet",
-                        },
-                        new TextureMapDef
-                        {
-                            HitMaterial = "Wood",
-                            DecalMaterial = "RifleBullet",
-                        },
-                        new TextureMapDef
-                        {
-                            HitMaterial = "GlassOpaque",
-                            DecalMaterial = "RifleBullet",
-                        },
-                        new TextureMapDef
-                        {
-                            HitMaterial = "Stone",
-                            DecalMaterial = "RifleBullet",
-                        },
-                        new TextureMapDef
-                        {
-                            HitMaterial = "Rock",
-                            DecalMaterial = "RifleBullet",
-                        },
-                        new TextureMapDef
-                        {
-                            HitMaterial = "Ice",
-                            DecalMaterial = "RifleBullet",
-                        },
-                        new TextureMapDef
-                        {
-                            HitMaterial = "Soil",
-                            DecalMaterial = "RifleBullet",
-                        },
-                    },
-                },
+                Decals = MakeBulletDecal(),
                 Particles = new AmmoParticleDef
                 {
                     Ammo = new ParticleDef

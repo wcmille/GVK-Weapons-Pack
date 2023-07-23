@@ -50,48 +50,8 @@ namespace Scripts
             HardPointUsable = true, // set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
             NpcSafe = false, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.
             NoGridOrArmorScaling = false, // If you enable this you can remove the damagescale section entirely.
-            DamageScales = new DamageScaleDef
-            {
-                //This is additional damage done and does not directly affect the speed that the ammo's health pool depletes.
-                MaxIntegrity = 0f, // 0 = disabled, 1000 = any blocks with current integrity above 1000 will be immune to damage.
-                DamageVoxels = false, // true = voxels are vulnerable to this weapon
-                HealthHitModifier = 1, // defaults to a value of 1, this setting modifies how much Health is subtracted from a projectile per hit (1 = per hit).
-                Characters = 0.25f,
-                // modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01 = 1% damage, 2 = 200% damage.
-                Grids = new GridSizeDef
-                {
-                    Large = -1f,
-                    Small = 0.75f,
-                },
-                Armor = new ArmorDef
-                {
-                    Armor = -1f,
-                    Light = 1f,
-                    Heavy = 1f,
-                    NonArmor = 1f,
-                },
-                DamageType = new DamageTypes
-                {
-                    Base = Kinetic,
-                    AreaEffect = Kinetic,
-                    Detonation = Kinetic,
-                    Shield = Kinetic,
-                },
-                Deform = new DeformDef
-                {
-                    DeformType = HitBlock,
-                    DeformDelay = 30,
-                },
-                //Custom = Common_Ammos_DamageScales_Cockpits_SmallNerf,
-            },
-            Trajectory = new TrajectoryDef
-            {
-                Guidance = None,
-                DesiredSpeed = 1000f, // DO NOT SET HIGHER THAN 4100
-                MaxTrajectory = 2400f,
-                SpeedVariance = Random(start: 0, end: 20), // subtracts value from DesiredSpeed
-                RangeVariance = Random(start: 0, end: 50), // subtracts value from MaxTrajectory
-            },
+            DamageScales = KineticDamage(6E6),
+            Trajectory = MakeBasicTrajectory(1500 * 0.75),
             AmmoGraphics = new GraphicDef
             {
                 ModelName = "",

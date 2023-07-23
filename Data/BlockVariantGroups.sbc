@@ -28,7 +28,7 @@
 			<Blocks>
         <Block Type="MyObjectBuilder_InteriorTurret" Subtype="LargeInteriorTurret"/>
         <Block Type="MyObjectBuilder_LargeGatlingTurret" Subtype="SmallGatlingTurret"/>
-        <Block Type="MyObjectBuilder_LargeGatlingTurret" Subtype="LargeGatlingTurret"/>
+        <Block Type="MyObjectBuilder_LargeGatlingTurret" Subtype=""/>
         <Block Type="MyObjectBuilder_LargeMissileTurret" Subtype=""/>
         <Block Type="MyObjectBuilder_LargeMissileTurret" Subtype="SmallMissileTurret"/>
         <Block Type="MyObjectBuilder_LargeMissileTurret" Subtype="ARYXVulcanTurret"/>

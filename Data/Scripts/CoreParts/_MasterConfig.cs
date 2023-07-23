@@ -50,8 +50,6 @@ namespace Scripts
 							AryxSpartanTurret
 							);
             ArmorDefinitions(BusterArmor, AdditionalLightArmors);
-            // SupportDefinitions(ArmorEnhancer1A);
-            // UpgradeDefinitions(Upgrade75a, Upgrade75b);
         }
     }
 }

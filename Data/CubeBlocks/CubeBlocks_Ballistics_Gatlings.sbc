@@ -150,19 +150,17 @@
 				<TypeId>LargeGatlingTurret</TypeId>
 				<SubtypeId/>
 			</Id>
-			<DisplayName>[Gatling] Large CIWS Turret</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\OKI14mmCIWS_Turret.dds</Icon>
-			<Description>Close-in weapon system for defense against small vehicles, ships, personnel, and anti-ship missiles. Extended range and Rate of fire over the basic variant.
-				[1400m Auto Range]
-				[Uses 25mm KE]</Description>
+			<DisplayName>DisplayName_Block_GatlingTurret</DisplayName>
+			<Icon>Textures\GUI\Icons\Cubes\gatling_turret.dds</Icon>
+			<Description>Description_GatlingTurret</Description>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>false</GuiVisible>
 			<Public>false</Public>
 			<PlaceDecals>false</PlaceDecals>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="3" y="3" z="3"/>
-			<ModelOffset x="0" y="-1.25" z="0"/>
-			<Model>Models\Cubes\Large\Gatling\14mmLGBase.mwm</Model>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Large\GatlingTurret.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<Components>
 				<Component Subtype="SteelPlate" Count="90"/>
@@ -175,15 +173,15 @@
 				<Component Subtype="SteelPlate" Count="270"/>
 			</Components>
 			<BuildTimeSeconds>90</BuildTimeSeconds>
-			<PCU>10000</PCU>
+			<PCU>225</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="1" StartY="1" EndX="2" EndY="2" Default="true"/>
 			</MountPoints>
 			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Gatling\14mmLGBase_LOD1.mwm"/>
-				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Gatling\14mmLGBase_LOD2.mwm"/>
-				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\Gatling\14mmLGBase_LOD3.mwm"/>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\GatlingTurretConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\GatlingTurretConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\GatlingTurretConstruction_3.mwm" />
 			</BuildProgressModels>
 			<VoxelPlacement>
 				<!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
@@ -238,11 +236,9 @@
 				<TypeId>LargeGatlingTurret</TypeId>
 				<SubtypeId>SmallGatlingTurret</SubtypeId>
 			</Id>
-			<DisplayName>[Gatling] Small CIWS Turret</DisplayName>
+			<DisplayName>DisplayName_Block_GatlingTurret</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\gatling_turret.dds</Icon>
-			<Description>Close-in weapon system for defense against small vehicles, ships, personnel, and anti-ship missiles.
-				[900m Auto Range]
-				[Uses 25mm KE]</Description>
+			<Description>Description_GatlingTurret</Description>
 			<CubeSize>Small</CubeSize>
 			<GuiVisible>true</GuiVisible>
 			<PlaceDecals>false</PlaceDecals>
@@ -262,7 +258,7 @@
 				<Component Subtype="SteelPlate" Count="25"/>
 			</Components>
 			<BuildTimeSeconds>8</BuildTimeSeconds>
-			<PCU>20000</PCU>
+			<PCU>225</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="5" EndY="5" Default="true"/>
@@ -325,11 +321,9 @@
 				<TypeId>SmallGatlingGun</TypeId>
 				<SubtypeId/>
 			</Id>
-			<DisplayName>[Gatling] Small 25mm Fixed</DisplayName>
+			<DisplayName>DisplayName_Block_GatlingGun</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\gatling_gun.dds</Icon>
-			<Description>Hard-mounted six-barrel multi-role rotary cannon.
-				[1600m Manual Range]
-				[Uses 25mm KE]</Description>
+			<Description>Description_GatlingGun</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="1" y="1" z="4"/>
@@ -346,7 +340,7 @@
 				<Component Subtype="SteelPlate" Count="9"/>
 			</Components>
 			<BuildTimeSeconds>5</BuildTimeSeconds>
-			<PCU>10000</PCU>
+			<PCU>80</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1"/>
@@ -375,103 +369,14 @@
 			<GuiVisible>true</GuiVisible>
 			<Public>true</Public>
 		</Definition>
-		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
-			<Id>
-				<TypeId>LargeGatlingTurret</TypeId>
-				<SubtypeId>SmallGatlingGun_Gimbal</SubtypeId>
-			</Id>
-			<DisplayName>[Gatling] Small 25mm Gimbal</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\gatling_gun.dds</Icon>
-			<Description>Gimbaled six-barrel multi-role rotary cannon, with +/- 15 degree auto aiming.
-				[1400m Auto Range]
-				[Uses 25mm KE]</Description>
-			<CubeSize>Small</CubeSize>
-			<PlaceDecals>false</PlaceDecals>
-			<BlockTopology>TriangleMesh</BlockTopology>
-			<GuiVisible>true</GuiVisible>
-			<Size x="1" y="1" z="4"/>
-			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\GatlingTurretAutoGatling\GatlingTurretAutoGatling_Small.mwm</Model>
-			<UseModelIntersection>true</UseModelIntersection>
-			<Components>
-				<Component Subtype="SteelPlate" Count="3"/>
-				<Component Subtype="GVK_SmallCaliber_Tech" Count="1"/>
-				<Component Subtype="MetalGrid" Count="9"/>
-				<Component Subtype="SmallTube" Count="4"/>
-				<Component Subtype="Motor" Count="5"/>
-				<Component Subtype="Computer" Count="6"/>
-				<Component Subtype="Construction" Count="18"/>
-				<Component Subtype="SteelPlate" Count="9"/>
-			</Components>
-			<BuildTimeSeconds>5</BuildTimeSeconds>
-			<PCU>10000</PCU>
-			<CriticalComponent Subtype="Computer" Index="0"/>
-			<MountPoints>
-				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1"/>
-				<MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="1"/>
-				<MountPoint Side="Bottom" StartX="0" StartY="3" EndX="1" EndY="4"/>
-				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
-				<MountPoint Side="Left" StartX="3" StartY="0" EndX="4" EndY="1"/>
-			</MountPoints>
-			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.50" File="Models\GatlingTurretAutoGatling\GatlingTurretAutoGatling_SmallConstruction_1.mwm"/>
-				<Model BuildPercentUpperBound="1.00" File="Models\GatlingTurretAutoGatling\GatlingTurretAutoGatling_SmallConstruction_2.mwm"/>
-			</BuildProgressModels>
-			<VoxelPlacement>
-				<!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
-				<StaticMode>
-					<PlacementMode>OutsideVoxel</PlacementMode>
-					<MaxAllowed>0.2</MaxAllowed>
-					<MinAllowed>0</MinAllowed>
-				</StaticMode>
-				<DynamicMode>
-					<PlacementMode>OutsideVoxel</PlacementMode>
-					<MaxAllowed>0.2</MaxAllowed>
-					<MinAllowed>0.01</MinAllowed>
-				</DynamicMode>
-			</VoxelPlacement>
-			<BlockPairName>GatlingGun</BlockPairName>
-			<MirroringY>Z</MirroringY>
-			<MirroringZ>Y</MirroringZ>
-			<EdgeType>Light</EdgeType>
-			<OverlayTexture>Textures\GUI\Screens\camera_overlay.dds</OverlayTexture>
-			<WeaponDefinitionId Subtype="GatlingGun"/>
-			<InventoryMaxVolume>0.084</InventoryMaxVolume>
-			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
-			<DamagedSound>ParticleWeapExpl</DamagedSound>
-			<ResourceSinkGroup>Defense</ResourceSinkGroup>
-			<MinElevationDegrees>-10</MinElevationDegrees>
-			<MaxElevationDegrees>180</MaxElevationDegrees>
-			<MinAzimuthDegrees>-180</MinAzimuthDegrees>
-			<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
-			<RotationSpeed>0.001</RotationSpeed>
-			<ElevationSpeed>0.001 </ElevationSpeed>
-			<IdleRotation>false</IdleRotation>
-			<MaxRangeMeters>2000</MaxRangeMeters>
-			<AiEnabled>false</AiEnabled>
-			<MinFov>0.1</MinFov>
-			<MaxFov>1.04719755</MaxFov>
-			<EmissiveColorPreset>Default</EmissiveColorPreset>
-			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
-			<DestroySound>WepSmallWarheadExpl</DestroySound>
-			<AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
-			<InventoryFillFactorMin>.25</InventoryFillFactorMin>
-			<InventoryFillFactorMax>.5</InventoryFillFactorMax>
-			<TieredUpdateTimes>
-				<unsignedInt>10</unsignedInt>
-				<unsignedInt>0</unsignedInt>
-			</TieredUpdateTimes>
-		</Definition>
 		<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
 			<Id>
 				<TypeId>SmallGatlingGun</TypeId>
 				<SubtypeId>SmallGatlingGunWarfare2</SubtypeId>
 			</Id>
-			<DisplayName>[Gatling] Small 25mm Fixed (Warfare)</DisplayName>
+			<DisplayName>DisplayName_Block_GatlingGunWarfare2</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\gatlingGunReskin.dds</Icon>
-			<Description>Hard-mounted 3-barrel multi-role rotary cannon.
-				[1600m Manual Range]
-				[Uses 25mm KE]</Description>
+			<Description>Description_GatlingGun</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="1" y="1" z="4"/>
@@ -487,7 +392,7 @@
 				<Component Subtype="SteelPlate" Count="9"/>
 			</Components>
 			<BuildTimeSeconds>5</BuildTimeSeconds>
-			<PCU>10000</PCU>
+			<PCU>80</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>

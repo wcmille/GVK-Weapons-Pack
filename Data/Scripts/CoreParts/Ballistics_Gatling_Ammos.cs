@@ -49,94 +49,12 @@ namespace Scripts
             HardPointUsable = true, // set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
             NpcSafe = true, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.
             NoGridOrArmorScaling = false, // If you enable this you can remove the damagescale section entirely.
-            DamageScales = new DamageScaleDef
-            {
-                DamageVoxels = false, // Whether to damage voxels.
-                HealthHitModifier = 3,
-                Characters = 0.2f,
-                // For the following modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01f = 1% damage, 2 = 200% damage.
-                Grids = new GridSizeDef
-                {
-                    Large = -1f,
-                    Small = 0.75f,
-                },
-                Armor = new ArmorDef
-                {
-                    Armor = -1f,
-                    Light = -1f, // Multiplier for damage against light armor.
-                    Heavy = -1f,
-                    NonArmor = -1f,
-                },
-                Deform = new DeformDef
-                {
-                    DeformType = NoDeform, //HitBlock, AllDamagedBlocks, NoDeform
-                    DeformDelay = 30,
-                },
-                Custom = Common_Ammos_DamageScales_Cockpits_SmallNerf,
-            },
-            Trajectory = new TrajectoryDef
-            {
-                MaxLifeTime = 3600, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
-                DesiredSpeed = 1000, // voxel phasing if you go above 5100
-                MaxTrajectory = 1700f, // Max Distance the projectile or beam can Travel.
-                SpeedVariance = Random(start: 0, end: 50), // subtracts value from DesiredSpeed. Be warned, you can make your projectile go backwards.
-                RangeVariance = Random(start: 0, end: 300), // subtracts value from MaxTrajectory
-            },
+            DamageScales = KineticDamage(60E3),
+            Trajectory = MakeBasicTrajectory(1100*0.75),
             AmmoGraphics = new GraphicDef
             {
                 VisualProbability = 0.75f,
-                Decals = new DecalDef
-                {
-                    MaxAge = 3600,
-                    Map = new[]
-                    {
-                        new TextureMapDef
-                        {
-                            HitMaterial = "Metal",
-                            DecalMaterial = "GunBullet",
-                        },
-                        new TextureMapDef
-                        {
-                            HitMaterial = "Glass",
-                            DecalMaterial = "GunBullet",
-                        },
-                        new TextureMapDef
-                        {
-                            HitMaterial = "Soil",
-                            DecalMaterial = "GunBullet",
-                        },
-                        new TextureMapDef
-                        {
-                            HitMaterial = "Wood",
-                            DecalMaterial = "GunBullet",
-                        },
-                        new TextureMapDef
-                        {
-                            HitMaterial = "GlassOpaque",
-                            DecalMaterial = "GunBullet",
-                        },
-                        new TextureMapDef
-                        {
-                            HitMaterial = "Stone",
-                            DecalMaterial = "GunBullet",
-                        },
-                        new TextureMapDef
-                        {
-                            HitMaterial = "Rock",
-                            DecalMaterial = "GunBullet",
-                        },
-                        new TextureMapDef
-                        {
-                            HitMaterial = "Ice",
-                            DecalMaterial = "GunBullet",
-                        },
-                        new TextureMapDef
-                        {
-                            HitMaterial = "Soil",
-                            DecalMaterial = "GunBullet",
-                        },
-                    },
-                },
+                Decals = MakeBulletDecal(),
                 Particles = new AmmoParticleDef
                 {
                     Hit = new ParticleDef
