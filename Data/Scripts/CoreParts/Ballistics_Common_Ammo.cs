@@ -111,6 +111,31 @@ namespace Scripts
             };
         }
 
+        internal TrajectoryDef MakeAirburstTrajectory(int desiredSpeed)
+        {
+            float maxTrajectory = 5000.0f;
+            float scaledSpeed = Math.Max(0.75f * desiredSpeed, 5000.0f);
+            return new TrajectoryDef
+            {
+                Guidance = Smart, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
+                TargetLossDegree = 30f, // Degrees, Is pointed forward
+                TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                MaxLifeTime = 4 * 60, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
+                DesiredSpeed = scaledSpeed, // voxel phasing if you go above 5100
+                MaxTrajectory = Math.Min(desiredSpeed*3.5, maxTrajectory), // Max Distance the projectile or beam can Travel.
+                SpeedVariance = Random(start: -25f, end: 25), // subtracts value from DesiredSpeed
+                RangeVariance = Random(start: 0f, end: 0f), // subtracts value from MaxTrajectory
+                Smarts = new SmartsDef
+                {
+                    MaxTargets = 1, // Number of targets allowed before ending, 0 = unlimited
+                    OverideTarget = false, // when set to true ammo picks its own target, does not use hardpoint's.
+                    ScanRange = 0, // 0 disables projectile screening, the max range that this projectile will be seen at by defending grids (adds this projectile to defenders lookup database). 
+                    NoSteering = true, // this disables target follow and instead travel straight ahead (but will respect offsets).
+                    KeepAliveAfterTargetLoss = false, // Whether to stop early death of projectile on target loss
+                },
+            };
+        }
+
         internal DamageScaleDef KineticDamage(float ke)
         {
             return new DamageScaleDef
