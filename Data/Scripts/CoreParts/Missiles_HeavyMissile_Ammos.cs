@@ -125,58 +125,7 @@ namespace Scripts
             {
                 ModelName = "\\Models\\Cubes\\Large\\missileBattery01\\mediumMissile01_model.mwm", // Model Path goes here.  "\\Models\\Ammo\\Starcore_Arrow_Missile_Large"
                 VisualProbability = 1f, // %
-                Decals = new DecalDef
-                {
-                    MaxAge = 7200,
-                    Map = new[]
-                    {
-                        new TextureMapDef
-                        {
-                            HitMaterial = "Metal",
-                            DecalMaterial = "Missile",
-                        },
-                        new TextureMapDef
-                        {
-                            HitMaterial = "Glass",
-                            DecalMaterial = "Missile",
-                        },
-                        new TextureMapDef
-                        {
-                            HitMaterial = "Soil",
-                            DecalMaterial = "Missile",
-                        },
-                        new TextureMapDef
-                        {
-                            HitMaterial = "Wood",
-                            DecalMaterial = "Missile",
-                        },
-                        new TextureMapDef
-                        {
-                            HitMaterial = "GlassOpaque",
-                            DecalMaterial = "Missile",
-                        },
-                        new TextureMapDef
-                        {
-                            HitMaterial = "Stone",
-                            DecalMaterial = "Missile",
-                        },
-                        new TextureMapDef
-                        {
-                            HitMaterial = "Rock",
-                            DecalMaterial = "Missile",
-                        },
-                        new TextureMapDef
-                        {
-                            HitMaterial = "Ice",
-                            DecalMaterial = "Missile",
-                        },
-                        new TextureMapDef
-                        {
-                            HitMaterial = "Soil",
-                            DecalMaterial = "Missile",
-                        },
-                    },
-                },
+                Decals = MakeMissileDecal(),
                 Particles = new AmmoParticleDef
                 {
                     Ammo = new ParticleDef

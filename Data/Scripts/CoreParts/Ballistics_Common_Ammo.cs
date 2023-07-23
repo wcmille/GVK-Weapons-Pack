@@ -99,11 +99,12 @@ namespace Scripts
         internal TrajectoryDef MakeBasicTrajectory(int desiredSpeed)
         {
             float maxTrajectory = 5000.0f;
+            float scaledSpeed = Math.Max(0.75f * desiredSpeed, 5000.0f);
             return new TrajectoryDef
             {
                 Guidance = None, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
                 MaxLifeTime = 4 * 60, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
-                DesiredSpeed = desiredSpeed, // voxel phasing if you go above 5100
+                DesiredSpeed = scaledSpeed, // voxel phasing if you go above 5100
                 MaxTrajectory = Math.Min(desiredSpeed * 3.5f, maxTrajectory), // Max Distance the projectile or beam can Travel.
                 SpeedVariance = Random(start: 0, end: 20), // subtracts value from DesiredSpeed. Be warned, you can make your projectile go backwards.
                 RangeVariance = Random(start: 0, end: 50) // subtracts value from MaxTrajectory

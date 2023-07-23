@@ -52,7 +52,7 @@ namespace Scripts
             HardPointUsable = true, // set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
             NpcSafe = true, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.
             DamageScales = KineticDamage(3000.0f*3000.0f*5.0f),
-            Trajectory = MakeBasicTrajectory(3000),
+            Trajectory = MakeBasicTrajectory(4000),
             AmmoGraphics = new GraphicDef
             {
                 ModelName = "",
@@ -134,8 +134,8 @@ namespace Scripts
             EnergyMagazineSize = 0,
             HardPointUsable = true, // set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
             NpcSafe = true, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.
-            DamageScales = KineticDamage(3500.0f*3500.f*5.0f),
-            Trajectory = MakeBasicTrajectory(3500),
+            DamageScales = KineticDamage(3500.0f*3500.0f*5.0f),
+            Trajectory = MakeBasicTrajectory(4500),
             AmmoGraphics = new GraphicDef
             {
                 ModelName = "",
@@ -219,7 +219,7 @@ namespace Scripts
             HardPointUsable = true, // set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
             NpcSafe = true, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.
             DamageScales = KineticDamage(4000.0f * 4000.0f * 5.0f),
-            Trajectory = MakeBasicTrajectory(4000),
+            Trajectory = MakeBasicTrajectory(5000),
             AmmoGraphics = new GraphicDef
             {
                 ModelName = "",

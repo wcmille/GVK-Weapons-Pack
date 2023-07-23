@@ -51,7 +51,7 @@ namespace Scripts
             NpcSafe = false, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.
             NoGridOrArmorScaling = false, // If you enable this you can remove the damagescale section entirely.
             DamageScales = KineticDamage(6E6f),
-            Trajectory = MakeBasicTrajectory(1500 * 3/4),
+            Trajectory = MakeBasicTrajectory(1500),
             AmmoGraphics = new GraphicDef
             {
                 ModelName = "",

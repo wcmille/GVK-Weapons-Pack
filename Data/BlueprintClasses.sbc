@@ -33,7 +33,6 @@
 		<Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorSorter/missileBattery01"/>
 		<Entry Class="LargeBlocks" BlueprintSubtypeId="LargeMissileTurret/ARYXSpartanTurret"/>
 		<Entry Class="LargeBlocks" BlueprintSubtypeId="LargeMissileTurret/ARYXVulcanTurret"/>
-		<Entry Class="LargeBlocks" BlueprintSubtypeId="LargeMissileTurret/ARYXHeavyFlakTurret"/>
 		<!--SMALL BLOCKS-->
 		<Entry Class="SmallBlocks" BlueprintSubtypeId="SmallMissileLauncher/OKI122mmSGfixed"/>
 		<Entry Class="SmallBlocks" BlueprintSubtypeId="LargeMissileTurret/OKI122mmVT"/>

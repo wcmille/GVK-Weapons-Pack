@@ -125,7 +125,7 @@ namespace Scripts
             Animations = AryxRailgunAnims,
         };
 
-        WeaponDefinition AryxRailgun => new WeaponDefinition
+        WeaponDefinition LargeBlockRailgun => new WeaponDefinition
         {
             Assignments = new ModelAssignmentsDef
             {

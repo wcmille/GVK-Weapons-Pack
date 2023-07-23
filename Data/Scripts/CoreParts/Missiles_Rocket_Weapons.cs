@@ -195,6 +195,7 @@ namespace Scripts
             Ammos = new[]
             {
                 Missiles_Rocket,
+                Missiles_Missile,
             },
         };
 
@@ -336,6 +337,7 @@ namespace Scripts
             Ammos = new[]
             {
                 Missiles_Rocket,
+                Missiles_Missile,
             },
         };
     }
