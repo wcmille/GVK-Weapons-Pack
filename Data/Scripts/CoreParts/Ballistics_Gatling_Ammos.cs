@@ -49,8 +49,8 @@ namespace Scripts
             HardPointUsable = true, // set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
             NpcSafe = true, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.
             NoGridOrArmorScaling = false, // If you enable this you can remove the damagescale section entirely.
-            DamageScales = KineticDamage(60E3),
-            Trajectory = MakeBasicTrajectory(1100*0.75),
+            DamageScales = KineticDamage(60E3f),
+            Trajectory = MakeBasicTrajectory(1100*3/4),
             AmmoGraphics = new GraphicDef
             {
                 VisualProbability = 0.75f,

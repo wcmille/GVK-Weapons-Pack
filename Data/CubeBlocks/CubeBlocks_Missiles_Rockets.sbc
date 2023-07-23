@@ -90,11 +90,9 @@
 				<TypeId>LargeMissileTurret</TypeId>
 				<SubtypeId>SmallMissileTurret</SubtypeId>
 			</Id>
-			<DisplayName>[Rocket] Small Hydra Turret</DisplayName>
+			<DisplayName>DisplayName_Block_MissileTurret</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\missile_turret.dds</Icon>
-			<Description>Single stage self-propelled dumbfire rocket, with high acceleration but poor accuracy.
-				[600m Auto Range]
-				[Uses Hydra HE x2]</Description>
+			<Description>Description_MissileTurret</Description>
 			<CubeSize>Small</CubeSize>
 			<GuiVisible>true</GuiVisible>
 			<PlaceDecals>false</PlaceDecals>
@@ -177,11 +175,9 @@
 				<TypeId>SmallMissileLauncher</TypeId>
 				<SubtypeId>LargeMissileLauncher</SubtypeId>
 			</Id>
-			<DisplayName>[Rocket] Large Hydra Launcher</DisplayName>
+			<DisplayName>DisplayName_Block_RocketLauncher</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\missile_launcher.dds</Icon>
-			<Description>Single stage self-propelled dumbfire rocket, with high acceleration but poor accuracy.
-				[1000m Manual Range]
-				[Uses Hydra HE x19]</Description>
+			<Description>Description_LargeRocketLauncher</Description>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -230,11 +226,9 @@
 				<TypeId>SmallMissileLauncher</TypeId>
 				<SubtypeId/>
 			</Id>
-			<DisplayName>[Rocket] Small Hydra launcher</DisplayName>
+			<DisplayName>DisplayName_Block_RocketLauncher</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\missile_launcher_small.dds</Icon>
-			<Description>Single stage self-propelled dumbfire rocket, with high acceleration but poor accuracy.
-				[900m Manual Range]
-				[Uses Hydra HE x8 (Manual Reload)]</Description>
+			<Description>Description_RocketLauncher</Description>
 			<CubeSize>Small</CubeSize>
 			<GuiVisible>true</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -251,7 +245,7 @@
 				<Component Subtype="SteelPlate" Count="8"/>
 			</Components>
 			<BuildTimeSeconds>5</BuildTimeSeconds>
-			<PCU>10000</PCU>
+			<PCU>425</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1"/>
@@ -281,11 +275,9 @@
 				<TypeId>SmallMissileLauncher</TypeId>
 				<SubtypeId>SmallMissileLauncherWarfare2</SubtypeId>
 			</Id>
-			<DisplayName>[Rocket] Small Hydra launcher (Warfare)</DisplayName>
+			<DisplayName>DisplayName_Block_RocketLauncherWarfare2</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\RocketlauncherReskin.dds</Icon>
-			<Description>Single stage self-propelled dumbfire rocket, with high acceleration but poor accuracy.
-				[900m Manual Range]
-				[Uses Hydra HE x8 (Manual Reload)]</Description>
+			<Description>Description_RocketLauncher</Description>
 			<CubeSize>Small</CubeSize>
 			<GuiVisible>false</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -302,7 +294,7 @@
 				<Component Subtype="SteelPlate" Count="8"/>
 			</Components>
 			<BuildTimeSeconds>5</BuildTimeSeconds>
-			<PCU>10000</PCU>
+			<PCU>425</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Top" StartX="0" StartY="1" EndX="1" EndY="4"/>

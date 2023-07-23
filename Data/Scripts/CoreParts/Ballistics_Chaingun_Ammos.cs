@@ -48,8 +48,8 @@ namespace Scripts
             Health = 0, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 1000f, // Recoil. This is applied to the Parent Grid.
             HardPointUsable = true, // Whether this is a primary ammo type fired directly by the turret. Set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
-            DamageScales = KineticDamage(60E3),
-            Trajectory = MakeTrajectory(1100 * 0.75),
+            DamageScales = KineticDamage(60E3f),
+            Trajectory = MakeBasicTrajectory(1100 * 3/4),
             AmmoGraphics = new GraphicDef
             {
                 ModelName = "", // Model Path goes here.  "\\Models\\Ammo\\Starcore_Arrow_Missile_Large"

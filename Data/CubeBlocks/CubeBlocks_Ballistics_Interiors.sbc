@@ -6,11 +6,9 @@
 				<TypeId>InteriorTurret</TypeId>
 				<SubtypeId>LargeInteriorTurret</SubtypeId>
 			</Id>
-			<DisplayName>[Interior] Large Anti-personnel Carbine Turret</DisplayName>
+			<DisplayName>DisplayName_Block_InteriorTurret</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\interior_turret.dds</Icon>
-			<Description>The anti-personnel turret is excellent for interior or exterior defense against attackers on-foot, but not much else.
-				[700m Auto Range]
-				[Uses 5.56mm KE (Manual Reload)]</Description>
+			<Description>Description_InteriorTurret</Description>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>
 			<PlaceDecals>false</PlaceDecals>
@@ -29,7 +27,7 @@
 				<Component Subtype="SteelPlate" Count="30"/>
 			</Components>
 			<BuildTimeSeconds>10</BuildTimeSeconds>
-			<PCU>10000</PCU>
+			<PCU>125</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0.46" StartY="0.46" EndX="0.54" EndY="0.54"/>
