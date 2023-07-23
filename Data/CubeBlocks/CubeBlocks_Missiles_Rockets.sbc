@@ -6,11 +6,9 @@
 				<TypeId>LargeMissileTurret</TypeId>
 				<SubtypeId/>
 			</Id>
-			<DisplayName>[Rocket] Large Hydra Turret</DisplayName>
+			<DisplayName>DisplayName_Block_MissileTurret</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\LGMissileBase.dds</Icon>
-			<Description>Single stage self-propelled dumbfire rocket, with high acceleration but poor accuracy.
-				[900m Auto Range]
-				[Uses Hydra HE x6]</Description>
+			<Description>Description_MissileTurret</Description>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>false</GuiVisible>
 			<Public>false</Public>
@@ -31,7 +29,7 @@
 				<Component Subtype="SteelPlate" Count="240"/>
 			</Components>
 			<BuildTimeSeconds>90</BuildTimeSeconds>
-			<PCU>10000</PCU>
+			<PCU>275</PCU>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="1" StartY="1" EndX="2" EndY="2"/>
