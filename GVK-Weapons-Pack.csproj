@@ -102,4 +102,9 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>rd "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\WCVanilla GVA-Weapons-Pack\Data" /s /q
+xcopy "C:\Users\wayne\source\repos\GVK-Weapons-Pack\Data\*.*" "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\WCVanilla GVA-Weapons-Pack\Data" /y /s /i
+</PostBuildEvent>
+  </PropertyGroup>
 </Project>
