@@ -12,7 +12,9 @@
 				[1600m Auto Range]
 				[Uses 156MW Energy]</Description>
 			<CubeSize>Large</CubeSize>
-			<BlockTopology>TriangleMesh</BlockTopology>
+      <GuiVisible>false</GuiVisible>
+      <Public>false</Public>
+      <BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="3" y="3" z="3"/>
 			<ModelOffset x="0" y="-1.25" z="0"/>
 			<Model>Models\AWE_Spartan\LG_ARYXSpartan_Base.mwm</Model>
@@ -159,7 +161,7 @@
 				<Model BuildPercentUpperBound="0.50" File="Models\MA_Laser2\MA_Fixed_T2_BS1.mwm"/>
 				<Model BuildPercentUpperBound="1.00" File="Models\MA_Laser2\MA_Fixed_T2_BS2.mwm"/>
 			</BuildProgressModels>
-			<BlockPairName>Lasers_Laser_Fixed_Gimbal</BlockPairName>
+			<BlockPairName>Lasers_Laser_Fixed</BlockPairName>
 			<UseModelIntersection>true</UseModelIntersection>
 			<GuiVisible>true</GuiVisible>
 			<Components>
