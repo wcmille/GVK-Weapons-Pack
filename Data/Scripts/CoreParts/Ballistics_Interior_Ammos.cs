@@ -1,121 +1,94 @@
 ﻿using static Scripts.Structure.WeaponDefinition;
 using static Scripts.Structure.WeaponDefinition.AmmoDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.EjectionDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.EjectionDef.SpawnType;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.ShapeDef.Shapes;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef.CustomScalesDef.SkipMode;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.FragmentDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.PatternDef.PatternModes;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.FragmentDef.TimedSpawnDef.PointTypes;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.ApproachDef.Conditions;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.ApproachDef.UpRelativeTo;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.ApproachDef.FwdRelativeTo;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.ApproachDef.ReInitCondition;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.ApproachDef.RelativeTo;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.ApproachDef.ConditionOperators;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.ApproachDef.StageEvents;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.ApproachDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.GuidanceType;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef.ShieldDef.ShieldType;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef.DeformDef.DeformTypes;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.AreaOfDamageDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.AreaOfDamageDef.Falloff;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.AreaOfDamageDef.AoeShape;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.EwarDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.EwarDef.EwarMode;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.EwarDef.EwarType;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.EwarDef.PushPullDef.Force;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef.LineDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef.LineDef.FactionColor;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef.LineDef.TracerBaseDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef.LineDef.Texture;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef.DecalDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef.DamageTypes.Damage;
 
 namespace Scripts
 { // Don't edit above this line
     partial class Parts
     {
-        private AmmoDef Ballistics_Interior => new AmmoDef
+        private AmmoDef Ballistics_Interior
         {
-            AmmoMagazine = "NATO_5p56x45mm",
-            AmmoRound = "Ballistics_Interior",
-            BaseDamage = 25f,
-            Mass = 1f, // in kilograms
-            Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
-            BackKickForce = 2f,
-            HardPointUsable = true, // set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
-            NpcSafe = true, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.
-            NoGridOrArmorScaling = true, // If you enable this you can remove the damagescale section entirely.
-            Trajectory = MakeBasicTrajectory(950),
-            AmmoGraphics = new GraphicDef
+            get
             {
-                ModelName = "",
-                VisualProbability = 1f,
-                Decals = MakeBulletDecal(),
-                Particles = new AmmoParticleDef
+                //AmmoMagazine = "NATO_5p56x45mm",
+                //AmmoRound = "Ballistics_Interior",
+                //BaseDamage = 25f,
+                //Mass = 1f, // in kilograms
+                //Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
+                //BackKickForce = 2f,
+                //HardPointUsable = true, // set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
+                //NpcSafe = true, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.
+                //NoGridOrArmorScaling = true, // If you enable this you can remove the damagescale section entirely.
+                //Trajectory = MakeBasicTrajectory(950),
+                var sk = new SabotKinetic(this, 950.0f, 0.004f, 5.56f);
+                var AmmoGraphics = new GraphicDef
                 {
-                    Ammo = new ParticleDef
+                    ModelName = "",
+                    VisualProbability = 1f,
+                    Decals = MakeBulletDecal(),
+                    Particles = new AmmoParticleDef
                     {
-                        Name = "", //ShipWelderArc
-                        Offset = Vector(x: 0, y: 0, z: 0),
-                        Extras = new ParticleOptionDef
+                        Ammo = new ParticleDef
                         {
-                            Scale = 1,
+                            Name = "", //ShipWelderArc
+                            Offset = Vector(x: 0, y: 0, z: 0),
+                            Extras = new ParticleOptionDef
+                            {
+                                Scale = 1,
+                            },
+                        },
+                        Hit = new ParticleDef
+                        {
+                            Name = "Hit_BasicAmmoSmall",
+                            ApplyToShield = true,
+                            Offset = Vector(x: double.MaxValue, y: double.MaxValue, z: double.MaxValue),
+                            Extras = new ParticleOptionDef
+                            {
+                                Scale = 1f,
+                                HitPlayChance = 0.75f,
+                            },
+                        },
+                        Eject = new ParticleDef
+                        {
+                            Name = "Shell_Casings",
+                            ApplyToShield = false,
+                            Offset = Vector(x: double.MaxValue, y: double.MaxValue, z: double.MaxValue),
+                            Extras = new ParticleOptionDef
+                            {
+                                Scale = 1,
+                                HitPlayChance = 1f,
+                            },
                         },
                     },
-                    Hit = new ParticleDef
+                    Lines = new LineDef
                     {
-                        Name = "Hit_BasicAmmoSmall",
-                        ApplyToShield = true,
-                        Offset = Vector(x: double.MaxValue, y: double.MaxValue, z: double.MaxValue),
-                        Extras = new ParticleOptionDef
+                        ColorVariance = Random(start: 1f, end: 10f), // multiply the color by random values within range.
+                        WidthVariance = Random(start: -0.01f, end: 0.01f), // adds random value to default width (negatives shrinks width)
+                        DropParentVelocity = false, // If set to true will not take on the parents (grid/player) initial velocity when rendering.
+                        Tracer = new TracerBaseDef
                         {
-                            Scale = 1f,
-                            HitPlayChance = 0.75f,
+                            Enable = true,
+                            Length = 15f,
+                            Width = 0.03f,
+                            Color = Color(red: 4.4f, green: 2.8f, blue: 2.0f, alpha: 1),
+                            Textures = new[] { "ProjectileTrailLine", },// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
                         },
                     },
-                    Eject = new ParticleDef
-                    {
-                        Name = "Shell_Casings",
-                        ApplyToShield = false,
-                        Offset = Vector(x: double.MaxValue, y: double.MaxValue, z: double.MaxValue),
-                        Extras = new ParticleOptionDef
-                        {
-                            Scale = 1,
-                            HitPlayChance = 1f,
-                        },
-                    },
-                },
-                Lines = new LineDef
+                };
+                var AmmoAudio = new AmmoAudioDef
                 {
-                    ColorVariance = Random(start: 1f, end: 10f), // multiply the color by random values within range.
-                    WidthVariance = Random(start: -0.01f, end: 0.01f), // adds random value to default width (negatives shrinks width)
-                    DropParentVelocity = false, // If set to true will not take on the parents (grid/player) initial velocity when rendering.
-                    Tracer = new TracerBaseDef
-                    {
-                        Enable = true,
-                        Length = 15f,
-                        Width = 0.03f,
-                        Color = Color(red: 4.4f, green: 2.8f, blue: 2.0f, alpha: 1),
-                        Textures = new[] { "ProjectileTrailLine", },// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
-                    },
-                },
-            },
-            AmmoAudio = new AmmoAudioDef
-            {
-                TravelSound = "",
-                HitSound = "ArcImpMetalMetalCat0",
-                ShieldHitSound = "",
-                PlayerHitSound = "",
-                VoxelHitSound = "",
-                FloatingHitSound = "",
-                HitPlayChance = 0.1f,
-                HitPlayShield = true,
-            }, // Don't edit below this line
-        };
+                    TravelSound = "",
+                    HitSound = "ArcImpMetalMetalCat0",
+                    ShieldHitSound = "",
+                    PlayerHitSound = "",
+                    VoxelHitSound = "",
+                    FloatingHitSound = "",
+                    HitPlayChance = 0.1f,
+                    HitPlayShield = true,
+                }; // Don't edit below this line
+                return sk.AssembleRound("NATO_5p56x45mm", "Ballistics_Interior", AmmoGraphics, AmmoAudio);
+            }
+        }
     }
 }
