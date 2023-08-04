@@ -97,8 +97,8 @@
 				<Y>0.3</Y>
 				<Z>0.3</Z>
 			</Size>
-			<Mass>100</Mass>
-			<Volume>100</Volume>
+			<Mass>45</Mass>
+			<Volume>20</Volume>
 			<Model>Models\Weapons\LargeCalibreShell.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>1</Capacity>
@@ -118,8 +118,8 @@
 				<Y>0.2</Y>
 				<Z>0.2</Z>
 			</Size>
-			<Mass>60</Mass>
-			<Volume>30</Volume>
+			<Mass>18</Mass>
+			<Volume>10</Volume>
 			<Model>Models\Weapons\MediumCalibreShell.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>1</Capacity>
@@ -140,7 +140,7 @@
 				<Z>0.3</Z>
 			</Size>
 			<Mass>60</Mass>
-			<Volume>40</Volume>
+			<Volume>20</Volume>
 			<Model>Models\Weapons\RailgunAmmoLarge.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>1</Capacity>
@@ -160,8 +160,8 @@
 				<Y>0.1</Y>
 				<Z>0.1</Z>
 			</Size>
-			<Mass>10</Mass>
-			<Volume>8</Volume>
+			<Mass>5</Mass>
+			<Volume>2</Volume>
 			<Model>Models\Weapons\RailgunAmmo.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>1</Capacity>

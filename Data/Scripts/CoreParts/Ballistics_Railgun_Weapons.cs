@@ -1,17 +1,11 @@
-﻿using VRageMath;
-using System.Collections.Generic;
-using static Scripts.Structure;
+﻿using static Scripts.Structure;
 using static Scripts.Structure.WeaponDefinition;
-using static Scripts.Structure.WeaponDefinition.ModelAssignmentsDef;
 using static Scripts.Structure.WeaponDefinition.HardPointDef;
+using static Scripts.Structure.WeaponDefinition.HardPointDef.HardwareDef.HardwareType;
 using static Scripts.Structure.WeaponDefinition.HardPointDef.Prediction;
+using static Scripts.Structure.WeaponDefinition.ModelAssignmentsDef;
 using static Scripts.Structure.WeaponDefinition.TargetingDef.BlockTypes;
 using static Scripts.Structure.WeaponDefinition.TargetingDef.Threat;
-using static Scripts.Structure.WeaponDefinition.TargetingDef;
-using static Scripts.Structure.WeaponDefinition.TargetingDef.CommunicationDef.Comms;
-using static Scripts.Structure.WeaponDefinition.TargetingDef.CommunicationDef.SecurityMode;
-using static Scripts.Structure.WeaponDefinition.HardPointDef.HardwareDef;
-using static Scripts.Structure.WeaponDefinition.HardPointDef.HardwareDef.HardwareType;
 
 namespace Scripts
 {
@@ -302,7 +296,7 @@ namespace Scripts
             },
             Ammos = new[]
             {
-                SmallRailgunAmmo_Ares,
+                LargeRailgunAmmo_Apollo,
             },
             Animations = SmallRailgunAnimation,
         };

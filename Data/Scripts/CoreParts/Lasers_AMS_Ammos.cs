@@ -1,39 +1,10 @@
 using static Scripts.Structure.WeaponDefinition;
 using static Scripts.Structure.WeaponDefinition.AmmoDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.EjectionDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.EjectionDef.SpawnType;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.ShapeDef.Shapes;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef.CustomScalesDef.SkipMode;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.FragmentDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.PatternDef.PatternModes;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.FragmentDef.TimedSpawnDef.PointTypes;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.ApproachDef.Conditions;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.ApproachDef.UpRelativeTo;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.ApproachDef.FwdRelativeTo;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.ApproachDef.ReInitCondition;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.ApproachDef.RelativeTo;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.ApproachDef.ConditionOperators;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.ApproachDef.StageEvents;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.ApproachDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.GuidanceType;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef.ShieldDef.ShieldType;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef.DeformDef.DeformTypes;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.AreaOfDamageDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.AreaOfDamageDef.Falloff;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.AreaOfDamageDef.AoeShape;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.EwarDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.EwarDef.EwarMode;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.EwarDef.EwarType;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.EwarDef.PushPullDef.Force;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef.LineDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef.LineDef.FactionColor;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef.LineDef.TracerBaseDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef.LineDef.Texture;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef.DecalDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef.DamageTypes.Damage;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef.LineDef;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.GuidanceType;
 
 namespace Scripts
 { // Don't edit above this line
@@ -43,7 +14,7 @@ namespace Scripts
         {
             AmmoMagazine = "Energy",
             AmmoRound = "Lasers_AMS",
-            EnergyCost = 0.63f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel    (15 * 0.05 * 3600/60/60 = 0.75MW per tick)
+            EnergyCost = laserStandardConstant, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel    (15 * 0.05 * 3600/60/60 = 0.75MW per tick)
             BaseDamage = 50f,
             HardPointUsable = true,
             NpcSafe = true, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.

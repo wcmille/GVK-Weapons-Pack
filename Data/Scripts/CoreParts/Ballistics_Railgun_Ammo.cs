@@ -7,6 +7,7 @@ namespace Scripts
 { // Don't edit above this line
     partial class Parts
     {
+        const float railGunStandardConstant = 600.0f * 2.0f * 0.001f; //600J / damage * 50% efficiency * 1 MW/1000W
         private AmmoDef SmallRailgunAmmo
         {
             get
@@ -22,7 +23,7 @@ namespace Scripts
             //DamageScales = KineticDamage(3000.0f*3000.0f*5.0f),
             //Trajectory = MakeBasicTrajectory(4000),
             
-                var sk = new SabotKinetic(this, 4000.0f, 5.0f, 25.0f);
+                var sk = new SabotKinetic(this, 1550.0f, 2.5f, 5.0f);
                 var AmmoGraphics = new GraphicDef
                 {
                     ModelName = "",
@@ -91,13 +92,13 @@ namespace Scripts
                 }; // Don't edit below this line
                 var round = sk.AssembleRound("SmallRailgunAmmo", "SmallRailgunAmmo", AmmoGraphics, AmmoAudio);
                 round.HybridRound = true; //AmmoMagazine based weapon with energy cost
-                round.EnergyCost = 0.08030075188f; //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
+                round.EnergyCost = railGunStandardConstant; //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
 
                 return round;
             }
         }
 
-        private AmmoDef SmallRailgunAmmo_Ares
+        private AmmoDef LargeRailgunAmmo_Apollo
         {
             //AmmoMagazine = "SmallRailgunAmmo",
             //AmmoRound = "SmallRailgunAmmo",
@@ -114,7 +115,7 @@ namespace Scripts
             //Trajectory = MakeBasicTrajectory(4500),
             get
             {
-                var sk = new SabotKinetic(this, 4500.0f, 5.0f, 25.0f);
+                var sk = new SabotKinetic(this, 3535.0f, 30.0f, 40.0f);
                 var AmmoGraphics = new GraphicDef
                 {
                     ModelName = "",
@@ -183,9 +184,9 @@ namespace Scripts
                     HitPlayChance = 1,
                     HitPlayShield = true,
                 }; // Don't edit below this line
-                var round = sk.AssembleRound("SmallRailgunAmmo", "SmallRailgunAmmo", AmmoGraphics, AmmoAudio);
+                var round = sk.AssembleRound("LargeRailgunAmmo", "LargeRailgunAmmo", AmmoGraphics, AmmoAudio);
                 round.HybridRound = true; //AmmoMagazine based weapon with energy cost
-                round.EnergyCost = 0.09067669173f; //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
+                round.EnergyCost = railGunStandardConstant; //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
                 return round;
             }
         }
@@ -206,7 +207,7 @@ namespace Scripts
                 //NpcSafe = true, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.
                 //DamageScales = KineticDamage(4000.0f * 4000.0f * 5.0f),
                 //Trajectory = MakeBasicTrajectory(5000),
-                var sk = new SabotKinetic(this, 5000.0f, 10.0f, 40.0f);
+                var sk = new SabotKinetic(this, 5000.0f, 30.0f, 40.0f);
                 var AmmoGraphics = new GraphicDef
                 {
                     ModelName = "",
@@ -276,7 +277,7 @@ namespace Scripts
 
                 var round = sk.AssembleRound("LargeRailgunAmmo", "LargeRailgunAmmo", AmmoGraphics, AmmoAudio);
                 round.HybridRound = true; //AmmoMagazine based weapon with energy cost
-                round.EnergyCost = 0.08030075188f; //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
+                round.EnergyCost = railGunStandardConstant; //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
                 return round;
             }
         }
