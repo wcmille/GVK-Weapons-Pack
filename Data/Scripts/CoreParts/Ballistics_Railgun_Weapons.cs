@@ -55,7 +55,7 @@ namespace Scripts
             },
             HardPoint = new HardPointDef
             {
-                PartName = "Apollo 1kg Railgun Turret", // name of weapon in terminal
+                PartName = "Apollo Railgun Turret", // name of weapon in terminal
                 DeviateShotAngle = 0.01f,
                 AimingTolerance = 1f, // 0 - 180 firing angle
                 AimLeadingPrediction = Accurate, // Off, Basic, Accurate, Advanced
@@ -72,7 +72,7 @@ namespace Scripts
                     MaxAzimuth = 180,
                     MinElevation = -10,
                     MaxElevation = 25,
-                    InventorySize = 2.680f,
+                    InventorySize = 0.200f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                     Type = BlockWeapon, // BlockWeapon, HandWeapon, Phantom 
                     IdlePower = 0.001f, // Power draw in MW while not charging, or for non-energy weapons. Defaults to 0.001.
@@ -94,7 +94,7 @@ namespace Scripts
                     RateOfFire = 60,
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
-                    ReloadTime = 600, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = 216, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     DelayUntilFire = 120, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     GiveUpAfter = false,
                     MagsToLoad = 1, // Number of physical magazines to consume on reload.
@@ -114,7 +114,7 @@ namespace Scripts
             },
             Ammos = new[]
             {
-                SmallRailgunAmmo,
+                LargeRailgunAmmo_Apollo,
             },
             Animations = AryxRailgunAnims,
         };
@@ -127,81 +127,76 @@ namespace Scripts
                 {
                     new MountPointDef
                     {
-                        SubtypeId = "LargeRailgun",
-                        SpinPartId = "Boomsticks", // For weapons with a spinning barrel such as Gatling Guns
-                        MuzzlePartId = "None",
-                        AzimuthPartId = "None",
-                        ElevationPartId = "None",
-                        DurabilityMod = 0.5f,
+                        SubtypeId = "LargeRailgun", // Block Subtypeid. Your Cubeblocks contain this information
+                        SpinPartId = "None", // For weapons with a spinning barrel such as Gatling Guns. Subpart_Boomsticks must be written as Boomsticks.
+                        MuzzlePartId = "None", // The subpart where your muzzle empties are located. This is often the elevation subpart. Subpart_Boomsticks must be written as Boomsticks.
+                        AzimuthPartId = "None", // Your Rotating Subpart, the bit that moves sideways.
+                        ElevationPartId = "None",// Your Elevating Subpart, that bit that moves up.
+                        DurabilityMod = 0.5f, // GeneralDamageMultiplier, 0.25f = 25% damage taken.
+                        IconName = "" // Overlay for block inventory slots, like reactors, refineries, etc.
                     },
-                },
+                 },
                 Muzzles = new[]
                 {
-                    "muzzle_projectile_1",
+                    "barrel_001", // Where your Projectiles spawn. Use numbers not Letters. IE Muzzle_01 not Muzzle_A
                 },
-                Ejector = "",
+                Ejector = "", // Optional; empty from which to eject "shells" if specified.
+                Scope = "barrel_001", // Where line of sight checks are performed from. Must be clear of block collision.
             },
             Targeting = Common_Weapons_Targeting_Fixed_NoTargeting,
             HardPoint = new HardPointDef
             {
-                PartName = "Large Railgun", // name of weapon in terminal
-                DeviateShotAngle = 0.01f,
-                AimLeadingPrediction = Off, // Off, Basic, Accurate, Advanced
-                DelayCeaseFire = 120, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                PartName = "Large Railgun", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
+                DeviateShotAngle = 0.01f, // Projectile inaccuracy in degrees.
+                NpcSafe = true, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.
                 Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
                 Ai = Common_Weapons_Hardpoint_Ai_BasicFixed_NoTracking,
                 HardWare = new HardwareDef
                 {
-                    RotateRate = 0f,
-                    ElevateRate = 0f,
-                    MinAzimuth = 0,
-                    MaxAzimuth = 0,
-                    MinElevation = 0,
-                    MaxElevation = 0,
-                    FixedOffset = false,
-                    InventorySize = 1.320f,
-                    Offset = Vector(x: 0, y: 0, z: 0),
-                    Type = BlockWeapon, // BlockWeapon, HandWeapon, Phantom 
-                    IdlePower = 0.001f, // Power draw in MW while not charging, or for non-energy weapons. Defaults to 0.001.
+                    InventorySize = 1.0f, // Inventory capacity in kL.
+                    IdlePower = 0.001f, // Constant base power draw in MW.
+                    Offset = Vector(x: 0, y: 0, z: 0), // Offsets the aiming/firing line of the weapon, in metres.
+                    Type = BlockWeapon, // What type of weapon this is; BlockWeapon, HandWeapon, Phantom 
                 },
                 Other = new OtherDef
                 {
-                    //ConstructPartCap = 21,
-                    MuzzleCheck = false,
+                    //ConstructPartCap = 21, // Maximum number of blocks with this weapon on a grid; 0 = unlimited.
+                    MuzzleCheck = false, // Whether the weapon should check LOS from each individual muzzle in addition to the scope.
                     DisableLosCheck = true, // Do not perform LOS checks at all... not advised for self tracking weapons
                     NoVoxelLosCheck = true, // If set to true this ignores voxels for LOS checking.. which means weapons will fire at targets behind voxels.  However, this can save cpu in some situations, use with caution.
-                    Debug = false,
-                    //RestrictionRadius = 1.25f, // Meters, radius of sphere disable this gun if another is present
-                    //CheckInflatedBox = true, // if true, the bounding box of the gun is expanded by the RestrictionRadius
-                    //CheckForAnyWeapon = true, // if true, the check will fail if ANY gun is present, false only looks for this subtype
+                    Debug = false, // Force enables debug mode.
+                    //RestrictionRadius = 0, // Prevents other blocks of this type from being placed within this distance of the centre of the block.
+                    //CheckInflatedBox = false, // If true, the above distance check is performed from the edge of the block instead of the centre.
+                    //CheckForAnyWeapon = false, // If true, the check will fail if ANY weapon is present, not just weapons of the same subtype.
                 },
                 Loading = new LoadingDef
                 {
-                    RateOfFire = 60,
-                    BarrelsPerShot = 1,
-                    TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
-                    ReloadTime = 600, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    DelayUntilFire = 120, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    RateOfFire = 60, // Set this to 3600 for beam weapons. This is how fast your Gun fires.
+                    BarrelsPerShot = 1, // How many muzzles will fire a projectile per fire event.
+                    TrajectilesPerBarrel = 1, // Number of projectiles per muzzle per fire event.
+                    ReloadTime = 60*23+26, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 1, // Number of physical magazines to consume on reload.
-                    StayCharged = false, // Will start recharging whenever power cap is not full
+                    DelayUntilFire = 30, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    StayCharged = false, // Will start recharging whenever power cap is not full.
                 },
                 Audio = new HardPointAudioDef
                 {
-                    PreFiringSound = "ArcWepShipARYXRailgun_Windup",
-                    FiringSound = "MD_RailgunFire", // WepShipGatlingShot
-                    FiringSoundPerShot = true,
-                    ReloadSound = "",
-                    NoAmmoSound = "",
-                    HardPointRotationSound = "",
+                    PreFiringSound = "ArcWepRailgunLargeCharge", // Audio for warmup effect.
+                    FiringSound = "ArcWepRailgunLargeShot", // Audio for firing.
+                    FiringSoundPerShot = true, // Whether to replay the sound for each shot, or just loop over the entire track while firing.
+                    ReloadSound = "", // Sound SubtypeID, for when your Weapon is in a reloading state
+                    NoAmmoSound = "ArcWepShipRailgunNoAmmo",
+                    HardPointRotationSound = "", // Audio played when turret is moving.
                     BarrelRotationSound = "",
-                    FireSoundEndDelay = 300, // Measured in game ticks(6 = 100ms, 60 = 1 seconds, etc..).
+                    FireSoundEndDelay = 0, // How long the firing audio should keep playing after firing stops. Measured in game ticks(6 = 100ms, 60 = 1 seconds, etc..).
+                    FireSoundNoBurst = true, // Don't stop firing sound from looping when delaying after burst.
                 },
             },
             Ammos = new[]
             {
                 LargeRailgunAmmo,
             },
-            Animations = AryxRailgunAnims,
+            Animations = LargeRailgunAnimation,
         };
 
         WeaponDefinition SmallBlockRailgun => new WeaponDefinition
@@ -255,7 +250,7 @@ namespace Scripts
                 Ai = Common_Weapons_Hardpoint_Ai_BasicFixed_NoTracking,
                 HardWare = new HardwareDef
                 {
-                    InventorySize = 2.010f, // Inventory capacity in kL.
+                    InventorySize = 0.050f, // Inventory capacity in kL.
                     IdlePower = 0.001f, // Constant base power draw in MW.
                     Offset = Vector(x: 0, y: 0, z: 0), // Offsets the aiming/firing line of the weapon, in metres.
                     Type = BlockWeapon, // What type of weapon this is; BlockWeapon, HandWeapon, Phantom 
@@ -276,7 +271,7 @@ namespace Scripts
                     RateOfFire = 60, // Set this to 3600 for beam weapons. This is how fast your Gun fires.
                     BarrelsPerShot = 1, // How many muzzles will fire a projectile per fire event.
                     TrajectilesPerBarrel = 1, // Number of projectiles per muzzle per fire event.
-                    ReloadTime = 600, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = 11, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 1, // Number of physical magazines to consume on reload.
                     DelayUntilFire = 30, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     StayCharged = false, // Will start recharging whenever power cap is not full.
@@ -296,7 +291,7 @@ namespace Scripts
             },
             Ammos = new[]
             {
-                LargeRailgunAmmo_Apollo,
+                SmallRailgunAmmo,
             },
             Animations = SmallRailgunAnimation,
         };

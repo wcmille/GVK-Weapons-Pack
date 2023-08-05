@@ -7,7 +7,8 @@ namespace Scripts
 { // Don't edit above this line
     partial class Parts
     {
-        const float railGunStandardConstant = 600.0f * 2.0f * 0.001f; //600J / damage * 50% efficiency * 1 MW/1000W
+        //const float railGunStandardConstant = 600.0f * 2.0f; //600J / damage * 50% efficiency * 1 MW/1000W
+        const float railGunStandardConstant = 600f * 2f * 0.000001f * 6f;
         private AmmoDef SmallRailgunAmmo
         {
             get
@@ -23,7 +24,7 @@ namespace Scripts
             //DamageScales = KineticDamage(3000.0f*3000.0f*5.0f),
             //Trajectory = MakeBasicTrajectory(4000),
             
-                var sk = new SabotKinetic(this, 1550.0f, 2.5f, 5.0f);
+                var sk = new SabotKinetic(this, 1550.0f, 2.5f, 20.0f);
                 var AmmoGraphics = new GraphicDef
                 {
                     ModelName = "",
@@ -92,7 +93,7 @@ namespace Scripts
                 }; // Don't edit below this line
                 var round = sk.AssembleRound("SmallRailgunAmmo", "SmallRailgunAmmo", AmmoGraphics, AmmoAudio);
                 round.HybridRound = true; //AmmoMagazine based weapon with energy cost
-                round.EnergyCost = railGunStandardConstant; //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
+                round.EnergyCost = 6.0f*100.0f*railGunStandardConstant /3.85f/ 2.34f * (9.0f/11.0f); //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
 
                 return round;
             }
@@ -115,7 +116,7 @@ namespace Scripts
             //Trajectory = MakeBasicTrajectory(4500),
             get
             {
-                var sk = new SabotKinetic(this, 3535.0f, 30.0f, 40.0f);
+                var sk = new SabotKinetic(this, 1976.42f, 30.0f, 46.0f);
                 var AmmoGraphics = new GraphicDef
                 {
                     ModelName = "",
@@ -186,7 +187,7 @@ namespace Scripts
                 }; // Don't edit below this line
                 var round = sk.AssembleRound("LargeRailgunAmmo", "LargeRailgunAmmo", AmmoGraphics, AmmoAudio);
                 round.HybridRound = true; //AmmoMagazine based weapon with energy cost
-                round.EnergyCost = railGunStandardConstant; //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
+                round.EnergyCost = 702.0f*railGunStandardConstant/1.1715625f/216.0f; //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
                 return round;
             }
         }
@@ -277,7 +278,7 @@ namespace Scripts
 
                 var round = sk.AssembleRound("LargeRailgunAmmo", "LargeRailgunAmmo", AmmoGraphics, AmmoAudio);
                 round.HybridRound = true; //AmmoMagazine based weapon with energy cost
-                round.EnergyCost = railGunStandardConstant; //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
+                round.EnergyCost = railGunStandardConstant/2.34f; //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
                 return round;
             }
         }
