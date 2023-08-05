@@ -1,39 +1,14 @@
 using static Scripts.Structure.WeaponDefinition;
 using static Scripts.Structure.WeaponDefinition.AmmoDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.EjectionDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.EjectionDef.SpawnType;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.ShapeDef.Shapes;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef.CustomScalesDef.SkipMode;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.FragmentDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.PatternDef.PatternModes;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.FragmentDef.TimedSpawnDef.PointTypes;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.ApproachDef.Conditions;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.ApproachDef.UpRelativeTo;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.ApproachDef.FwdRelativeTo;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.ApproachDef.ReInitCondition;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.ApproachDef.RelativeTo;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.ApproachDef.ConditionOperators;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.ApproachDef.StageEvents;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.ApproachDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.GuidanceType;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef.ShieldDef.ShieldType;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef.DeformDef.DeformTypes;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.AreaOfDamageDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.AreaOfDamageDef.Falloff;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.AreaOfDamageDef.AoeShape;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.EwarDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.EwarDef.EwarMode;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.EwarDef.EwarType;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.EwarDef.PushPullDef.Force;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef.LineDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef.LineDef.FactionColor;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef.LineDef.TracerBaseDef;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef.LineDef.Texture;
-using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef.DecalDef;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.AreaOfDamageDef.Falloff;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef.DamageTypes.Damage;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef.LineDef;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.GuidanceType;
 
 namespace Scripts
 { // Don't edit above this line
@@ -42,7 +17,7 @@ namespace Scripts
         private AmmoDef Missiles_HeavyMissile => new AmmoDef // Your ID, for slotting into the Weapon CS
         {
             AmmoMagazine = "Missiles_HeavyMissile", // SubtypeId of physical ammo magazine. Use "Energy" for weapons without physical ammo.
-            AmmoRound = "Missiles_HeavyMissile", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
+            AmmoRound = "HeavyMissile", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
             BaseDamage = 1f, // Direct damage; one steel plate is worth 100.
             Mass = 400f, // In kilograms; how much force the impact will apply to the target.
             Health = 15, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
@@ -110,15 +85,42 @@ namespace Scripts
             },
             Trajectory = new TrajectoryDef
             {
-                Guidance = TravelTo, // None, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
+                Guidance = Smart, // None, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
+                TargetLossDegree = 45,
+                AccelPerSec = 30f,
+                TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 1500, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
                 DesiredSpeed = 200, // voxel phasing if you go above 5100
                 MaxTrajectory = 3000f, // Max Distance the projectile or beam can Travel.
-                GravityMultiplier = 1.1f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable. Natural Gravity Only.
+                TotalAcceleration = 0f, // 0 means no limit, something to do due with a thing called delta and something called v.
+                
                 Smarts = new SmartsDef
                 {
-                    ScanRange = 1500, // 0 disables projectile screening, the max range that this projectile will be seen at by defending grids (adds this projectile to defenders lookup database). 
-                    NoSteering = true, // this disables target follow and instead travel straight ahead (but will respect offsets).
+                    SteeringLimit = 0, // 0 means no limit, value is in degrees, good starting is 150.  This enable advanced smart "control", cost of 3 on a scale of 1-5, 0 being basic smart.
+                    Inaccuracy = 2f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
+                    Aggressiveness = 2f, // controls how responsive tracking is, recommended value 3-5.
+                    MaxLateralThrust = 0.1, // controls how sharp the projectile may turn, this is the cheaper but less realistic version of SteeringLimit, cost of 2 on a scale of 1-5, 0 being basic smart.
+                    NavAcceleration = 0, // helps influence how the projectile steers, 0 defaults to 1/2 Aggressiveness value or 0 if its 0, a value less than 0 disables this feature. 
+                    TrackingDelay = 60, // Measured in Shape diameter units traveled.
+                    //AccelClearance = true, // Setting this to true will prevent smart acceleration until it is clear of the grid and tracking delay has been met (free fall).
+                    MaxChaseTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    OverideTarget = false, // when set to true ammo picks its own target, does not use hardpoint's.
+                    CheckFutureIntersection = false, // Utilize obstacle avoidance for drones/smarts
+                    FutureIntersectionRange = 0, // Range in front of the projectile at which it will detect obstacle.  If set to zero it defaults to DesiredSpeed + Shape Diameter
+                    MaxTargets = 0, // Number of targets allowed before ending, 0 = unlimited
+                    NoTargetExpire = false, // Expire without ever having a target at TargetLossTime
+                    Roam = false, // Roam current area after target loss
+                    KeepAliveAfterTargetLoss = true, // Whether to stop early death of projectile on target loss
+                    OffsetRatio = 0.1f, // The ratio to offset the random direction (0 to 1) 
+                    OffsetTime = 120, // how often to offset degree, measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..)
+                    OffsetMinRange = 500, // The range from target at which offsets are no longer active
+                    FocusOnly = true, // only target the constructs Ai's focus target. Don't use with OverideTarget.
+                    FocusEviction = false, // If FocusOnly and this to true will force smarts to lose target when there is no focus target
+                    ScanRange = 1200, // 0 disables projectile screening, the max range that this projectile will be seen at by defending grids (adds this projectile to defenders lookup database). 
+                    NoSteering = false, // this disables target follow and instead travel straight ahead (but will respect offsets).
+                    MinTurnSpeed = 100, // set this to a reasonable value to avoid projectiles from spinning in place or being too aggressive turing at slow speeds 
+                    NoTargetApproach = false, // If true approaches can begin prior to the projectile ever having had a target.
+                    AltNavigation = false, // If true this will swap the default navigation algorithm from ProNav to ZeroEffort Miss.  Zero effort is more direct/precise but less cinematic 
                 },
             },
             AmmoGraphics = new GraphicDef

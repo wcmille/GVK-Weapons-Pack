@@ -1,14 +1,11 @@
-﻿using VRageMath;
-using System.Collections.Generic;
-using static Scripts.Structure;
+﻿using static Scripts.Structure;
 using static Scripts.Structure.WeaponDefinition;
-using static Scripts.Structure.WeaponDefinition.ModelAssignmentsDef;
 using static Scripts.Structure.WeaponDefinition.HardPointDef;
+using static Scripts.Structure.WeaponDefinition.HardPointDef.HardwareDef.HardwareType;
 using static Scripts.Structure.WeaponDefinition.HardPointDef.Prediction;
+using static Scripts.Structure.WeaponDefinition.ModelAssignmentsDef;
 using static Scripts.Structure.WeaponDefinition.TargetingDef.BlockTypes;
 using static Scripts.Structure.WeaponDefinition.TargetingDef.Threat;
-using static Scripts.Structure.WeaponDefinition.HardPointDef.HardwareDef;
-using static Scripts.Structure.WeaponDefinition.HardPointDef.HardwareDef.HardwareType;
 
 namespace Scripts
 {
@@ -30,7 +27,7 @@ namespace Scripts
             ClosestFirst = false, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
             IgnoreDumbProjectiles = true, // Don't fire at non-smart projectiles.
             LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
-            MaxTargetDistance = 700, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
+            MaxTargetDistance = 3000, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
             TopTargets = 1, // 0 = unlimited, max number of top targets to randomize between.
             TopBlocks = 4, // 0 = unlimited, max number of blocks to randomize between
             StopTrackingSpeed = 1000, // do not track target threats traveling faster than this speed
@@ -94,7 +91,7 @@ namespace Scripts
                     MaxAzimuth = 180,
                     MinElevation = -5,
                     MaxElevation = 90,
-                    InventorySize = 1.040f,
+                    InventorySize = 120f * 6.0f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                     Type = BlockWeapon, // BlockWeapon, HandWeapon, Phantom 
                     IdlePower = 0.01f, // Power draw in MW while not charging, or for non-energy weapons. Defaults to 0.001.
@@ -243,13 +240,15 @@ namespace Scripts
             HardPoint = new HardPointDef
             {
                 PartName = "LargeMissileLauncher", // name of weapon in terminal
-                DeviateShotAngle = 135f,
+                DeviateShotAngle = 1f,                
+                AddToleranceToTracking = true,
+                AimingTolerance = 135f,
                 NpcSafe = true, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.
                 Ui = Common_Weapons_Hardpoint_Ui_FullDisable,
-                Ai = Common_Weapons_Hardpoint_Ai_BasicTurret,
+                Ai = Common_Weapons_Hardpoint_Ai_BasicFixed_Tracking,
                 HardWare = new HardwareDef
                 {
-                    InventorySize = 2.470f,
+                    InventorySize = 19f*120f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                     Type = BlockWeapon, // BlockWeapon, HandWeapon, Phantom 
                     IdlePower = 0.001f, // Power draw in MW while not charging, or for non-energy weapons. Defaults to 0.001.
@@ -257,7 +256,7 @@ namespace Scripts
                 Other = Common_Weapons_Hardpoint_Other_21CapOnly,
                 Loading = new LoadingDef
                 {
-                    RateOfFire = 320,
+                    RateOfFire = 120,
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     ReloadTime = 960, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
@@ -318,7 +317,7 @@ namespace Scripts
                 Ai = Common_Weapons_Hardpoint_Ai_BasicFixed_NoTracking,
                 HardWare = new HardwareDef
                 {
-                    InventorySize = 0.520f,
+                    InventorySize = 4*60f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                     Type = BlockWeapon, // BlockWeapon, HandWeapon, Phantom 
                     IdlePower = 0.001f, // Power draw in MW while not charging, or for non-energy weapons. Defaults to 0.001.

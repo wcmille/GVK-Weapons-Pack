@@ -244,8 +244,8 @@
 				<Y>1</Y>
 				<Z>1</Z>
 			</Size>
-			<Mass>400</Mass>
-			<Volume>200</Volume>
+			<Mass>300</Mass>
+			<Volume>120</Volume>
 			<Model>Models\Cubes\Large\missileBattery01\mediumMissile01_model.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>1</Capacity>
