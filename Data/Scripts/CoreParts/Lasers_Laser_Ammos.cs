@@ -10,7 +10,7 @@ namespace Scripts
 { // Don't edit above this line
     partial class Parts
     {
-        const float laserStandardConstant = 600.0f * 2.0f * 0.001f; //600J / damage * 50% efficiency * 1 MW/1000W
+        const float laserStandardConstant = joulesPerDamage * 2.0f * 0.001f; //600J / damage * 50% efficiency * 1 MW/1000W
         private AmmoDef Lasers_Laser_Small => new AmmoDef //Blue Receptor laser
         {
             AmmoMagazine = "Energy",

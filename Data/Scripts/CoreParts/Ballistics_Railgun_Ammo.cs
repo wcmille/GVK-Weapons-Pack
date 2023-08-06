@@ -8,7 +8,8 @@ namespace Scripts
     partial class Parts
     {
         //const float railGunStandardConstant = 600.0f * 2.0f; //600J / damage * 50% efficiency * 1 MW/1000W
-        const float railGunStandardConstant = 600f * 2f * 0.000001f * 6f;
+        const float railGunStandardConstant = joulesPerDamage * 2f * 0.000001f * 6f;
+        const float joulesPerDamage = 600f;
         private AmmoDef SmallRailgunAmmo
         {
             get

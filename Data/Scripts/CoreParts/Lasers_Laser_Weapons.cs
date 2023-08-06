@@ -1,17 +1,11 @@
-﻿using VRageMath;
-using System.Collections.Generic;
-using static Scripts.Structure;
+﻿using static Scripts.Structure;
 using static Scripts.Structure.WeaponDefinition;
-using static Scripts.Structure.WeaponDefinition.ModelAssignmentsDef;
 using static Scripts.Structure.WeaponDefinition.HardPointDef;
+using static Scripts.Structure.WeaponDefinition.HardPointDef.HardwareDef.HardwareType;
 using static Scripts.Structure.WeaponDefinition.HardPointDef.Prediction;
+using static Scripts.Structure.WeaponDefinition.ModelAssignmentsDef;
 using static Scripts.Structure.WeaponDefinition.TargetingDef.BlockTypes;
 using static Scripts.Structure.WeaponDefinition.TargetingDef.Threat;
-using static Scripts.Structure.WeaponDefinition.TargetingDef;
-using static Scripts.Structure.WeaponDefinition.TargetingDef.CommunicationDef.Comms;
-using static Scripts.Structure.WeaponDefinition.TargetingDef.CommunicationDef.SecurityMode;
-using static Scripts.Structure.WeaponDefinition.HardPointDef.HardwareDef;
-using static Scripts.Structure.WeaponDefinition.HardPointDef.HardwareDef.HardwareType;
 
 namespace Scripts
 {
@@ -149,9 +143,9 @@ namespace Scripts
                     DisableLosCheck = false, // Do not perform LOS checks at all... not advised for self tracking weapons
                     NoVoxelLosCheck = false, // If set to true this ignores voxels for LOS checking.. which means weapons will fire at targets behind voxels.  However, this can save cpu in some situations, use with caution.
                     Debug = false,
-                    RestrictionRadius = 1.25f, // Meters, radius of sphere disable this gun if another is present
-                    CheckInflatedBox = true, // if true, the bounding box of the gun is expanded by the RestrictionRadius
-                    CheckForAnyWeapon = true, // if true, the check will fail if ANY gun is present, false only looks for this subtype
+                    //RestrictionRadius = 1.25f, // Meters, radius of sphere disable this gun if another is present
+                    //CheckInflatedBox = true, // if true, the bounding box of the gun is expanded by the RestrictionRadius
+                    //CheckForAnyWeapon = true, // if true, the check will fail if ANY gun is present, false only looks for this subtype
                 },
                 Loading = Lasers_Laser_Loading_Large,
                 Audio = Lasers_Laser_Audio_Large,
