@@ -11,9 +11,6 @@ namespace Scripts
 {
     partial class Parts
     {
-
-        //Common definitions
-
         private TargetingDef Missiles_Rocket_Targeting => new TargetingDef
         {
             Threats = new[]
