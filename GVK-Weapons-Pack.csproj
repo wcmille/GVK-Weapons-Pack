@@ -91,7 +91,6 @@
     <Compile Include="Data\Scripts\CoreParts\Missiles_Torpedo_Animations_Crusader.cs" />
     <Compile Include="Data\Scripts\CoreParts\Missiles_Torpedo_Weapons.cs" />
     <Compile Include="Data\Scripts\CoreParts\Other_Radar_Ammos.cs" />
-    <Compile Include="Data\Scripts\CoreParts\Other_Radar_Weapons.cs" />
     <Compile Include="Data\Scripts\CoreParts\script\PartCompile.cs" />
     <Compile Include="Data\Scripts\CoreParts\script\Slave.cs" />
     <Compile Include="Data\Scripts\CoreParts\script\Structure.cs" />

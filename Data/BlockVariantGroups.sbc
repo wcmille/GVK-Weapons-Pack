@@ -40,8 +40,6 @@
         <Block Type="MyObjectBuilder_LargeMissileTurret" Subtype="SmallBlockMediumCalibreTurret"/>
         <Block Type="MyObjectBuilder_LargeMissileTurret" Subtype="LargeCalibreTurret"/>
         <Block Type="MyObjectBuilder_LargeMissileTurret" Subtype="ARYXRailgunTurret"/>
-        <Block Type="MyObjectBuilder_LargeMissileTurret" Subtype="OKIDesignator"/>
-        <Block Type="MyObjectBuilder_LargeMissileTurret" Subtype="OKIObserverSM"/>
         <Block Type="MyObjectBuilder_LargeMissileTurret" Subtype="MA_PDT"/>
         <Block Type="MyObjectBuilder_LargeMissileTurret" Subtype="MA_PDT_sm"/>
         <Block Type="MyObjectBuilder_ConveyorSorter" Subtype="MA_T2PDX"/>

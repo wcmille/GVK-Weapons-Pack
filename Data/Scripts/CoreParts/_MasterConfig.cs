@@ -43,7 +43,6 @@ namespace Scripts
 							ReceptorCoilGun,
 							ReceptorTurret,
 							MA_Fixed_T2,
-							Other_Radar_Large,
 							SentinelTurret,
 							AryxVulcanTurret,
 							tukkaLauncher01,
