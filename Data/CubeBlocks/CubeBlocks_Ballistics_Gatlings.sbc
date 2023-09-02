@@ -18,7 +18,6 @@
 			<Model>Models\AWE_Vulcan\ARYXVulcanBase.mwm</Model>
             <Components>
                 <Component Subtype="SteelPlate" Count="140" />
-				<Component Subtype="GVK_SmallCaliber_Tech" Count="5"/>
                 <Component Subtype="Construction" Count="810" />
                 <Component Subtype="SmallTube" Count="170" />
                 <Component Subtype="Motor" Count="220" />
@@ -75,7 +74,6 @@
 			<Model>Models\Akiad\Small\SentinelTurretBase.mwm</Model>
 			<Components>
 				<Component Subtype="SteelPlate" Count="90"/>
-				<Component Subtype="GVK_SmallCaliber_Tech" Count="2"/>
 				<Component Subtype="MetalGrid" Count="270"/>
 				<Component Subtype="SmallTube" Count="110"/>
 				<Component Subtype="Motor" Count="150"/>
@@ -164,7 +162,6 @@
 			<UseModelIntersection>true</UseModelIntersection>
 			<Components>
 				<Component Subtype="SteelPlate" Count="90"/>
-				<Component Subtype="GVK_SmallCaliber_Tech" Count="2"/>
 				<Component Subtype="MetalGrid" Count="270"/>
 				<Component Subtype="SmallTube" Count="110"/>
 				<Component Subtype="Motor" Count="150"/>
@@ -249,7 +246,6 @@
 			<UseModelIntersection>true</UseModelIntersection>
 			<Components>
 				<Component Subtype="SteelPlate" Count="9"/>
-				<Component Subtype="GVK_SmallCaliber_Tech" Count="1"/>
 				<Component Subtype="MetalGrid" Count="25"/>
 				<Component Subtype="SmallTube" Count="10"/>
 				<Component Subtype="Motor" Count="14"/>
@@ -436,7 +432,6 @@
       <Model>Models\Cubes\Small\Autocannon.mwm</Model>
       <Components>
         <Component Subtype="SteelPlate" Count="4"/>
-        <Component Subtype="GVK_SmallCaliber_Tech" Count="2"/>
         <Component Subtype="MetalGrid" Count="10"/>
         <Component Subtype="SmallTube" Count="4"/>
         <Component Subtype="Motor" Count="6"/>
@@ -492,7 +487,6 @@
       <UseModelIntersection>true</UseModelIntersection>
       <Components>
         <Component Subtype="SteelPlate" Count="10"/>
-        <Component Subtype="GVK_SmallCaliber_Tech" Count="2"/>
         <Component Subtype="MetalGrid" Count="28"/>
         <Component Subtype="SmallTube" Count="12"/>
         <Component Subtype="Motor" Count="15"/>

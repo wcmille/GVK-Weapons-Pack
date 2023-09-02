@@ -19,7 +19,6 @@
 			<UseModelIntersection>true</UseModelIntersection>
 			<Components>
 				<Component Subtype="SteelPlate" Count="140"/>
-				<Component Subtype="GVK_LargeCaliber_Tech" Count="2"/>
 				<Component Subtype="Construction" Count="210"/>
 				<Component Subtype="SmallTube" Count="83"/>
 				<Component Subtype="LargeTube" Count="69"/>
@@ -113,7 +112,6 @@
 			<UseModelIntersection>true</UseModelIntersection>
 			<Components>
 				<Component Subtype="SteelPlate" Count="20"/>
-				<Component Subtype="GVK_LargeCaliber_Tech" Count="1"/>
 				<Component Subtype="Construction" Count="29"/>
 				<Component Subtype="SmallTube" Count="12"/>
 				<Component Subtype="LargeTube" Count="10"/>
@@ -202,7 +200,6 @@
 			<Model>Models\Cubes\Small\MediumCaliberGun.mwm</Model>
 			<Components>
 				<Component Subtype="SteelPlate" Count="7"/>
-				<Component Subtype="GVK_LargeCaliber_Tech" Count="1"/>
 				<Component Subtype="Construction" Count="10"/>
 				<Component Subtype="SmallTube" Count="4"/>
 				<Component Subtype="LargeTube" Count="4"/>

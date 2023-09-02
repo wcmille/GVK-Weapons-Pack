@@ -20,13 +20,6 @@
 
       <Components>
         <Component Subtype="SteelPlate" Count="140" />
-        <Component Subtype="GVK_Missile_Tech" Count="5"/>
-        <Component Subtype="GVK_Missile_Tech" Count="1">
-          <DeconstructId>
-            <TypeId>Ore</TypeId>
-            <SubtypeId>Scrap</SubtypeId>
-          </DeconstructId>
-        </Component>
         <Component Subtype="MetalGrid" Count="56" />
         <Component Subtype="LargeTube" Count="28" />
         <Component Subtype="Motor" Count="280" />

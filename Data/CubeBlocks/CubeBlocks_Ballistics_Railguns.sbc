@@ -23,9 +23,7 @@
       <!-- added grind to scrap because WC weapons can weld with loaded ammo from projection -->
       <Components>
         <Component Subtype="SteelPlate" Count="410"/>
-        <Component Subtype="GVK_Data_Core" Count="1"/>
-        <Component Subtype="GVK_LargeCaliber_Tech" Count="3"/>
-        <Component Subtype="GVK_LargeCaliber_Tech" Count="1">
+        <Component Subtype="GVK_Laser_Tech" Count="3">
           <DeconstructId>
             <TypeId>Ore</TypeId>
             <SubtypeId>Scrap</SubtypeId>
@@ -81,6 +79,12 @@
       <Model>Models\Cubes\Small\RailGun.mwm</Model>
       <Components>
         <Component Subtype="SteelPlate" Count="5"/>
+        <Component Subtype="GVK_Laser_Tech" Count="1">
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Scrap</SubtypeId>
+          </DeconstructId>
+        </Component>
         <Component Subtype="Construction" Count="20"/>
         <Component Subtype="Superconductor" Count="20"/>
         <Component Subtype="LargeTube" Count="6"/>
@@ -137,6 +141,12 @@
       <Model>Models\Cubes\Large\RailGun.mwm</Model>
       <Components>
         <Component Subtype="SteelPlate" Count="50"/>
+        <Component Subtype="GVK_Laser_Tech" Count="10">
+          <DeconstructId>
+            <TypeId>Ore</TypeId>
+            <SubtypeId>Scrap</SubtypeId>
+          </DeconstructId>
+        </Component>
         <Component Subtype="Construction" Count="150"/>
         <Component Subtype="Superconductor" Count="150"/>
         <Component Subtype="LargeTube" Count="60"/>
