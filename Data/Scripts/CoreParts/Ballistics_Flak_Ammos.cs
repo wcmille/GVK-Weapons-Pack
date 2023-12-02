@@ -31,7 +31,7 @@ namespace Scripts
                 //NoGridOrArmorScaling = false, // If you enable this you can remove the damagescale section entirely.
                 //DamageScales = KineticDamage(4E6f),
                 //Trajectory = MakeBasicTrajectory(1500),
-                var sk = new SabotKinetic(this, 1500, 10.0f, 105.0f);
+                var sk = new SabotKinetic(this, 1500, 6.0f, 105.0f);
                 var ag = new GraphicDef
                 {
                     ModelName = "",

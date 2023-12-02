@@ -227,7 +227,7 @@
 			<GuiVisible>true</GuiVisible>
 			<Components>
 				<Component Subtype="SteelPlate" Count="7"/>
-				<Component Subtype="GVK_Laser_Tech" Count="2"/>
+				<Component Subtype="GVK_Laser_Tech" Count="1"/>
 				<Component Subtype="SmallTube" Count="10"/>
 				<Component Subtype="Motor" Count="8"/>
 				<Component Subtype="Superconductor" Count="23"/>

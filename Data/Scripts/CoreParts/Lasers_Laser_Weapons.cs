@@ -11,9 +11,7 @@ namespace Scripts
 {
     partial class Parts
     {
-
         //Common Definitions
-
         private TargetingDef Lasers_Laser_Targeting_Turret_Large => new TargetingDef
         {
             Threats = new[]
@@ -153,7 +151,7 @@ namespace Scripts
             Ammos = new[]
             {
                 Lasers_Laser_Large,
-                Lasers_Laser_Large_Shrapnel
+                //Lasers_Laser_Large_Shrapnel
             },
         };
 
@@ -213,9 +211,9 @@ namespace Scripts
                     DisableLosCheck = false, // Do not perform LOS checks at all... not advised for self tracking weapons
                     NoVoxelLosCheck = false, // If set to true this ignores voxels for LOS checking.. which means weapons will fire at targets behind voxels.  However, this can save cpu in some situations, use with caution.
                     Debug = false,
-                    RestrictionRadius = 1.25f, // Meters, radius of sphere disable this gun if another is present
-                    CheckInflatedBox = true, // if true, the bounding box of the gun is expanded by the RestrictionRadius
-                    CheckForAnyWeapon = true, // if true, the check will fail if ANY gun is present, false only looks for this subtype
+                    //RestrictionRadius = 1.25f, // Meters, radius of sphere disable this gun if another is present
+                    //CheckInflatedBox = true, // if true, the bounding box of the gun is expanded by the RestrictionRadius
+                    //CheckForAnyWeapon = true, // if true, the check will fail if ANY gun is present, false only looks for this subtype
                 },
                 Loading = Lasers_Laser_Loading_Large,
                 Audio = Lasers_Laser_Audio_Large,
@@ -223,7 +221,7 @@ namespace Scripts
             Ammos = new[]
             {
                 Lasers_Laser_Large,
-                Lasers_Laser_Large_Shrapnel
+                //Lasers_Laser_Large_Shrapnel
             },
         };
 
@@ -272,9 +270,9 @@ namespace Scripts
                     DisableLosCheck = false, // Do not perform LOS checks at all... not advised for self tracking weapons
                     NoVoxelLosCheck = false, // If set to true this ignores voxels for LOS checking.. which means weapons will fire at targets behind voxels.  However, this can save cpu in some situations, use with caution.
                     Debug = false,
-                    RestrictionRadius = 0.5f, // Meters, radius of sphere disable this gun if another is present
-                    CheckInflatedBox = false, // if true, the bounding box of the gun is expanded by the RestrictionRadius
-                    CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype
+                    //RestrictionRadius = 0.5f, // Meters, radius of sphere disable this gun if another is present
+                    //CheckInflatedBox = false, // if true, the bounding box of the gun is expanded by the RestrictionRadius
+                    //CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype
                 },
                 Loading = Lasers_Laser_Loading_Large,
                 Audio = Lasers_Laser_Audio_Small,
@@ -282,7 +280,7 @@ namespace Scripts
             Ammos = new[]
             {
                 Lasers_Laser_Small,
-                Lasers_Laser_Small_Shrapnel
+                //Lasers_Laser_Small_Shrapnel
             },
         };
 
@@ -339,9 +337,9 @@ namespace Scripts
                     DisableLosCheck = false, // Do not perform LOS checks at all... not advised for self tracking weapons
                     NoVoxelLosCheck = false, // If set to true this ignores voxels for LOS checking.. which means weapons will fire at targets behind voxels.  However, this can save cpu in some situations, use with caution.
                     Debug = false,
-                    RestrictionRadius = 0.5f, // Meters, radius of sphere disable this gun if another is present
-                    CheckInflatedBox = true, // if true, the bounding box of the gun is expanded by the RestrictionRadius
-                    CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype
+                    //RestrictionRadius = 0.5f, // Meters, radius of sphere disable this gun if another is present
+                    //CheckInflatedBox = true, // if true, the bounding box of the gun is expanded by the RestrictionRadius
+                    //CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype
                 },
                 Loading = Lasers_Laser_Loading_Large,
                 Audio = Lasers_Laser_Audio_Small,
@@ -349,7 +347,7 @@ namespace Scripts
             Ammos = new[]
             {
                 Lasers_Laser_Small,
-                Lasers_Laser_Small_Shrapnel
+                //Lasers_Laser_Small_Shrapnel
             },
         };
 
@@ -408,9 +406,9 @@ namespace Scripts
                     DisableLosCheck = false, // Do not perform LOS checks at all... not advised for self tracking weapons
                     NoVoxelLosCheck = false, // If set to true this ignores voxels for LOS checking.. which means weapons will fire at targets behind voxels.  However, this can save cpu in some situations, use with caution.
                     Debug = false,
-                    RestrictionRadius = 0f, // Meters, radius of sphere disable this gun if another is present
-                    CheckInflatedBox = false, // if true, the bounding box of the gun is expanded by the RestrictionRadius
-                    CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype
+                    //RestrictionRadius = 0f, // Meters, radius of sphere disable this gun if another is present
+                    //CheckInflatedBox = false, // if true, the bounding box of the gun is expanded by the RestrictionRadius
+                    //CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype
                 },
                 Loading = new LoadingDef
                 {
@@ -428,7 +426,7 @@ namespace Scripts
             Ammos = new[]
             {
                 Lasers_Laser_Large,
-                Lasers_Laser_Large_Shrapnel
+                //Lasers_Laser_Large_Shrapnel
             },
         };
     }

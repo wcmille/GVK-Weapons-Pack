@@ -10,14 +10,16 @@ namespace Scripts
 { // Don't edit above this line
     partial class Parts
     {
-        const float laserStandardConstant = joulesPerDamage * 2.0f * 0.001f; //600J / damage * 50% efficiency * 1 MW/1000W
+        const float laserScale = 0.4f;
+        const float laserStandardConstant = joulesPerDamage * 2.0f * 0.001f / laserScale; //600J / damage * 50% efficiency * 1 MW/1000W
+
         private AmmoDef Lasers_Laser_Small => new AmmoDef //Blue Receptor laser
         {
             AmmoMagazine = "Energy",
             AmmoRound = "Lasers_Laser_Small",
             HybridRound = false, //AmmoMagazine based weapon with energy cost
             EnergyCost = laserStandardConstant, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel    (15 * 0.05 * 3600/60/60 = 0.75MW per tick)
-            BaseDamage = 75,
+            BaseDamage = 75 * laserScale,
             Mass = 0f, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
             HardPointUsable = true,
@@ -129,23 +131,23 @@ namespace Scripts
             AmmoRound = "Lasers_Laser_Large", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = laserStandardConstant, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
-            BaseDamage = 150f, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 150f * laserScale, // Direct damage; one steel plate is worth 100.
             Health = 0, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             HardPointUsable = true, // Whether this is a primary ammo type fired directly by the turret. Set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
             NpcSafe = true, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.			
-            Fragment = new FragmentDef
-            {
-                AmmoRound = "Lasers_Laser_Large_Shrapnel", // AmmoRound field of the ammo to spawn.
-                Fragments = 1, // Number of projectiles to spawn.
-                Degrees = 0, // Cone in which to randomize direction of spawned projectiles.
-                Reverse = false, // Spawn projectiles backward instead of forward.
-                DropVelocity = false, // fragments will not inherit velocity from parent.
-                Offset = 0f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards), value is read from parent ammo type.
-                Radial = 0f, // Determines starting angle for Degrees of spread above.  IE, 0 degrees and 90 radial goes perpendicular to travel path
-                MaxChildren = 0, // number of maximum branches for fragments from the roots point of view, 0 is unlimited
-                IgnoreArming = true, // If true, ignore ArmOnHit or MinArmingTime in EndOfLife definitions
-                AdvOffset = Vector(x: 0, y: 0, z: 0), // advanced offsets the fragment by xyz coordinates relative to parent, value is read from fragment ammo type.
-            },
+            //Fragment = new FragmentDef
+            //{
+            //    AmmoRound = "Lasers_Laser_Large_Shrapnel", // AmmoRound field of the ammo to spawn.
+            //    Fragments = 1, // Number of projectiles to spawn.
+            //    Degrees = 0, // Cone in which to randomize direction of spawned projectiles.
+            //    Reverse = false, // Spawn projectiles backward instead of forward.
+            //    DropVelocity = false, // fragments will not inherit velocity from parent.
+            //    Offset = 0f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards), value is read from parent ammo type.
+            //    Radial = 0f, // Determines starting angle for Degrees of spread above.  IE, 0 degrees and 90 radial goes perpendicular to travel path
+            //    MaxChildren = 0, // number of maximum branches for fragments from the roots point of view, 0 is unlimited
+            //    IgnoreArming = true, // If true, ignore ArmOnHit or MinArmingTime in EndOfLife definitions
+            //    AdvOffset = Vector(x: 0, y: 0, z: 0), // advanced offsets the fragment by xyz coordinates relative to parent, value is read from fragment ammo type.
+            //},
             DamageScales = new DamageScaleDef
             {
                 MaxIntegrity = 0f, // Blocks with integrity higher than this value will be immune to damage from this projectile; 0 = disabled.
@@ -233,23 +235,23 @@ namespace Scripts
             AmmoRound = "Lasers_Laser_Dual", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = laserStandardConstant, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
-            BaseDamage = 150f, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 150f * laserScale, // Direct damage; one steel plate is worth 100.
             Health = 0, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             HardPointUsable = true, // Whether this is a primary ammo type fired directly by the turret. Set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
             NpcSafe = true, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.			
-            Fragment = new FragmentDef
-            {
-                AmmoRound = "Lasers_Laser_Large_Shrapnel", // AmmoRound field of the ammo to spawn.
-                Fragments = 1, // Number of projectiles to spawn.
-                Degrees = 0, // Cone in which to randomize direction of spawned projectiles.
-                Reverse = false, // Spawn projectiles backward instead of forward.
-                DropVelocity = false, // fragments will not inherit velocity from parent.
-                Offset = 0f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards), value is read from parent ammo type.
-                Radial = 0f, // Determines starting angle for Degrees of spread above.  IE, 0 degrees and 90 radial goes perpendicular to travel path
-                MaxChildren = 0, // number of maximum branches for fragments from the roots point of view, 0 is unlimited
-                IgnoreArming = true, // If true, ignore ArmOnHit or MinArmingTime in EndOfLife definitions
-                AdvOffset = Vector(x: 0, y: 0, z: 0), // advanced offsets the fragment by xyz coordinates relative to parent, value is read from fragment ammo type.
-            },
+            //Fragment = new FragmentDef
+            //{
+            //    AmmoRound = "Lasers_Laser_Large_Shrapnel", // AmmoRound field of the ammo to spawn.
+            //    Fragments = 1, // Number of projectiles to spawn.
+            //    Degrees = 0, // Cone in which to randomize direction of spawned projectiles.
+            //    Reverse = false, // Spawn projectiles backward instead of forward.
+            //    DropVelocity = false, // fragments will not inherit velocity from parent.
+            //    Offset = 0f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards), value is read from parent ammo type.
+            //    Radial = 0f, // Determines starting angle for Degrees of spread above.  IE, 0 degrees and 90 radial goes perpendicular to travel path
+            //    MaxChildren = 0, // number of maximum branches for fragments from the roots point of view, 0 is unlimited
+            //    IgnoreArming = true, // If true, ignore ArmOnHit or MinArmingTime in EndOfLife definitions
+            //    AdvOffset = Vector(x: 0, y: 0, z: 0), // advanced offsets the fragment by xyz coordinates relative to parent, value is read from fragment ammo type.
+            //},
             DamageScales = new DamageScaleDef
             {
                 MaxIntegrity = 0f, // Blocks with integrity higher than this value will be immune to damage from this projectile; 0 = disabled.
@@ -327,115 +329,115 @@ namespace Scripts
             },
         };
 
-        private AmmoDef Lasers_Laser_Large_Shrapnel => new AmmoDef //Red PDX laser Shrapnel
-        {
-            AmmoMagazine = "Energy",
-            AmmoRound = "Lasers_Laser_Large_Shrapnel",
-            HybridRound = false, //AmmoMagazine based weapon with energy cost
-            EnergyCost = 0.0000001f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel    (15 * 0.05 * 3600/60/60 = 0.75MW per tick)
-            BaseDamage = 150f,
-            HardPointUsable = false,
-            DamageScales = new DamageScaleDef
-            {
-                MaxIntegrity = 0f, // Blocks with integrity higher than this value will be immune to damage from this projectile; 0 = disabled.
-                DamageVoxels = false, // Whether to damage voxels.
-                SelfDamage = false, // Whether to damage the weapon's own grid.
-                HealthHitModifier = -1, // How much Health to subtract from another projectile on hit; defaults to 1 if zero or less.
-                VoxelHitModifier = -1, // Voxel damage multiplier; defaults to 1 if zero or less.
-                Characters = 0.25f, // Character damage multiplier; defaults to 1 if zero or less.
-                // For the following modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01f = 1% damage, 2 = 200% damage.
-                Grids = new GridSizeDef
-                {
-                    Large = -1f, // Multiplier for damage against large grids.
-                    Small = 0.75f, // Multiplier for damage against small grids.
-                },
-                Armor = new ArmorDef
-                {
-                    Armor = -1f, // Multiplier for damage against all armor. This is multiplied with the specific armor type multiplier (light, heavy).
-                    Light = 0.8f, // Multiplier for damage against light armor.
-                    Heavy = 0.6f, // Multiplier for damage against heavy armor.
-                    NonArmor = -1f, // Multiplier for damage against every else.
-                },
-                DamageType = new DamageTypes // Damage type of each element of the projectile's damage; Kinetic, Energy
-                {
-                    Base = Energy, // Base Damage uses this
-                    AreaEffect = Energy,
-                    Detonation = Energy,
-                    Shield = Energy, // Damage against shields is currently all of one type per projectile. Shield Bypass Weapons, always Deal Energy regardless of this line
-                },
-                Custom = Common_Ammos_DamageScales_Cockpits_SmallNerf,
-            },
-            Beams = new BeamDef
-            {
-                Enable = true, // Enable beam behaviour. Please have 3600 RPM, when this Setting is enabled. Please do not fire Beams into Voxels.
-                VirtualBeams = false, // Only one damaging beam, but with the effectiveness of the visual beams combined (better performance).
-                ConvergeBeams = false, // When using virtual beams, converge the visual beams to the location of the real beam.
-                RotateRealBeam = false, // The real beam is rotated between all visual beams, instead of centered between them.
-                OneParticle = true, // Only spawn one particle hit per beam weapon.
-                FakeVoxelHitTicks = 30, // If this beam hits/misses a voxel it assumes it will continue to do so for this many ticks at the same hit length and not extend further within this window.  This can save up to n times worth of cpu.
-            },
-            Trajectory = new TrajectoryDef
-            {
-                Guidance = None,
-                MaxTrajectory = 10f,
-                RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
-                DesiredSpeed = 1000, // voxel phasing if you go above 5100
-            },
-        };
+        //private AmmoDef Lasers_Laser_Large_Shrapnel => new AmmoDef //Red PDX laser Shrapnel
+        //{
+        //    AmmoMagazine = "Energy",
+        //    AmmoRound = "Lasers_Laser_Large_Shrapnel",
+        //    HybridRound = false, //AmmoMagazine based weapon with energy cost
+        //    EnergyCost = 0.0000001f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel    (15 * 0.05 * 3600/60/60 = 0.75MW per tick)
+        //    BaseDamage = 150f,
+        //    HardPointUsable = false,
+        //    DamageScales = new DamageScaleDef
+        //    {
+        //        MaxIntegrity = 0f, // Blocks with integrity higher than this value will be immune to damage from this projectile; 0 = disabled.
+        //        DamageVoxels = false, // Whether to damage voxels.
+        //        SelfDamage = false, // Whether to damage the weapon's own grid.
+        //        HealthHitModifier = -1, // How much Health to subtract from another projectile on hit; defaults to 1 if zero or less.
+        //        VoxelHitModifier = -1, // Voxel damage multiplier; defaults to 1 if zero or less.
+        //        Characters = 0.25f, // Character damage multiplier; defaults to 1 if zero or less.
+        //        // For the following modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01f = 1% damage, 2 = 200% damage.
+        //        Grids = new GridSizeDef
+        //        {
+        //            Large = -1f, // Multiplier for damage against large grids.
+        //            Small = 0.75f, // Multiplier for damage against small grids.
+        //        },
+        //        Armor = new ArmorDef
+        //        {
+        //            Armor = -1f, // Multiplier for damage against all armor. This is multiplied with the specific armor type multiplier (light, heavy).
+        //            Light = 0.8f, // Multiplier for damage against light armor.
+        //            Heavy = 0.6f, // Multiplier for damage against heavy armor.
+        //            NonArmor = -1f, // Multiplier for damage against every else.
+        //        },
+        //        DamageType = new DamageTypes // Damage type of each element of the projectile's damage; Kinetic, Energy
+        //        {
+        //            Base = Energy, // Base Damage uses this
+        //            AreaEffect = Energy,
+        //            Detonation = Energy,
+        //            Shield = Energy, // Damage against shields is currently all of one type per projectile. Shield Bypass Weapons, always Deal Energy regardless of this line
+        //        },
+        //        Custom = Common_Ammos_DamageScales_Cockpits_SmallNerf,
+        //    },
+        //    Beams = new BeamDef
+        //    {
+        //        Enable = true, // Enable beam behaviour. Please have 3600 RPM, when this Setting is enabled. Please do not fire Beams into Voxels.
+        //        VirtualBeams = false, // Only one damaging beam, but with the effectiveness of the visual beams combined (better performance).
+        //        ConvergeBeams = false, // When using virtual beams, converge the visual beams to the location of the real beam.
+        //        RotateRealBeam = false, // The real beam is rotated between all visual beams, instead of centered between them.
+        //        OneParticle = true, // Only spawn one particle hit per beam weapon.
+        //        FakeVoxelHitTicks = 30, // If this beam hits/misses a voxel it assumes it will continue to do so for this many ticks at the same hit length and not extend further within this window.  This can save up to n times worth of cpu.
+        //    },
+        //    Trajectory = new TrajectoryDef
+        //    {
+        //        Guidance = None,
+        //        MaxTrajectory = 10f,
+        //        RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
+        //        DesiredSpeed = 1000, // voxel phasing if you go above 5100
+        //    },
+        //};
 
-        private AmmoDef Lasers_Laser_Small_Shrapnel => new AmmoDef //Blue Receptor laser Shrapnel
-        {
-            AmmoMagazine = "Energy",
-            AmmoRound = "Lasers_Laser_Small_Shrapnel",
-            HybridRound = false, //AmmoMagazine based weapon with energy cost
-            EnergyCost = 0.0000001f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel    (15 * 0.05 * 3600/60/60 = 0.75MW per tick)
-            BaseDamage = 75f,
-            Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
-            HardPointUsable = false,
-            DamageScales = new DamageScaleDef
-            {
-                MaxIntegrity = 0f, // Blocks with integrity higher than this value will be immune to damage from this projectile; 0 = disabled.
-                DamageVoxels = false, // Whether to damage voxels.
-                HealthHitModifier = -1, // How much Health to subtract from another projectile on hit; defaults to 1 if zero or less.
-                Characters = 0.25f, // Character damage multiplier; defaults to 1 if zero or less.
-                // For the following modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01f = 1% damage, 2 = 200% damage.
-                Grids = new GridSizeDef
-                {
-                    Large = -1f, // Multiplier for damage against large grids.
-                    Small = 0.75f, // Multiplier for damage against small grids.
-                },
-                Armor = new ArmorDef
-                {
-                    Armor = -1f, // Multiplier for damage against all armor. This is multiplied with the specific armor type multiplier (light, heavy).
-                    Light = 0.8f, // Multiplier for damage against light armor.
-                    Heavy = 0.6f, // Multiplier for damage against heavy armor.
-                    NonArmor = -1f, // Multiplier for damage against every else.
-                },
-                DamageType = new DamageTypes // Damage type of each element of the projectile's damage; Kinetic, Energy
-                {
-                    Base = Energy, // Base Damage uses this
-                    AreaEffect = Energy,
-                    Detonation = Energy,
-                    Shield = Energy, // Damage against shields is currently all of one type per projectile. Shield Bypass Weapons, always Deal Energy regardless of this line
-                },
-                Custom = Common_Ammos_DamageScales_Cockpits_SmallNerf,
-            },
-            Beams = new BeamDef
-            {
-                Enable = true, // Enable beam behaviour. Please have 3600 RPM, when this Setting is enabled. Please do not fire Beams into Voxels.
-                VirtualBeams = false, // Only one damaging beam, but with the effectiveness of the visual beams combined (better performance).
-                ConvergeBeams = false, // When using virtual beams, converge the visual beams to the location of the real beam.
-                RotateRealBeam = false, // The real beam is rotated between all visual beams, instead of centered between them.
-                OneParticle = true, // Only spawn one particle hit per beam weapon.
-                FakeVoxelHitTicks = 30, // If this beam hits/misses a voxel it assumes it will continue to do so for this many ticks at the same hit length and not extend further within this window.  This can save up to n times worth of cpu.
-            },
-            Trajectory = new TrajectoryDef
-            {
-                Guidance = None,
-                MaxTrajectory = 10f,
-                RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
-                DesiredSpeed = 1000, // voxel phasing if you go above 5100
-            },
-        };
+    //    private AmmoDef Lasers_Laser_Small_Shrapnel => new AmmoDef //Blue Receptor laser Shrapnel
+    //    {
+    //        AmmoMagazine = "Energy",
+    //        AmmoRound = "Lasers_Laser_Small_Shrapnel",
+    //        HybridRound = false, //AmmoMagazine based weapon with energy cost
+    //        EnergyCost = 0.0000001f, //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel    (15 * 0.05 * 3600/60/60 = 0.75MW per tick)
+    //        BaseDamage = 75f,
+    //        Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
+    //        HardPointUsable = false,
+    //        DamageScales = new DamageScaleDef
+    //        {
+    //            MaxIntegrity = 0f, // Blocks with integrity higher than this value will be immune to damage from this projectile; 0 = disabled.
+    //            DamageVoxels = false, // Whether to damage voxels.
+    //            HealthHitModifier = -1, // How much Health to subtract from another projectile on hit; defaults to 1 if zero or less.
+    //            Characters = 0.25f, // Character damage multiplier; defaults to 1 if zero or less.
+    //            // For the following modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01f = 1% damage, 2 = 200% damage.
+    //            Grids = new GridSizeDef
+    //            {
+    //                Large = -1f, // Multiplier for damage against large grids.
+    //                Small = 0.75f, // Multiplier for damage against small grids.
+    //            },
+    //            Armor = new ArmorDef
+    //            {
+    //                Armor = -1f, // Multiplier for damage against all armor. This is multiplied with the specific armor type multiplier (light, heavy).
+    //                Light = 0.8f, // Multiplier for damage against light armor.
+    //                Heavy = 0.6f, // Multiplier for damage against heavy armor.
+    //                NonArmor = -1f, // Multiplier for damage against every else.
+    //            },
+    //            DamageType = new DamageTypes // Damage type of each element of the projectile's damage; Kinetic, Energy
+    //            {
+    //                Base = Energy, // Base Damage uses this
+    //                AreaEffect = Energy,
+    //                Detonation = Energy,
+    //                Shield = Energy, // Damage against shields is currently all of one type per projectile. Shield Bypass Weapons, always Deal Energy regardless of this line
+    //            },
+    //            Custom = Common_Ammos_DamageScales_Cockpits_SmallNerf,
+    //        },
+    //        Beams = new BeamDef
+    //        {
+    //            Enable = true, // Enable beam behaviour. Please have 3600 RPM, when this Setting is enabled. Please do not fire Beams into Voxels.
+    //            VirtualBeams = false, // Only one damaging beam, but with the effectiveness of the visual beams combined (better performance).
+    //            ConvergeBeams = false, // When using virtual beams, converge the visual beams to the location of the real beam.
+    //            RotateRealBeam = false, // The real beam is rotated between all visual beams, instead of centered between them.
+    //            OneParticle = true, // Only spawn one particle hit per beam weapon.
+    //            FakeVoxelHitTicks = 30, // If this beam hits/misses a voxel it assumes it will continue to do so for this many ticks at the same hit length and not extend further within this window.  This can save up to n times worth of cpu.
+    //        },
+    //        Trajectory = new TrajectoryDef
+    //        {
+    //            Guidance = None,
+    //            MaxTrajectory = 10f,
+    //            RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
+    //            DesiredSpeed = 1000, // voxel phasing if you go above 5100
+    //        },
+    //    };
     }
 }
