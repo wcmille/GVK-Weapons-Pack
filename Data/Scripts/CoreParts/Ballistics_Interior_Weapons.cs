@@ -1,17 +1,11 @@
-﻿using VRageMath;
-using System.Collections.Generic;
-using static Scripts.Structure;
+﻿using static Scripts.Structure;
 using static Scripts.Structure.WeaponDefinition;
-using static Scripts.Structure.WeaponDefinition.ModelAssignmentsDef;
 using static Scripts.Structure.WeaponDefinition.HardPointDef;
+using static Scripts.Structure.WeaponDefinition.HardPointDef.HardwareDef.HardwareType;
 using static Scripts.Structure.WeaponDefinition.HardPointDef.Prediction;
+using static Scripts.Structure.WeaponDefinition.ModelAssignmentsDef;
 using static Scripts.Structure.WeaponDefinition.TargetingDef.BlockTypes;
 using static Scripts.Structure.WeaponDefinition.TargetingDef.Threat;
-using static Scripts.Structure.WeaponDefinition.TargetingDef;
-using static Scripts.Structure.WeaponDefinition.TargetingDef.CommunicationDef.Comms;
-using static Scripts.Structure.WeaponDefinition.TargetingDef.CommunicationDef.SecurityMode;
-using static Scripts.Structure.WeaponDefinition.HardPointDef.HardwareDef;
-using static Scripts.Structure.WeaponDefinition.HardPointDef.HardwareDef.HardwareType;
 
 namespace Scripts
 {   // Don't edit above this line
@@ -85,7 +79,7 @@ namespace Scripts
                     MaxAzimuth = 180,
                     MinElevation = -76,
                     MaxElevation = 90,
-                    InventorySize = 0.6f,
+                    InventorySize = 0.384f,
                     Offset = Vector(x: 0, y: 0, z: 0),
                     Type = BlockWeapon, // BlockWeapon, HandWeapon, Phantom 
                     IdlePower = 0.01f, // Power draw in MW while not charging, or for non-energy weapons. Defaults to 0.001.

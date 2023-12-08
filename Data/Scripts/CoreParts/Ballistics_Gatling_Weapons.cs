@@ -1,17 +1,12 @@
 ﻿using VRageMath;
-using System.Collections.Generic;
 using static Scripts.Structure;
 using static Scripts.Structure.WeaponDefinition;
-using static Scripts.Structure.WeaponDefinition.ModelAssignmentsDef;
 using static Scripts.Structure.WeaponDefinition.HardPointDef;
+using static Scripts.Structure.WeaponDefinition.HardPointDef.HardwareDef.HardwareType;
 using static Scripts.Structure.WeaponDefinition.HardPointDef.Prediction;
+using static Scripts.Structure.WeaponDefinition.ModelAssignmentsDef;
 using static Scripts.Structure.WeaponDefinition.TargetingDef.BlockTypes;
 using static Scripts.Structure.WeaponDefinition.TargetingDef.Threat;
-using static Scripts.Structure.WeaponDefinition.TargetingDef;
-using static Scripts.Structure.WeaponDefinition.TargetingDef.CommunicationDef.Comms;
-using static Scripts.Structure.WeaponDefinition.TargetingDef.CommunicationDef.SecurityMode;
-using static Scripts.Structure.WeaponDefinition.HardPointDef.HardwareDef;
-using static Scripts.Structure.WeaponDefinition.HardPointDef.HardwareDef.HardwareType;
 
 namespace Scripts
 {
@@ -190,7 +185,7 @@ namespace Scripts
             {
                 PartName = "Sentinel Gatling", // name of weapon in terminal
                 DeviateShotAngle = 0.3f,
-                AimingTolerance = 30f, // 0 - 180 firing angle
+                AimingTolerance = 3f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 20, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 NpcSafe = true, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.
@@ -265,7 +260,7 @@ namespace Scripts
             {
                 PartName = "CIWS Large", // name of weapon in terminal
                 DeviateShotAngle = 0.3f,
-                AimingTolerance = 30f, // 0 - 180 firing angle
+                AimingTolerance = 3f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 20, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 NpcSafe = true, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.
@@ -309,7 +304,7 @@ namespace Scripts
             {
                 PartName = "CWIS Small", // name of weapon in terminal
                 DeviateShotAngle = 0.4f,
-                AimingTolerance = 30f, // 0 - 180 firing angle
+                AimingTolerance = 3f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 20, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 NpcSafe = true, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.
@@ -440,7 +435,7 @@ namespace Scripts
             {
                 PartName = "Vulcan Gatling", // name of weapon in terminal
                 DeviateShotAngle = 0.3f, // Inaccuracy in degrees
-                AimingTolerance = 40f, // 0 - 180 firing angle
+                AimingTolerance = 4f, // 0 - 180 firing angle
                 AimLeadingPrediction = Advanced, // Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 60, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 NpcSafe = true, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.

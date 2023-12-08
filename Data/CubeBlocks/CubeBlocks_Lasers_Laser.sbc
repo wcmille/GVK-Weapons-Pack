@@ -90,7 +90,7 @@
 				<Component Subtype="BulletproofGlass" Count="19"/>
 				<Component Subtype="Computer" Count="22"/>
 				<Component Subtype="MetalGrid" Count="10"/>
-				<Component Subtype="SteelPlate" Count="240"/>
+				<Component Subtype="SteelPlate" Count="200"/>
 			</Components>
 			<BuildTimeSeconds>40</BuildTimeSeconds>
 			<PCU>200</PCU>

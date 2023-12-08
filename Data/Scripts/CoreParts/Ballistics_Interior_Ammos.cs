@@ -87,7 +87,7 @@ namespace Scripts
                     HitPlayChance = 0.1f,
                     HitPlayShield = true,
                 }; // Don't edit below this line
-                return sk.AssembleRound("NATO_5p56x45mm", "Ballistics_Interior", AmmoGraphics, AmmoAudio);
+                return sk.AssembleRound("RapidFireAutomaticRifleGun_Mag_50rd", "Ballistics_Interior", AmmoGraphics, AmmoAudio);
             }
         }
     }

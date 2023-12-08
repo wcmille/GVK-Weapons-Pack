@@ -19,13 +19,14 @@
 			<Model>Models\Cubes\Large\MissileTurret.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<Components>
-				<Component Subtype="SteelPlate" Count="78"/>
-				<Component Subtype="MetalGrid" Count="78"/>
-				<Component Subtype="LargeTube" Count="93"/>
-				<Component Subtype="Motor" Count="250"/>
-				<Component Subtype="Computer" Count="190"/>
-				<Component Subtype="Construction" Count="620"/>
-				<Component Subtype="SteelPlate" Count="240"/>
+        <Component Subtype="SteelPlate" Count="10" />
+        <Component Subtype="Construction" Count="35" />
+        <Component Subtype="MetalGrid" Count="15" />
+        <Component Subtype="LargeTube" Count="6" />
+        <Component Subtype="Motor" Count="16" />
+        <Component Subtype="Computer" Count="10" />
+        <Component Subtype="Construction" Count="15" />
+        <Component Subtype="SteelPlate" Count="30" />
 			</Components>
 			<BuildTimeSeconds>90</BuildTimeSeconds>
 			<PCU>275</PCU>

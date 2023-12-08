@@ -34,7 +34,7 @@ namespace Scripts
                     AmmoRound = "Missiles_Torpedo", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
                     BaseDamage = 100f, // Direct damage; one steel plate is worth 100.
                     Mass = 200f, // In kilograms; how much force the impact will apply to the target.
-                    Health = 200, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
+                    Health = 100, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
                     HardPointUsable = true, // Whether this is a primary ammo type fired directly by the turret. Set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
                     NpcSafe = true, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.
                     NoGridOrArmorScaling = false, // If you enable this you can remove the damagescale section entirely.
@@ -77,26 +77,27 @@ namespace Scripts
                     Trajectory = new TrajectoryDef
                     {
                         Guidance = Smart, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
-                        MaxLifeTime = 3600, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
-                        AccelPerSec = 30f, // 30. Meters Per Second. This is the spawning Speed of the Projectile, and used by turning.
-                        DesiredSpeed = 300, // 300. voxel phasing if you go above 5100
+                        TargetLossDegree = 100f, // Degrees, Is pointed forward
+                        TargetLossTime = 3, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).                MaxLifeTime = 3600, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
+                        AccelPerSec = 50f, // 30. Meters Per Second. This is the spawning Speed of the Projectile, and used by turning.
+                        DesiredSpeed = 200, // 300. voxel phasing if you go above 5100
                         MaxTrajectory = 4000f, // Max Distance the projectile or beam can Travel.
                         TotalAcceleration = 0, // 0 means no limit, something to do due with a thing called delta and something called v.
                         Smarts = new SmartsDef
                         {
                             SteeringLimit = 0, // 0 means no limit, value is in degrees, good starting is 150.  This enable advanced smart "control", cost of 3 on a scale of 1-5, 0 being basic smart.
                             Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
-                            Aggressiveness = 4f, // controls how responsive tracking is, recommended value 3-5.
-                            MaxLateralThrust = 0.025f, //0-1, how much of acceleration can be used for turning, this is the cheaper but less realistic version of SteeringLimit, cost of 2 on a scale of 1-5, 0 being basic smart.
-                            NavAcceleration = -1f, // helps influence how the projectile steers, 0 defaults to 1/2 Aggressiveness value or 0 if its 0, a value less than 0 disables this feature. 
+                            Aggressiveness = 3f, // controls how responsive tracking is, recommended value 3-5.
+                            MaxLateralThrust = 0.5f, //0-1, how much of acceleration can be used for turning, this is the cheaper but less realistic version of SteeringLimit, cost of 2 on a scale of 1-5, 0 being basic smart.
+                            NavAcceleration = 3f, // helps influence how the projectile steers, 0 defaults to 1/2 Aggressiveness value or 0 if its 0, a value less than 0 disables this feature. 
                             TrackingDelay = 100, // 200. Measured in Shape diameter units traveled.
                             AccelClearance = false, // Setting this to true will prevent smart acceleration until it is clear of the grid and tracking delay has been met (free fall).
                             OverideTarget = false, // when set to true ammo picks its own target, does not use hardpoint's.
-                            CheckFutureIntersection = true, // Utilize obstacle avoidance for drones/smarts
+                            CheckFutureIntersection = false, // Utilize obstacle avoidance for drones/smarts
                             FutureIntersectionRange = 0, // Range in front of the projectile at which it will detect obstacle.  If set to zero it defaults to DesiredSpeed + Shape Diameter
                             MaxTargets = 3, // Number of targets allowed before ending, 0 = unlimited
                             NoTargetExpire = false, // Expire without ever having a target at TargetLossTime
-                            Roam = false, // Roam current area after target loss
+                            Roam = true, // Roam current area after target loss
                             KeepAliveAfterTargetLoss = true, // Whether to stop early death of projectile on target loss
                             ScanRange = 2000, // 0 disables projectile screening, the max range that this projectile will be seen at by defending grids (adds this projectile to defenders lookup database). 
                             NoSteering = false, // this disables target follow and instead travel straight ahead (but will respect offsets).
@@ -104,17 +105,17 @@ namespace Scripts
                             AltNavigation = false, // If true this will swap the default navigation algorithm from ProNav to ZeroEffort Miss.  Zero effort is more direct/precise but less cinematic 
                         },
                         Approaches = new[] // These approaches move forward and backward in order, once the end condition of the last one is reached it will revert to default behavior. Cost level of 4+, or 5+ if used with steering.
-                        {
+                {
                     new ApproachDef // * in comments means default
                     {
                         // Start/End behaviors 
                         RestartCondition = Wait, // Wait*, MoveToPrevious, MoveToNext, ForceRestart -- A restart condition is when the end condition is reached without having met the start condition. 
-                        Operators = StartEnd_And, // Controls how the start and end conditions are matched:  StartEnd_And*, StartEnd_Or, StartAnd_EndOr,StartOr_EndAnd,
+                        Operators = StartAnd_EndOr, // Controls how the start and end conditions are matched:  StartEnd_And*, StartEnd_Or, StartAnd_EndOr,StartOr_EndAnd,
                         CanExpireOnceStarted = true, // This stages values will continue to apply until the end conditions are met.
                         ForceRestart = false, // This forces the ReStartCondition when the end condition is met no matter if the start condition was met or not.  
 
                         // Start/End conditions
-                        StartCondition1 = Lifetime, // Each condition type is either >= or <= the corresponding value defined below.
+                        StartCondition1 = DesiredElevation, // Each condition type is either >= or <= the corresponding value defined below.
                                                     // Ignore(skip this condition)*, DistanceFromPositionC[<=], DistanceToPositionC[>=], DistanceFromPositionB[<=], DistanceToPositionB[>=]
                                                     // DistanceFromTarget[<=], DistanceToTarget[>=], DistanceFromEndTrajectory[<=], DistanceToEndTrajectory[>=], Lifetime[>=], DeadTime[<=],
                                                     // MinTravelRequired[>=], MaxTravelRequired[<=], Spawn(per stage), DesiredElevation(tolerance can be set with ElevationTolerance),
@@ -122,15 +123,15 @@ namespace Scripts
                                                     // RelativeHealthLost[>=], HealthRemaining[<=],
                                                     // *NOTE* DO NOT set start1 and start2 or end1 and end2 to same condition
                         StartCondition2 = Ignore,
-                        EndCondition1 = DistanceFromPositionC,
-                        EndCondition2 = Ignore,
+                        EndCondition1 = DistanceFromPositionC, ////////////Might need a restart list so it doesnt keep looping in this approach
+                        EndCondition2 = DistanceToPositionB,
                         EndCondition3 = Ignore,
                         // Start/End thresholds -- both conditions are evaluated before activation, use Ignore to skip
-                        Start1Value = 120,
+                        Start1Value = 100,
                         Start2Value = 0,
                         End1Value = 600,
-                        End2Value = 0,
-                        End3Value = 0, 
+                        End2Value = 100,
+                        End3Value = 100, 
                         // Special triggers when the start/end conditions are met (DoNothing*, EndProjectile, EndProjectileOnRestart, StorePositionA, StorePositionB, StorePositionC, Refund)
                         StartEvent = DoNothing,
                         EndEvent = DoNothing,  
@@ -152,13 +153,13 @@ namespace Scripts
                         AdjustPositionB = true, // Updated the position overtime.
                         AdjustPositionC = true, // Update the position overtime.
                         LeadRotateElevatePositionB = true, // Add Lead, Rotation and DesiredElevation to PositionB
-                        LeadRotateElevatePositionC = true, // Add Lead, Rotation and DesiredElevation to PositionC
+                        LeadRotateElevatePositionC = false, // Add Lead, Rotation and DesiredElevation to PositionC
                         TrajectoryRelativeToB = true, // If true the projectiles immediate trajectory will be relative to PositionB instead of PositionC (e.g. quick response to elevation changes relative to PositionB position assuming that position is closer to PositionA)
                         ElevationRelativeToC = false, // If true the projectiles desired elevation will be relative to PositionC instead of PositionB (e.g. quick response to elevation changes relative to PositionC position assuming that position is closer to PositionA)
                         // Tweaks to vantagepoint behavior
                         AngleOffset = 0, // value 0 - 1, rotates the Updir and ForwardDir
                         AngleVariance = Random(0, 0), // added to AngleOffset above, values of 0,0 disables feature
-                        ElevationTolerance = 90, // adds additional tolerance (in meters) to meet the Elevation condition requirement.  *note* collision size is also added to the tolerance
+                        ElevationTolerance = 100, // adds additional tolerance (in meters) to meet the Elevation condition requirement.  *note* collision size is also added to the tolerance
                         TrackingDistance = 0, // Minimum travel distance before projectile begins racing to heading
                         DesiredElevation = 200, // The desired elevation relative to reference position 
                         // Storage Values
@@ -167,7 +168,7 @@ namespace Scripts
                         StoredStartType = PositionA, // Uses same values as PositionB/PositionC/Elevation
                         StoredEndType = Target,
                         // Controls the leading behavior
-                        LeadDistance = 40, // Add additional "lead" in meters to the trajectory (project in the future), this will be applied even before TrackingDistance is met. 
+                        LeadDistance = 50, // Add additional "lead" in meters to the trajectory (project in the future), this will be applied even before TrackingDistance is met. 
                         PushLeadByTravelDistance = false, // the follow lead position will move in its point direction by an amount equal to the projectiles travel distance.
 
                         // Modify speed and acceleration ratios while this approach is active
@@ -193,7 +194,7 @@ namespace Scripts
                         SelfAvoidance = false, // If this and FutureIntersect is enabled then projectiles will actively avoid the parent grids.
                         TargetAvoidance = false, // If this and FutureIntersect is enabled then projectiles will actively avoid the target.
                         SelfPhasing = false, // If enabled the projectiles can phase through the parent grids without doing damage or dying.
-                        SwapNavigationType = true, // This will swap to other navigation  (i.e. the alternate of what is set in smart, ProNav vs ZeroEffort) 
+                        SwapNavigationType = false, // This will swap to other navigation  (i.e. the alternate of what is set in smart, ProNav vs ZeroEffort) 
                         // Audio/Visual Section
                         AlternateParticle = new ParticleDef // if blank it will use default, must be a default version for this to be useable. 
                         {

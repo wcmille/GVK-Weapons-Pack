@@ -221,7 +221,8 @@ namespace Scripts
 				
             },
 			Ammos = new[] {
-				Missiles_Missile
+				Missiles_Rocket,
+                Missiles_Missile
             },
         };
 
