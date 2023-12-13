@@ -57,6 +57,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Scripts\CoreParts\Armor_Blocks.cs" />
+    <Compile Include="Data\Scripts\CoreParts\AryxRadar.cs" />
+    <Compile Include="Data\Scripts\CoreParts\AryxRadarAmmo.cs" />
     <Compile Include="Data\Scripts\CoreParts\Ballistics_Cannon_Ammos.cs" />
     <Compile Include="Data\Scripts\CoreParts\Ballistics_Cannon_Weapons.cs" />
     <Compile Include="Data\Scripts\CoreParts\Ballistics_Chaingun_Ammos.cs" />
@@ -90,7 +92,6 @@
     <Compile Include="Data\Scripts\CoreParts\Missiles_Torpedo_Ammos.cs" />
     <Compile Include="Data\Scripts\CoreParts\Missiles_Torpedo_Animations_Crusader.cs" />
     <Compile Include="Data\Scripts\CoreParts\Missiles_Torpedo_Weapons.cs" />
-    <Compile Include="Data\Scripts\CoreParts\Other_Radar_Ammos.cs" />
     <Compile Include="Data\Scripts\CoreParts\script\PartCompile.cs" />
     <Compile Include="Data\Scripts\CoreParts\script\Slave.cs" />
     <Compile Include="Data\Scripts\CoreParts\script\Structure.cs" />

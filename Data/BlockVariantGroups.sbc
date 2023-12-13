@@ -44,6 +44,8 @@
         <Block Type="MyObjectBuilder_LargeMissileTurret" Subtype="MA_PDT_sm"/>
         <Block Type="MyObjectBuilder_ConveyorSorter" Subtype="MA_T2PDX"/>
         <Block Type="MyObjectBuilder_LargeMissileTurret" Subtype="ReceptorTurret"/>
+        <Block Type="MyObjectBuilder_ConveyorSorter" Subtype="ARYXLargeRadar"/>
+        <Block Type="MyObjectBuilder_ConveyorSorter" Subtype="ARYXSmallRadar"/>
       </Blocks>
 		</BlockVariantGroup>
 	</BlockVariantGroups>

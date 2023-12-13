@@ -46,7 +46,8 @@ namespace Scripts
 							SentinelTurret,
 							AryxVulcanTurret,
 							tukkaLauncher01,
-							AryxSpartanTurret
+							AryxSpartanTurret,
+							AryxRadar
 							);
             ArmorDefinitions(AdditionalLightArmors);
         }
