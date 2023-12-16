@@ -11,21 +11,11 @@ namespace Scripts
         {
             get
             {
-                //AmmoMagazine = "NATO_5p56x45mm",
-                //AmmoRound = "Ballistics_Interior",
-                //BaseDamage = 25f,
-                //Mass = 1f, // in kilograms
-                //Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
-                //BackKickForce = 2f,
-                //HardPointUsable = true, // set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
-                //NpcSafe = true, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.
-                //NoGridOrArmorScaling = true, // If you enable this you can remove the damagescale section entirely.
-                //Trajectory = MakeBasicTrajectory(950),
                 var sk = new SabotKinetic(this, 950.0f, 0.004f, 5.56f);
                 var AmmoGraphics = new GraphicDef
                 {
                     ModelName = "",
-                    VisualProbability = 1f,
+                    VisualProbability = 0.2f,
                     Decals = MakeBulletDecal(),
                     Particles = new AmmoParticleDef
                     {

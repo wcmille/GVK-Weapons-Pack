@@ -15,25 +15,16 @@ namespace Scripts
 
         //Common definitions
 
-        private TargetingDef Ballistics_Gatlings_Targeting_T2 => new TargetingDef
+        private TargetingDef Ballistics_Gatlings_Targeting_T2
         {
-            Threats = new[]
+            get
             {
-                Projectiles, Characters, Grids,   // threats percieved automatically without changing menu settings
-			},
-            SubSystems = new[]
-            {
-                Any,
-            },
-            ClosestFirst = false, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
-            IgnoreDumbProjectiles = false, // Don't fire at non-smart projectiles.
-            LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
-            MaxTargetDistance = 1400, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
-            MinTargetDistance = 0, // 0 = unlimited, Min target distance that targets will be automatically shot at.
-            TopTargets = 1, // 0 = unlimited, max number of top targets to randomize between.
-            TopBlocks = 1, // 0 = unlimited, max number of blocks to randomize between
-            StopTrackingSpeed = 1000, // do not track target threats traveling faster than this speed
-        };
+                var targDef = Ballistics_Gatlings_Targeting_T1;
+                targDef.MaxTargetDistance = 1400; // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
+                targDef.MinTargetDistance = 0; // 0 = unlimited, Min target distance that targets will be automatically shot at.
+                return targDef;
+            }
+        }
         private TargetingDef Ballistics_Gatlings_Targeting_T1 => new TargetingDef
         {
             Threats = new[]
@@ -53,6 +44,7 @@ namespace Scripts
             TopBlocks = 1, // 0 = unlimited, max number of blocks to randomize between
             StopTrackingSpeed = 1000, // do not track target threats traveling faster than this speed
         };
+
         private HardwareDef Ballistics_Gatlings_Hardpoint_HardWare = new HardwareDef
         {
             RotateRate = 0.05f,
@@ -67,6 +59,7 @@ namespace Scripts
             Type = BlockWeapon, // BlockWeapon, HandWeapon, Phantom 
             IdlePower = 0.01f, // Power draw in MW while not charging, or for non-energy weapons. Defaults to 0.001.
         };
+
         private OtherDef Ballistics_Gatlings_Hardpoint_Other = new OtherDef
         {
             ConstructPartCap = 21, // Maximum number of blocks with this weapon on a grid; 0 = unlimited.
@@ -79,6 +72,7 @@ namespace Scripts
             CheckInflatedBox = false, // If true, the above distance check is performed from the edge of the block instead of the centre.
             CheckForAnyWeapon = false, // If true, the check will fail if ANY weapon is present, not just weapons of the same subtype.
         };
+
         private LoadingDef Ballistics_Gatlings_Hardpoint_Loading = new LoadingDef
         {
             RateOfFire = 1800,

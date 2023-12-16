@@ -20,17 +20,6 @@ namespace Scripts
         {
             get
             {
-                //AmmoMagazine = "MediumCalibreAmmo",
-                //AmmoRound = "Ballistics_AP",
-                //BaseDamage = 6000f, // breaks 1 HA or 1 LA cubes in 1 round
-                //Mass = 300f, // in kilograms
-                //Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
-                //BackKickForce = 200000f,
-                //HardPointUsable = true, // set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
-                //NpcSafe = false, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.
-                //NoGridOrArmorScaling = false, // If you enable this you can remove the damagescale section entirely.
-                //DamageScales = KineticDamage(4E6f),
-                //Trajectory = MakeBasicTrajectory(1500),
                 var sk = new SabotKinetic(this, 1500, 6.0f, 105.0f);
                 var ag = new GraphicDef
                 {

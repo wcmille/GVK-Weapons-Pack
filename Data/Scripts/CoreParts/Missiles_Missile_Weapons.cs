@@ -26,42 +26,34 @@ namespace Scripts
 			LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
 			MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
 			MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
-			MaxTargetDistance = 2300, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
-			MinTargetDistance = 0, // 0 = unlimited, Min target distance that targets will be automatically shot at.
+			MaxTargetDistance = 4000, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
+			MinTargetDistance = 200, // 0 = unlimited, Min target distance that targets will be automatically shot at.
 			TopTargets = 2, // 0 = unlimited, max number of top targets to randomize between.
 			TopBlocks = 5, // 0 = unlimited, max number of blocks to randomize between
 			StopTrackingSpeed = 1000, // do not track target threats traveling faster than this speed
 		};
 
-		private TargetingDef Missiles_Missile_Targeting_Small => new TargetingDef {
-			Threats = new[] {
-				Grids, // threats percieved automatically without changing menu settings
-			},
-			SubSystems = new[] {
-				Thrust, Utility, Offense, Power, Production, Jumping, Steering, Any,
-			},
-			ClosestFirst = true, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
-			IgnoreDumbProjectiles = true, // Don't fire at non-smart projectiles.
-			LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
-			MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
-			MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
-			MaxTargetDistance = 1800, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
-			MinTargetDistance = 0, // 0 = unlimited, Min target distance that targets will be automatically shot at.
-			TopTargets = 1, // 0 = unlimited, max number of top targets to randomize between.
-			TopBlocks = 2, // 0 = unlimited, max number of blocks to randomize between
-			StopTrackingSpeed = 1000, // do not track target threats traveling faster than this speed
-		};
+		private TargetingDef Missiles_Missile_Targeting_Small
+		{
+			get
+			{
+				var targDef = Missiles_Missile_Targeting_Large;
+				targDef.TopTargets = 1; // 0 = unlimited, max number of top targets to randomize between.
+				targDef.TopBlocks = 2; // 0 = unlimited, max number of blocks to randomize between
+				return targDef;
+			}
+		}
 
-		private OtherDef Missiles_Missile_Hardpoint_Other = new OtherDef {
-			ConstructPartCap = 21,
-			RotateBarrelAxis = 0,
-			EnergyPriority = 0,
-			MuzzleCheck = false,
-			Debug = false,
-			RestrictionRadius = 0f, // Meters, radius of sphere disable this gun if another is present
-			CheckInflatedBox = false, // if true, the bounding box of the gun is expanded by the RestrictionRadius
-			CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype
-		};
+		//private OtherDef Missiles_Missile_Hardpoint_Other = new OtherDef {
+		//	ConstructPartCap = 21,
+		//	RotateBarrelAxis = 0,
+		//	EnergyPriority = 0,
+		//	MuzzleCheck = false,
+		//	Debug = false,
+		//	RestrictionRadius = 0f, // Meters, radius of sphere disable this gun if another is present
+		//	CheckInflatedBox = false, // if true, the bounding box of the gun is expanded by the RestrictionRadius
+		//	CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype
+		//};
 
 		private HardPointAudioDef Missiles_Missile_Hardpoint_Audio = new HardPointAudioDef {
 			PreFiringSound = "",
