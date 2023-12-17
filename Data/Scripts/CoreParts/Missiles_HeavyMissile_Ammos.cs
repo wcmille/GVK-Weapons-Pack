@@ -40,7 +40,7 @@ namespace Scripts
                         TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                         MaxLifeTime = 1500, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
                         DesiredSpeed = 200, // voxel phasing if you go above 5100
-                        MaxTrajectory = 3000f, // Max Distance the projectile or beam can Travel.
+                        MaxTrajectory = 5000f, // Max Distance the projectile or beam can Travel.
                         TotalAcceleration = 0f, // 0 means no limit, something to do due with a thing called delta and something called v.
 
                         Smarts = new SmartsDef

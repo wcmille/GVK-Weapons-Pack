@@ -71,7 +71,7 @@ namespace Scripts
             };
         }
 
-        readonly struct SabotKinetic
+        struct SabotKinetic
         {
             readonly float desiredSpeed;
             readonly float roundMass;
