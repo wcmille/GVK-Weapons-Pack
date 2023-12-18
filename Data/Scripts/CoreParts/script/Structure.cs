@@ -1521,6 +1521,7 @@ namespace Scripts
                     [ProtoContract]
                     public struct OnHitDef
                     {
+                        /*
                         [ProtoMember(1)] internal int Duration;
                         [ProtoMember(2)] internal int ProcInterval;
                         [ProtoMember(3)] internal double ProcAmount;
@@ -1529,6 +1530,7 @@ namespace Scripts
                         [ProtoMember(6)] internal bool DieOnEnd;
                         [ProtoMember(7)] internal bool StickOnHit;
                         [ProtoMember(8)] internal bool AlignFragtoImpactAngle;
+                        */
                     }
                 }
 

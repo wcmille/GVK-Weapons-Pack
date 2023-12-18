@@ -17,6 +17,11 @@ namespace Scripts
                 var he = new HighExplosive(10.0f);
                 return new AmmoDef
                 {
+                    Shape = new ShapeDef()
+                    {
+                        Shape = ShapeDef.Shapes.SphereShape,
+                        Diameter = 0.5,
+                    },
                     AmmoMagazine = "Missiles_Missile",
                     AmmoRound = "Missile",
                     BaseDamage = 1f,
