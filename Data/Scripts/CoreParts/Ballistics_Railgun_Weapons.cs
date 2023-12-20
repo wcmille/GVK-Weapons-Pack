@@ -194,7 +194,7 @@ namespace Scripts
             Ammos = new[]
             {
                 LargeRailgunAmmo,
-                LargeRailgunAmmo_Pen
+                //LargeRailgunAmmo_Pen
             },
             Animations = LargeRailgunAnimation,
         };

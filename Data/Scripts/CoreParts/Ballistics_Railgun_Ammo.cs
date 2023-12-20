@@ -169,28 +169,28 @@ namespace Scripts
             }
         }
 
-        private AmmoDef LargeRailgunAmmo_Pen => new AmmoDef
-        {
-            AmmoMagazine = "Energy",
-            AmmoRound = "LargeRailgunAmmo_Pen",
-            BaseDamage = 10000,
-            NoGridOrArmorScaling = true,
-            Trajectory = new TrajectoryDef
-            {
-                MaxLifeTime = 1,
-                MaxTrajectory = 2.5f,
-                DesiredSpeed = 2.5f * 60f,
-            },
-            HardPointUsable = false,
-            Fragment = new FragmentDef()
-            {
-                AmmoRound = "LargeRailgunAmmo_Pen",
-                Offset = 2.4f,
-                Fragments = 1,
-                MaxChildren = 20,
-                ArmWhenHit = true,
-            }
-        };
+        //private AmmoDef LargeRailgunAmmo_Pen => new AmmoDef
+        //{
+        //    AmmoMagazine = "Energy",
+        //    AmmoRound = "LargeRailgunAmmo_Pen",
+        //    BaseDamage = 10000,
+        //    NoGridOrArmorScaling = true,
+        //    Trajectory = new TrajectoryDef
+        //    {
+        //        MaxLifeTime = 1,
+        //        MaxTrajectory = 2.5f,
+        //        DesiredSpeed = 2.5f * 60f,
+        //    },
+        //    HardPointUsable = false,
+        //    Fragment = new FragmentDef()
+        //    {
+        //        AmmoRound = "LargeRailgunAmmo_Pen",
+        //        Offset = 2.4f,
+        //        Fragments = 1,
+        //        MaxChildren = 20,
+        //        ArmWhenHit = true,
+        //    }
+        //};
 
         private AmmoDef LargeRailgunAmmo
         {
@@ -267,16 +267,16 @@ namespace Scripts
                 var round = sk.AssembleRound("LargeRailgunAmmo", "LargeRailgunAmmo", AmmoGraphics, AmmoAudio);
                 round.HybridRound = true; //AmmoMagazine based weapon with energy cost
                 round.EnergyCost = railGunStandardConstant / 2.34f; //(((EnergyCost * DefaultDamage) * ShotsPerSecond) * BarrelsPerShot) * ShotsPerBarrel
-                round.BaseDamage = 0;
+                //round.BaseDamage = 0;
  
-                round.Fragment = new FragmentDef()
-                {
-                    AmmoRound = "LargeRailgunAmmo_Pen",
-                    Offset = 0f,
-                    Fragments = 1,
-                    MaxChildren = 20,
-                    ArmWhenHit = true,
-                };
+                //round.Fragment = new FragmentDef()
+                //{
+                //    AmmoRound = "LargeRailgunAmmo_Pen",
+                //    Offset = 0f,
+                //    Fragments = 1,
+                //    MaxChildren = 20,
+                //    ArmWhenHit = true,
+                //};
                 return round;
             }
         }
