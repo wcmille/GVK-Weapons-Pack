@@ -170,7 +170,7 @@ namespace Scripts
                     MaxAzimuth = 180,
                     MinElevation = -8,
                     MaxElevation = 90,
-                    InventorySize = 0.520f,
+                    InventorySize = 2 * smallMissileSize,
                     Offset = Vector(x: 0, y: 0, z: 0),
                     Type = BlockWeapon, // BlockWeapon, HandWeapon, Phantom 
                     IdlePower = 0.01f, // Power draw in MW while not charging, or for non-energy weapons. Defaults to 0.001.
@@ -314,7 +314,7 @@ namespace Scripts
                 Ai = Common_Weapons_Hardpoint_Ai_BasicFixed_NoTracking,
                 HardWare = new HardwareDef
                 {
-                    InventorySize = 4f*60f*0.001f,
+                    InventorySize = 4f*smallMissileSize,
                     Offset = Vector(x: 0, y: 0, z: 0),
                     Type = BlockWeapon, // BlockWeapon, HandWeapon, Phantom 
                     IdlePower = 0.001f, // Power draw in MW while not charging, or for non-energy weapons. Defaults to 0.001.

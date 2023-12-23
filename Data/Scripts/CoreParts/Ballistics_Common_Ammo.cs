@@ -15,6 +15,7 @@ namespace Scripts
         const float maxTrajectory = 5000.0f;
         const float scale = 0.75f;
         const float integrityFactor = 1.0f / 600.0f;
+        const float smallMissileSize = 0.060f;
 
         internal DecalDef MakeBulletDecal()
         {
