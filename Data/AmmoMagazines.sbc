@@ -195,7 +195,7 @@
 				<TypeId>AmmoMagazine</TypeId>
 				<SubtypeId>Missiles_Missile</SubtypeId>
 			</Id>
-			<DisplayName>[Missile] Archer HE</DisplayName>
+			<DisplayName>Archer Missile</DisplayName>
 			<Icon>Textures\GUI\Icons\MXA_Archer_Missile_Ammo.png</Icon>
 			<Size>
 				<X>0.25</X>
@@ -216,7 +216,7 @@
 				<TypeId>AmmoMagazine</TypeId>
 				<SubtypeId>Missiles_Torpedo</SubtypeId>
 			</Id>
-			<DisplayName>[Torpedo] Crusader EMP</DisplayName>
+			<DisplayName>Crusader EMP Torpedo</DisplayName>
 			<Icon>Textures\GUI\Icons\CrusaderMissile.png</Icon>
 			<Size>
 				<X>1</X>
@@ -237,7 +237,7 @@
 				<TypeId>AmmoMagazine</TypeId>
 				<SubtypeId>Missiles_HeavyMissile</SubtypeId>
 			</Id>
-			<DisplayName>[Heavy Missile] Tuukka HE</DisplayName>
+			<DisplayName>Heavy Missile</DisplayName>
 			<Icon>Textures\GUI\Icons\Items\mediumMissile01_model.png</Icon>
 			<Size>
 				<X>4</X>
