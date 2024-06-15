@@ -85,14 +85,14 @@ namespace Scripts
                     HitPlayChance = 1f,
                     HitPlayShield = true,
                 };
-                return sk.AssembleRound("MediumCalibreAmmo", "Ballistics_AP", ag, aa);
+                return sk.AssembleRound("MediumCalibreAmmo", "AP", ag, aa);
             }
         }
 
         private AmmoDef Ballistics_Flak => new AmmoDef
         {
             AmmoMagazine = "MediumCalibreAmmo",
-            AmmoRound = "Ballistics_Flak",
+            AmmoRound = "Flak",
             BaseDamage = 1000f,
             Mass = 100, // in kilograms
             Health = 0, // 0 = disabled, otherwise how much damage it can take from other trajectiles before dying.
