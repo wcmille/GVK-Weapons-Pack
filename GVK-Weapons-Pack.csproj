@@ -68,7 +68,6 @@
     <Compile Include="Data\Scripts\CoreParts\Ballistics_Flak_Weapons.cs" />
     <Compile Include="Data\Scripts\CoreParts\Ballistics_Gatling_Ammos.cs" />
     <Compile Include="Data\Scripts\CoreParts\Ballistics_Gatling_Animations.cs" />
-    <Compile Include="Data\Scripts\CoreParts\Ballistics_Gatling_Animations_Vulcan.cs" />
     <Compile Include="Data\Scripts\CoreParts\Ballistics_Gatling_Weapons.cs" />
     <Compile Include="Data\Scripts\CoreParts\Ballistics_Interior_Ammos.cs" />
     <Compile Include="Data\Scripts\CoreParts\Ballistics_Interior_Weapons.cs" />
@@ -82,10 +81,7 @@
     <Compile Include="Data\Scripts\CoreParts\Lasers_Laser_Weapons.cs" />
     <Compile Include="Data\Scripts\CoreParts\Missiles_Common_Ammo.cs" />
     <Compile Include="Data\Scripts\CoreParts\Missiles_HeavyMissile_Ammos.cs" />
-    <Compile Include="Data\Scripts\CoreParts\Missiles_HeavyMissile_Animations_Tuukka.cs" />
-    <Compile Include="Data\Scripts\CoreParts\Missiles_HeavyMissile_Weapons.cs" />
     <Compile Include="Data\Scripts\CoreParts\Missiles_Missile_Ammo.cs" />
-    <Compile Include="Data\Scripts\CoreParts\Missiles_Missile_Animations_Archer.cs" />
     <Compile Include="Data\Scripts\CoreParts\Missiles_Missile_Weapons.cs" />
     <Compile Include="Data\Scripts\CoreParts\Missiles_Rocket_Ammos.cs" />
     <Compile Include="Data\Scripts\CoreParts\Missiles_Rocket_Weapons.cs" />

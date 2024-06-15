@@ -12,8 +12,7 @@
 			<IsBlockCategory>false</IsBlockCategory>
 			<SearchCategory>true</SearchCategory>
 			<ItemIds>
-				<string>ARYXRailgunTurret</string>
-		        <string>AryxRadar</string>
+		    <string>AryxRadar</string>
 				<string>Missile_Torpedo_Large</string>
 				<string>Missile_Torpedo_Small</string>
 				<string>LargeWarhead</string>
@@ -44,10 +43,6 @@
 				<string>SmallMissileLauncherWarfare2</string>
 				<string>SmallGatlingGunWarfare2</string>
 				<string>AutoCannonTurret</string>
-				<string>ARYXMissileBattery</string>
-				<string>ARYXVulcanTurret</string>
-				<string>ARYXSpartanTurret</string>
-				<string>missileBattery01</string>
 			</ItemIds>
 		</Category>
 	</CategoryClasses>

@@ -19,15 +19,11 @@ namespace Scripts
 							SmallMissileLauncher,
 							LargeMissileTurret,
 							SmallGatlingTurret,
-							AryxRailgunTurret, 
 							SmallBlockRailgun,
-							//SmallCannon122mm,
-							//VehicleTurret122mm,
 							LargeBlockArtilleryTurret,
 							LargeBlockArtillery,
 							SmallBlockAutocannon,
 							AutoCannonTurret,
-							//LargeAutoCannonTurret,
 							LargeBlockAssaultCannonTurret,
 							SmallBlockAssaultCannon,
 							SmallBlockAssaultCannonTurret,
@@ -44,9 +40,6 @@ namespace Scripts
 							ReceptorTurret,
 							MA_Fixed_T2,
 							SentinelTurret,
-							AryxVulcanTurret,
-							tukkaLauncher01,
-							AryxSpartanTurret,
 							AryxRadar
 							);
             ArmorDefinitions(AdditionalLightArmors);

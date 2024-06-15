@@ -99,7 +99,7 @@ namespace Scripts
                     RateOfFire = 480,
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
-                    ReloadTime = 480, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = missileReloadTime, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 6, // Number of physical magazines to consume on reload.
                 },
                 Audio = Missiles_Rocket_Hardpoint_Audio,
@@ -181,7 +181,7 @@ namespace Scripts
                     RateOfFire = 320,
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
-                    ReloadTime = 260, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = missileReloadTime, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 2, // Number of physical magazines to consume on reload.
                 },
                 Audio = Missiles_Rocket_Hardpoint_Audio,
@@ -256,7 +256,7 @@ namespace Scripts
                     RateOfFire = 120,
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
-                    ReloadTime = 960, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = missileReloadTime, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 19, // Number of physical magazines to consume on reload.
                 },
                 Audio = Missiles_Rocket_Hardpoint_Audio,
@@ -325,7 +325,7 @@ namespace Scripts
                     RateOfFire = 480,
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
-                    ReloadTime = 120, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = missileReloadTime, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 4, // Number of physical magazines to consume on reload.
                 },
                 Audio = Missiles_Rocket_Hardpoint_Audio,

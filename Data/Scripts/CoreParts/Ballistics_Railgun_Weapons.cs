@@ -12,7 +12,7 @@ namespace Scripts
     partial class Parts
     {
         // Don't edit above this line
-        WeaponDefinition AryxRailgunTurret => new WeaponDefinition
+        /*WeaponDefinition AryxRailgunTurret => new WeaponDefinition
         {
             Assignments = new ModelAssignmentsDef
             {
@@ -116,7 +116,7 @@ namespace Scripts
                 LargeRailgunAmmo_Apollo,
             },
             Animations = AryxRailgunAnims,
-        };
+        };*/
 
         WeaponDefinition LargeBlockRailgun => new WeaponDefinition
         {

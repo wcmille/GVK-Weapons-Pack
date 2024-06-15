@@ -189,7 +189,7 @@ namespace Scripts
                     BarrelsPerShot = 1, 
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,
-                    ReloadTime = 480, //3600 // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = missileReloadTime, //3600 // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     DelayUntilFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 0, //heat generated per shot
                     MaxHeat = 0, //max heat before weapon enters cooldown (70% of max heat)

@@ -9,6 +9,7 @@ namespace Scripts
 {
     partial class Parts
     {
+        const int missileReloadTime = 30 * 60; // 30 seconds
         internal DecalDef MakeMissileDecal()
         {
             return new DecalDef
