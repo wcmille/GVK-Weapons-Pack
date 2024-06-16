@@ -518,7 +518,7 @@
     </Definition>
     <Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
       <Id>
-        <TypeId>ConveyorSorter</TypeId>
+        <TypeId>LargeMissileTurret</TypeId>
         <SubtypeId>AutoCannonTurret</SubtypeId>
       </Id>
       <DisplayName>DisplayName_Block_AutoCannonTurret</DisplayName>
