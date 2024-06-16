@@ -264,7 +264,7 @@
 		<Weapon>
 			<Id>
 				<TypeId>WeaponDefinition</TypeId>
-				<SubtypeId>AutocannonTurret</SubtypeId>
+				<SubtypeId>AutoCannonTurret</SubtypeId>
 			</Id>
 			<ProjectileAmmoData/>
 			<AmmoMagazines>

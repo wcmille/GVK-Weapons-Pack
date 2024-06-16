@@ -19,15 +19,12 @@
 		<Entry Class="EliteConsumables" BlueprintSubtypeId="Missiles_HeavyMissile"/>
 		<!--LARGE BLOCKS-->
 		<Entry Class="LargeBlocks" BlueprintSubtypeId="LargeGatlingTurret/LargeGatlingTurretBasic"/>
-		<Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorSorter/ARYXLargeRadar"/>
 		<Entry Class="LargeBlocks" BlueprintSubtypeId="LargeMissileTurret/MA_PDT"/>
 		<Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorSorter/MA_T2PDX"/>
 		<Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorSorter/Missile_Torpedo_Large"/>
 		<Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorSorter/MA_Fixed_T2"/>
-		<Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorSorter/ARYXMissileBattery"/>
     <Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorSorter/ARYXLargeRadar"/>
     <!--SMALL BLOCKS-->
-		<Entry Class="SmallBlocks" BlueprintSubtypeId="InteriorTurret/SmallInteriorTurret"/>
 		<Entry Class="SmallBlocks" BlueprintSubtypeId="LargeMissileTurret/MA_PDT_sm"/>
 		<Entry Class="SmallBlocks" BlueprintSubtypeId="ConveyorSorter/ReceptorCoilGun"/>
 		<Entry Class="SmallBlocks" BlueprintSubtypeId="LargeMissileTurret/ReceptorTurret"/>

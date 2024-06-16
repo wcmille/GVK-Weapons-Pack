@@ -419,7 +419,7 @@
         <string>Weapons</string>
       </TargetingGroups>
     </Definition>
-    <Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+    <Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition" Enabled="false">
       <Id>
         <TypeId>LargeGatlingTurret</TypeId>
         <SubtypeId>AutoCannonTurret</SubtypeId>
@@ -516,5 +516,102 @@
       <CameraDummyName>muzzle_projectile</CameraDummyName>
       <AiEnabled>false</AiEnabled>
     </Definition>
-	</CubeBlocks>
+    <Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+      <Id>
+        <TypeId>ConveyorSorter</TypeId>
+        <SubtypeId>AutoCannonTurret</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Block_AutoCannonTurret</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\AutocannonTurret_icon.dds</Icon>
+      <Description>Description_AutoCannonTurret</Description>
+      <CubeSize>Small</CubeSize>
+      <PlaceDecals>false</PlaceDecals>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="5" y="4" z="5"/>
+      <ModelOffset x="0" y="0" z="0"/>
+      <Model>Models\Cubes\Small\AutocannonTurret_Base.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+      <Components>
+        <Component Subtype="SteelPlate" Count="10"/>
+        <Component Subtype="MetalGrid" Count="28"/>
+        <Component Subtype="SmallTube" Count="12"/>
+        <Component Subtype="Motor" Count="15"/>
+        <Component Subtype="Computer" Count="19"/>
+        <Component Subtype="Construction" Count="56"/>
+        <Component Subtype="SteelPlate" Count="28"/>
+      </Components>
+      <BuildTimeSeconds>9</BuildTimeSeconds>
+      <PCU>200</PCU>
+      <CriticalComponent Subtype="Computer" Index="0"/>
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="1.3" StartY="1.3" EndX="3.7" EndY="3.7" Default="true"/>
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.43" File="Models\Cubes\Small\AutocannonTurretConstruction_1.mwm"/>
+        <Model BuildPercentUpperBound="1.0" File="Models\Cubes\Small\AutocannonTurretConstruction_2.mwm"/>
+      </BuildProgressModels>
+      <VoxelPlacement>
+        <!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+        <StaticMode>
+          <PlacementMode>OutsideVoxel</PlacementMode>
+          <MaxAllowed>0.2</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </StaticMode>
+        <DynamicMode>
+          <PlacementMode>OutsideVoxel</PlacementMode>
+          <MaxAllowed>0.2</MaxAllowed>
+          <MinAllowed>0.01</MinAllowed>
+        </DynamicMode>
+      </VoxelPlacement>
+      <BlockPairName>AutoCannonTurret</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <OverlayTexture>Textures\GUI\Screens\camera_overlay.dds</OverlayTexture>
+      <WeaponDefinitionId Subtype="AutocannonTurret"/>
+      <HiddenTargetingOptions>Friends</HiddenTargetingOptions>
+      <InventoryMaxVolume>0.072</InventoryMaxVolume>
+      <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <MinElevationDegrees>-10</MinElevationDegrees>
+      <MaxElevationDegrees>180</MaxElevationDegrees>
+      <MinAzimuthDegrees>-180</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+      <RotationSpeed>0.001</RotationSpeed>
+      <ElevationSpeed>0.001 </ElevationSpeed>
+      <IdleRotation>true</IdleRotation>
+      <MaxRangeMeters>600</MaxRangeMeters>
+      <MinFov>0.1</MinFov>
+      <MaxFov>1.04719755</MaxFov>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+      <InventoryFillFactorMin>.25</InventoryFillFactorMin>
+      <InventoryFillFactorMax>.5</InventoryFillFactorMax>
+      <TieredUpdateTimes>
+        <unsignedInt>10</unsignedInt>
+        <unsignedInt>0</unsignedInt>
+      </TieredUpdateTimes>
+      <TargetingGroups>
+        <string>Weapons</string>
+      </TargetingGroups>
+      <SubpartPairing>
+        <dictionary>
+          <item>
+            <Key>Base1</Key>
+            <Value>AutocannonTurret_Base1</Value>
+          </item>
+          <item>
+            <Key>Base2</Key>
+            <Value>AutocannonTurret_Base1/AutocannonTurret_Barrel</Value>
+          </item>
+        </dictionary>
+      </SubpartPairing>
+      <MuzzleProjectileDummyName>muzzle_missile_001</MuzzleProjectileDummyName>
+      <CameraDummyName>muzzle_projectile</CameraDummyName>
+      <AiEnabled>false</AiEnabled>
+    </Definition>
+  </CubeBlocks>
 </Definitions>
