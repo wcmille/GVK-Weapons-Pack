@@ -40,6 +40,8 @@ namespace Scripts
 							ReceptorTurret,
 							MA_Fixed_T2,
 							SentinelTurret,
+							LaserDesignator,
+							LaserDesignatorTurret,
 							AryxRadar
 							);
             ArmorDefinitions(AdditionalLightArmors);

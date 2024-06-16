@@ -20,6 +20,7 @@
         <Block Type="MyObjectBuilder_ConveyorSorter" Subtype="LargeRailgun"/>
         <Block Type="MyObjectBuilder_ConveyorSorter" Subtype="MA_Fixed_T2"/>
         <Block Type="MyObjectBuilder_ConveyorSorter" Subtype="ReceptorCoilGun"/>
+        <Block Type="MyObjectBuilder_ConveyorSorter" Subtype="LaserDesignator"/>
       </Blocks>
 		</BlockVariantGroup>
 		<BlockVariantGroup>
@@ -40,9 +41,9 @@
         <Block Type="MyObjectBuilder_LargeMissileTurret" Subtype="MA_PDT"/>
         <Block Type="MyObjectBuilder_LargeMissileTurret" Subtype="MA_PDT_sm"/>
         <Block Type="MyObjectBuilder_ConveyorSorter" Subtype="MA_T2PDX"/>
+        <Block Type="MyObjectBuilder_LargeMissileTurret" Subtype="LaserDesignatorTurret"/>
         <Block Type="MyObjectBuilder_LargeMissileTurret" Subtype="ReceptorTurret"/>
         <Block Type="MyObjectBuilder_ConveyorSorter" Subtype="ARYXLargeRadar"/>
-        <Block Type="MyObjectBuilder_ConveyorSorter" Subtype="ARYXSmallRadar"/>
       </Blocks>
 		</BlockVariantGroup>
 	</BlockVariantGroups>

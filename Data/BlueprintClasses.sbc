@@ -29,6 +29,7 @@
 		<Entry Class="SmallBlocks" BlueprintSubtypeId="ConveyorSorter/ReceptorCoilGun"/>
 		<Entry Class="SmallBlocks" BlueprintSubtypeId="LargeMissileTurret/ReceptorTurret"/>
 		<Entry Class="SmallBlocks" BlueprintSubtypeId="ConveyorSorter/Missile_Torpedo_Small"/>
-		<Entry Class="SmallBlocks" BlueprintSubtypeId="ConveyorSorter/ARYXSmallRadar"/>
+		<Entry Class="SmallBlocks" BlueprintSubtypeId="LargeMissileTurret/LaserDesignatorTurret"/>
+		<Entry Class="SmallBlocks" BlueprintSubtypeId="LargeMissileTurret/LaserDesignator"/>
   </BlueprintClassEntries>
 </Definitions>

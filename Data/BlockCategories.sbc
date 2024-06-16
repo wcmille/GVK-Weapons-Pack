@@ -12,7 +12,7 @@
 			<IsBlockCategory>false</IsBlockCategory>
 			<SearchCategory>true</SearchCategory>
 			<ItemIds>
-		    <string>AryxRadar</string>
+			    <string>AryxRadar</string>
 				<string>Missile_Torpedo_Large</string>
 				<string>Missile_Torpedo_Small</string>
 				<string>LargeWarhead</string>
@@ -32,7 +32,6 @@
 				<string>ReceptorTurret</string>
 				<string>MA_Fixed_T2</string>
 				<string>ARYXLargeRadar</string>
-				<string>ARYXSmallRadar</string>
 				<string>LargeBlockMediumCalibreTurret</string>
 				<string>SmallBlockMediumCalibreTurret</string>
 				<string>LargeCalibreTurret</string>
@@ -43,7 +42,9 @@
 				<string>SmallMissileLauncherWarfare2</string>
 				<string>SmallGatlingGunWarfare2</string>
 				<string>AutoCannonTurret</string>
-			</ItemIds>
+        <string>LaserDesignator</string>
+        <string>LaserDesignatorTurret</string>
+      </ItemIds>
 		</Category>
 	</CategoryClasses>
 </Definitions>
