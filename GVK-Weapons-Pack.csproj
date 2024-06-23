@@ -57,8 +57,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Scripts\CoreParts\Armor_Blocks.cs" />
-    <Compile Include="Data\Scripts\CoreParts\AryxRadar.cs" />
-    <Compile Include="Data\Scripts\CoreParts\AryxRadarAmmo.cs" />
     <Compile Include="Data\Scripts\CoreParts\Ballistics_Cannon_Ammos.cs" />
     <Compile Include="Data\Scripts\CoreParts\Ballistics_Cannon_Weapons.cs" />
     <Compile Include="Data\Scripts\CoreParts\Ballistics_Chaingun_Ammos.cs" />
