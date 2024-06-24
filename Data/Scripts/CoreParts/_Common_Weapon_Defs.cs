@@ -1,4 +1,5 @@
-﻿using VRageMath;
+﻿using System.CodeDom;
+using VRageMath;
 using static Scripts.Structure.WeaponDefinition;
 using static Scripts.Structure.WeaponDefinition.AmmoDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.AreaOfDamageDef;
@@ -24,8 +25,12 @@ namespace Scripts
 {
     partial class Parts
     {
-
 		//// Weapon definitions ////
+		public const float MaxRadarRange = 6000;
+		public const float MaxSmallRadarRange = 5000;
+        public const float MaxLongMissileRange = 5000; //Crusaders
+        public const float MaxMissileRange = 4000;
+        public const float MaxBallisticRange = 3000;
 		
 		private TargetingDef Common_Weapons_Targeting_Fixed_NoTargeting => new TargetingDef {
 			Threats = new[] {
@@ -100,7 +105,7 @@ namespace Scripts
 			TurretController = false,
 			PrimaryTracking = false,
 			LockOnFocus = false,
-			SuppressFire = true,
+			SuppressFire = false,
 			OverrideLeads = false, // Override default behavior for target leads
 		};
 
