@@ -18,14 +18,14 @@
 			<Model>Models\Cubes\Large\MediumCalibreTurret.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<Components>
-				<Component Subtype="SteelPlate" Count="140"/>
-				<Component Subtype="Construction" Count="210"/>
-				<Component Subtype="SmallTube" Count="83"/>
-				<Component Subtype="LargeTube" Count="69"/>
-				<Component Subtype="Motor" Count="130"/>
-				<Component Subtype="Computer" Count="69"/>
-				<Component Subtype="MetalGrid" Count="110"/>
-				<Component Subtype="SteelPlate" Count="350"/>
+        <Component Subtype="SteelPlate" Count="100" />
+        <Component Subtype="Construction" Count="200" />
+        <Component Subtype="MetalGrid" Count="30" />
+        <Component Subtype="LargeTube" Count="30" />
+        <Component Subtype="Motor" Count="20" />
+        <Component Subtype="Computer" Count="20" />
+        <Component Subtype="Construction" Count="80" />
+        <Component Subtype="SteelPlate" Count="200" />
 			</Components>
 			<BuildTimeSeconds>90</BuildTimeSeconds>
 			<PCU>200</PCU>

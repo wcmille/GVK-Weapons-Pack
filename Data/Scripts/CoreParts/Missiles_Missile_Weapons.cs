@@ -13,6 +13,9 @@ namespace Scripts
 {
     partial class Parts
     {
+		int baseMissileFireRate = 90;
+	    float maxMissileDistance = 4000.0f;
+
 		//Common definitions
 		private TargetingDef Missiles_Missile_Targeting_Large => new TargetingDef {
 			Threats = new[] {
@@ -26,7 +29,7 @@ namespace Scripts
 			LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
 			MinimumDiameter = 0, // 0 = unlimited, Minimum radius of threat to engage.
 			MaximumDiameter = 0, // 0 = unlimited, Maximum radius of threat to engage.
-			MaxTargetDistance = 4000, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
+			MaxTargetDistance = maxMissileDistance, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
 			MinTargetDistance = 200, // 0 = unlimited, Min target distance that targets will be automatically shot at.
 			TopTargets = 2, // 0 = unlimited, max number of top targets to randomize between.
 			TopBlocks = 5, // 0 = unlimited, max number of blocks to randomize between
@@ -185,7 +188,7 @@ namespace Scripts
 				
                 Loading = new LoadingDef
                 {
-                    RateOfFire = 240, // 240 Pre Rebalance 
+                    RateOfFire = baseMissileFireRate, // 240 Pre Rebalance 
                     BarrelsPerShot = 1, 
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     SkipBarrels = 0,

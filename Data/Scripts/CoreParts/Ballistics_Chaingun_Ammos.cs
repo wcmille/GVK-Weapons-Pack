@@ -11,7 +11,8 @@ namespace Scripts
         {
             get 
             {
-                var sk = new SabotKinetic(this, 1100.0f, 0.1f, 30.0f);
+                //Modelled from this weapon: https://en.wikipedia.org/wiki/Rheinmetall_Oerlikon_Millennium_Gun
+                var sk = new SabotKinetic(this, 1440.0f, 0.45f, 30.0f);
                 var ag = new GraphicDef
                 {
                     ModelName = "", // Model Path goes here.  "\\Models\\Ammo\\Starcore_Arrow_Missile_Large"

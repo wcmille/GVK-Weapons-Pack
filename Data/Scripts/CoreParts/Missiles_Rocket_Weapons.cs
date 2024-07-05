@@ -24,7 +24,7 @@ namespace Scripts
             ClosestFirst = false, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
             IgnoreDumbProjectiles = true, // Don't fire at non-smart projectiles.
             LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
-            MaxTargetDistance = 4000, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
+            MaxTargetDistance = maxMissileDistance, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
             TopTargets = 1, // 0 = unlimited, max number of top targets to randomize between.
             TopBlocks = 4, // 0 = unlimited, max number of blocks to randomize between
             StopTrackingSpeed = 1000, // do not track target threats traveling faster than this speed
@@ -96,7 +96,7 @@ namespace Scripts
                 Other = Common_Weapons_Hardpoint_Other_21CapOnly,
                 Loading = new LoadingDef
                 {
-                    RateOfFire = 480,
+                    RateOfFire = baseMissileFireRate,
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     ReloadTime = missileReloadTime, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
@@ -148,7 +148,7 @@ namespace Scripts
                 ClosestFirst = false, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
                 IgnoreDumbProjectiles = true, // Don't fire at non-smart projectiles.
                 LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
-                MaxTargetDistance = 600, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
+                MaxTargetDistance = maxMissileDistance, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
                 TopTargets = 1, // 0 = unlimited, max number of top targets to randomize between.
                 TopBlocks = 1, // 0 = unlimited, max number of blocks to randomize between
                 StopTrackingSpeed = 1000, // do not track target threats traveling faster than this speed
@@ -178,7 +178,7 @@ namespace Scripts
                 Other = Common_Weapons_Hardpoint_Other_21CapOnly,
                 Loading = new LoadingDef
                 {
-                    RateOfFire = 320,
+                    RateOfFire = baseMissileFireRate,
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     ReloadTime = missileReloadTime, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
@@ -253,7 +253,7 @@ namespace Scripts
                 Other = Common_Weapons_Hardpoint_Other_21CapOnly,
                 Loading = new LoadingDef
                 {
-                    RateOfFire = 120,
+                    RateOfFire = baseMissileFireRate,
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     ReloadTime = missileReloadTime, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
@@ -322,7 +322,7 @@ namespace Scripts
                 Other = Common_Weapons_Hardpoint_Other_21CapOnly,
                 Loading = new LoadingDef
                 {
-                    RateOfFire = 480,
+                    RateOfFire = baseMissileFireRate,
                     BarrelsPerShot = 1,
                     TrajectilesPerBarrel = 1, // Number of Trajectiles per barrel per fire event.
                     ReloadTime = missileReloadTime, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
