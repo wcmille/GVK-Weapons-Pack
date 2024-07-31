@@ -147,7 +147,7 @@
 				<TypeId>AmmoMagazine</TypeId>
 				<SubtypeId>SmallRailgunAmmo</SubtypeId>
 			</Id>
-			<DisplayName>SmallRailgunAmmo</DisplayName>
+			<DisplayName>DisplayName_Item_SmallRailgunAmmo</DisplayName>
 			<Icon>Textures\GUI\Icons\ammo\RailgunAmmo.dds</Icon>
 			<Size>
 				<X>0.25</X>
@@ -187,7 +187,7 @@
 				<TypeId>AmmoMagazine</TypeId>
 				<SubtypeId>Missiles_Missile</SubtypeId>
 			</Id>
-			<DisplayName>Archer Missile</DisplayName>
+			<DisplayName>Missile</DisplayName>
 			<Icon>Textures\GUI\Icons\MXA_Archer_Missile_Ammo.png</Icon>
 			<Size>
 				<X>0.25</X>
@@ -207,7 +207,7 @@
 				<TypeId>AmmoMagazine</TypeId>
 				<SubtypeId>Missiles_Torpedo</SubtypeId>
 			</Id>
-			<DisplayName>Crusader EMP Torpedo</DisplayName>
+			<DisplayName>Crusader Torpedo</DisplayName>
 			<Icon>Textures\GUI\Icons\CrusaderMissile.png</Icon>
 			<Size>
 				<X>1</X>

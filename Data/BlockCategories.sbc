@@ -12,7 +12,6 @@
 			<IsBlockCategory>false</IsBlockCategory>
 			<SearchCategory>true</SearchCategory>
 			<ItemIds>
-			    <string>AryxRadar</string>
 				<string>Missile_Torpedo_Large</string>
 				<string>Missile_Torpedo_Small</string>
 				<string>LargeWarhead</string>
