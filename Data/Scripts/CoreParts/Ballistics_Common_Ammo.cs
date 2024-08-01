@@ -104,7 +104,6 @@ namespace Scripts
             }
             public DamageScaleDef KineticDamage()
             {
-
                 return new DamageScaleDef
                 {
                     //This is additional damage done and does not directly affect the speed that the ammo's health pool depletes.

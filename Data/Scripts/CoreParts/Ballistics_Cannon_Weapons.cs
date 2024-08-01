@@ -26,7 +26,7 @@ namespace Scripts
             ClosestFirst = false, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
             IgnoreDumbProjectiles = true, // Don't fire at non-smart projectiles.
             LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
-            MaxTargetDistance = 2400, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
+            MaxTargetDistance = MaxBallisticRange * shortFactor, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
             MinTargetDistance = 20, // 0 = unlimited, Min target distance that targets will be automatically shot at.
             TopTargets = 1, // 0 = unlimited, max number of top targets to randomize between.
             TopBlocks = 1, // 0 = unlimited, max number of blocks to randomize between
@@ -46,7 +46,7 @@ namespace Scripts
             ClosestFirst = false, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
             IgnoreDumbProjectiles = true, // Don't fire at non-smart projectiles.
             LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
-            MaxTargetDistance = 2400, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
+            MaxTargetDistance = MaxBallisticRange * shortFactor, // 0 = unlimited, Maximum target distance that targets will be automatically shot at.
             MinTargetDistance = 10, // 0 = unlimited, Min target distance that targets will be automatically shot at.
             TopTargets = 1, // 0 = unlimited, max number of top targets to randomize between.
             TopBlocks = 1, // 0 = unlimited, max number of blocks to randomize between

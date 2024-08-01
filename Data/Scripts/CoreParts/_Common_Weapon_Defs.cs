@@ -31,6 +31,8 @@ namespace Scripts
         public const float MaxLongMissileRange = 5000; //Crusaders
         public const float MaxMissileRange = 4000;
         public const float MaxBallisticRange = 3000;
+		public const float MaxSmallBallisticRange = 2500;
+		public const float shortFactor = 0.9f;
 		
 		private TargetingDef Common_Weapons_Targeting_Fixed_NoTargeting => new TargetingDef {
 			Threats = new[] {

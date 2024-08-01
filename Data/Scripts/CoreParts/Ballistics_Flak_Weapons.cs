@@ -13,7 +13,6 @@ namespace Scripts
     partial class Parts
     {
         const int FlakBaseRoF = 15;
-        const float FlakWeaponRange = 2400;
 
         private HardPointAudioDef Ballistics_Flak_Hardpoint_Audio = new HardPointAudioDef
         {
@@ -82,7 +81,7 @@ namespace Scripts
                 ClosestFirst = false, // Tries to pick closest targets first (blocks on grids, projectiles, etc...).
                 IgnoreDumbProjectiles = false, // Don't fire at non-smart projectiles.
                 LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
-                MaxTargetDistance = FlakWeaponRange, // Maximum distance at which targets will be automatically shot at; 0 = unlimited.
+                MaxTargetDistance = MaxBallisticRange * shortFactor, // Maximum distance at which targets will be automatically shot at; 0 = unlimited.
                 TopTargets = 8, // Maximum number of targets to randomize between; 0 = unlimited.
                 TopBlocks = 1, // Maximum number of blocks to randomize between; 0 = unlimited.
                 StopTrackingSpeed = 1000, // Do not track threats traveling faster than this speed; 0 = unlimited.
@@ -181,7 +180,7 @@ namespace Scripts
                 ClosestFirst = false, // Tries to pick closest targets first (blocks on grids, projectiles, etc...).
                 IgnoreDumbProjectiles = false, // Don't fire at non-smart projectiles.
                 LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
-                MaxTargetDistance = FlakWeaponRange, // Maximum distance at which targets will be automatically shot at; 0 = unlimited.
+                MaxTargetDistance = MaxBallisticRange * shortFactor, // Maximum distance at which targets will be automatically shot at; 0 = unlimited.
                 TopTargets = 8, // Maximum number of targets to randomize between; 0 = unlimited.
                 TopBlocks = 1, // Maximum number of blocks to randomize between; 0 = unlimited.
                 StopTrackingSpeed = 1000, // Do not track threats traveling faster than this speed; 0 = unlimited.
