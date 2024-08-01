@@ -23,7 +23,7 @@
 			<UseModelIntersection>true</UseModelIntersection>
 			<Components>
 				<Component Subtype="SteelPlate" Count="28"/>
-				<Component Subtype="GVK_Laser_Tech" Count="3"/>
+				<Component Subtype="GV_Elite_Tech" Count="3"/>
 				<Component Subtype="SmallTube" Count="37"/>
 				<Component Subtype="Motor" Count="30"/>
 				<Component Subtype="Superconductor" Count="92"/>
@@ -106,7 +106,7 @@
 			<GuiVisible>true</GuiVisible>
 			<Components>
 				<Component Subtype="SteelPlate" Count="9"/>
-				<Component Subtype="GVK_Laser_Tech" Count="2"/>
+				<Component Subtype="GV_Elite_Tech" Count="2"/>
 				<Component Subtype="SmallTube" Count="12"/>
 				<Component Subtype="Motor" Count="10"/>
 				<Component Subtype="Superconductor" Count="30"/>
@@ -167,7 +167,7 @@
 			<GuiVisible>true</GuiVisible>
 			<Components>
 				<Component Subtype="SteelPlate" Count="7"/>
-				<Component Subtype="GVK_Laser_Tech" Count="1"/>
+				<Component Subtype="GV_Elite_Tech" Count="1"/>
 				<Component Subtype="SmallTube" Count="10"/>
 				<Component Subtype="Motor" Count="8"/>
 				<Component Subtype="Superconductor" Count="23"/>
@@ -257,7 +257,7 @@
 			<GuiVisible>true</GuiVisible>
 			<Components>
 				<Component Subtype="SteelPlate" Count="3"/>
-				<Component Subtype="GVK_Laser_Tech" Count="1"/>
+				<Component Subtype="GV_Elite_Tech" Count="1"/>
 				<Component Subtype="SmallTube" Count="4"/>
 				<Component Subtype="Motor" Count="3"/>
 				<Component Subtype="Superconductor" Count="8"/>

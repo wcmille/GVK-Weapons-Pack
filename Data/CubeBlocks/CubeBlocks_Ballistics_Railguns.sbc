@@ -72,7 +72,7 @@
       <Model>Models\Cubes\Small\RailGun.mwm</Model>
       <Components>
         <Component Subtype="SteelPlate" Count="5"/>
-        <Component Subtype="GVK_Laser_Tech" Count="1">
+        <Component Subtype="GV_Elite_Tech" Count="1">
           <DeconstructId>
             <TypeId>Ore</TypeId>
             <SubtypeId>Scrap</SubtypeId>
@@ -194,13 +194,13 @@
       <Model>Models\Cubes\Large\RailGun.mwm</Model>
       <Components>
         <Component Subtype="SteelPlate" Count="50"/>
-        <Component Subtype="GVK_Laser_Tech" Count="3">
+        <Component Subtype="GV_Elite_Tech" Count="3">
           <DeconstructId>
             <TypeId>Ore</TypeId>
             <SubtypeId>Scrap</SubtypeId>
           </DeconstructId>
         </Component>
-        <Component Subtype="GVK_Laser_Tech" Count="7"/>
+        <Component Subtype="GV_Elite_Tech" Count="7"/>
         <Component Subtype="Construction" Count="150"/>
         <Component Subtype="Superconductor" Count="150"/>
         <Component Subtype="LargeTube" Count="60"/>

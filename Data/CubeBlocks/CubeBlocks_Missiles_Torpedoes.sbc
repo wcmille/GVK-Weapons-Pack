@@ -7,10 +7,9 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>Missile_Torpedo_Large</SubtypeId>
 			</Id>
-			<DisplayName>[Torpedo] Large Crusader Launcher</DisplayName>
-			<Description>The Crusader Torpedo is matched only by the MAC in range, however this fire-and-forget torpedo can deliver a powerful EMP warhead on-target with no range penaulty, with an explosion so large it can be seen from low orbit. Designed by Akiad Development.
-				[3000m Auto Range]
-				[Uses Crusader EMP x1]</Description>
+			<DisplayName>Large Crusader Torpedo Launcher</DisplayName>
+			<Description>The Crusader Torpedo is a slow, long range weapon that delivers a hit powerful enough to destroy most small craft, or disable larger ones. Designed by Akiad Development.
+      [Uses Crusader Torpdeo]</Description>
 			<Icon>Textures\GUI\Icons\CrusaderTubeLG.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>true</GuiVisible>
@@ -72,10 +71,10 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>Missile_Torpedo_Small</SubtypeId>
 			</Id>
-			<DisplayName>[Torpedo] Small Crusader Launcher</DisplayName>
-			<Description>The Crusader Torpedo is matched only by the MAC in range, however this fire-and-forget torpedo can deliver a powerful EMP warhead on-target with no range penaulty, with an explosion so large it can be seen from low orbit. Designed by Akiad Development.
-				[2500m Semi-Auto Range]
-				[Uses Crusader EMP x1 (Manual Reload)]</Description>
+			<DisplayName>Small Crusader Torpedo Launcher</DisplayName>
+			<Description>
+        The Crusader Torpedo is a slow, long range weapon that delivers a hit powerful enough to destroy most small craft, or disable larger ones. Designed by Akiad Development.
+        [Uses Crusader Torpdeo (Manual Reload)]</Description>
 			<Icon>Textures\GUI\Icons\CrusaderLauncherOpenStatic.png</Icon>
 			<CubeSize>Small</CubeSize>
 			<GuiVisible>true</GuiVisible>
@@ -134,10 +133,11 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>Missile_Torpedo_Large_NPC</SubtypeId>
 			</Id>
-			<DisplayName>[Torpedo] Large Crusader Launcher NPC</DisplayName>
-			<Description>The Crusader Torpedo is matched only by the MAC in range, however this fire-and-forget torpedo can deliver a powerful EMP warhead on-target with no range penaulty, with an explosion so large it can be seen from low orbit. Designed by Akiad Development.
-				[3000m Auto Range]
-				[Uses Crusader EMP x1]</Description>
+			<DisplayName>Large Crusader Torpedo Launcher NPC</DisplayName>
+			<Description>
+        The Crusader Torpedo is a slow, long range weapon that delivers a hit powerful enough to destroy most small craft, or disable larger ones. Designed by Akiad Development.
+        [Uses Crusader Torpdeo]
+      </Description>
 			<Icon>Textures\GUI\Icons\CrusaderTubeLG.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>false</GuiVisible>
@@ -206,10 +206,10 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>Missile_Torpedo_Small_NPC</SubtypeId>
 			</Id>
-			<DisplayName>[Torpedo] Small Crusader Launcher NPC</DisplayName>
-			<Description>The Crusader Torpedo is matched only by the MAC in range, however this fire-and-forget torpedo can deliver a powerful EMP warhead on-target with no range penaulty, with an explosion so large it can be seen from low orbit. Designed by Akiad Development.
-				[2500m Semi-Auto Range]
-				[Uses Crusader EMP x1 (Manual Reload)]</Description>
+			<DisplayName>Small Crusader Torpedo Launcher NPC</DisplayName>
+			<Description>
+        The Crusader Torpedo is a slow, long range weapon that delivers a hit powerful enough to destroy most small craft, or disable larger ones. Designed by Akiad Development.
+        [Uses Crusader Torpdeo (Manual Reload)]</Description>
 			<Icon>Textures\GUI\Icons\CrusaderLauncherOpenStatic.png</Icon>
 			<CubeSize>Small</CubeSize>
 			<GuiVisible>false</GuiVisible>

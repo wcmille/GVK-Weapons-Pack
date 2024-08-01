@@ -1,8 +1,8 @@
 using static Scripts.Structure;
-using static Scripts.Structure.ArmorDefinition;
 using static Scripts.Structure.ArmorDefinition.ArmorType;
 
-namespace Scripts {
+namespace Scripts
+{
     partial class Parts {
         // Don't edit above this line
         //private ArmorDefinition BusterArmor => new ArmorDefinition
