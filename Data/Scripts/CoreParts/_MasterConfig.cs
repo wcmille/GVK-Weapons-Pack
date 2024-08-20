@@ -42,6 +42,8 @@ namespace Scripts
 							SentinelTurret,
 							LaserDesignator,
 							LaserDesignatorTurret,
+							LargeFlareWC,
+                            SmallFlareWC,
                             honir_designator_01_def
                             );
             ArmorDefinitions(AdditionalLightArmors);

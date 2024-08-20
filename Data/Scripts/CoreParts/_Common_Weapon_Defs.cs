@@ -1,5 +1,4 @@
-﻿using System.CodeDom;
-using VRageMath;
+﻿using VRageMath;
 using static Scripts.Structure.WeaponDefinition;
 using static Scripts.Structure.WeaponDefinition.AmmoDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.AreaOfDamageDef;
@@ -111,7 +110,34 @@ namespace Scripts
 			OverrideLeads = false, // Override default behavior for target leads
 		};
 
-		private CriticalDef Common_Weapons_Hardpoint_Hardware_CriticalReaction_None = new CriticalDef
+        private AiDef Common_Weapons_Hardpoint_Ai_FullDisable = new AiDef
+        {
+            TrackTargets = false, // Whether this weapon tracks its own targets, or (for multiweapons) relies on the weapon with PrimaryTracking enabled for target designation. Turrets Need this set to True.
+            TurretAttached = false, // Whether this weapon is a turret and should have the UI and API options for such. Turrets Need this set to True.
+            TurretController = false, // Whether this weapon can physically control the turret's movement. Turrets Need this set to True.
+            PrimaryTracking = false, // For multiweapons: whether this weapon should designate targets for other weapons on the platform without their own tracking.
+            LockOnFocus = false, // If enabled, weapon will only fire at targets that have been HUD selected AND locked onto by pressing Numpad 0.
+            SuppressFire = false, // If enabled, weapon can only be fired manually.
+            OverrideLeads = false, // Disable target leading on fixed weapons, or allow it for turrets.
+            DefaultLeadGroup = 2, // Default LeadGroup setting, range 0-5, 0 is disables lead group.  Only useful for fixed weapons or weapons set to OverrideLeads.
+            TargetGridCenter = false, // Does not target blocks, instead it targets grid center.
+        };
+
+        private OtherDef Common_Weapons_Hardpoint_Other_NoRestrictionRadius = new OtherDef
+        {
+            ConstructPartCap = 0,
+            RotateBarrelAxis = 0,
+            EnergyPriority = 0,
+            MuzzleCheck = false,
+            DisableLosCheck = false, // Do not perform LOS checks at all... not advised for self tracking weapons
+            NoVoxelLosCheck = false, // If set to true this ignores voxels for LOS checking.. which means weapons will fire at targets behind voxels.  However, this can save cpu in some situations, use with caution.
+            Debug = false,
+            RestrictionRadius = 0f, // Meters, radius of sphere disable this gun if another is present
+            CheckInflatedBox = false, // if true, the bounding box of the gun is expanded by the RestrictionRadius
+            CheckForAnyWeapon = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype
+        };
+
+        private CriticalDef Common_Weapons_Hardpoint_Hardware_CriticalReaction_None = new CriticalDef
 		{
 			Enable = false, // Enables Warhead behaviour.
 			DefaultArmedTimer = 0, // Sets default countdown duration.
