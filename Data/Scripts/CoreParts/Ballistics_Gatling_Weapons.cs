@@ -243,6 +243,16 @@ namespace Scripts
                         DurabilityMod = 0.5f,
                         IconName = "TestIcon.dds",
                     },
+                    new MountPointDef
+                    {
+                        SubtypeId = "LargeGatlingTurretReskin",
+                        SpinPartId = "Boomsticks", // For weapons with a spinning barrel such as Gatling Guns
+						MuzzlePartId = "GatlingTurretReskinBarrel",
+                        AzimuthPartId = "GatlingTurretBase1",
+                        ElevationPartId = "GatlingTurretBase2",
+                        DurabilityMod = 0.5f,
+                        IconName = "TestIcon.dds",
+                    },
                 },
                 Muzzles = new[]
                 {
@@ -287,10 +297,20 @@ namespace Scripts
                         DurabilityMod = 0.5f,
                         IconName = "TestIcon.dds",
                     },
+                    new MountPointDef
+                    {
+                        SubtypeId = "SmallGatlingTurretReskin",
+                        SpinPartId = "Boomsticks", // For weapons with a spinning barrel such as Gatling Guns
+                        MuzzlePartId = "GatlingTurretBarrel",
+                        AzimuthPartId = "GatlingTurretBase1",
+                        ElevationPartId = "GatlingTurretBase2",
+                        DurabilityMod = 0.5f,
+                        IconName = "TestIcon.dds",
+                    },
                 },
                 Muzzles = new[]
                 {
-                    "muzzle_projectile",
+                    "muzzle_projectile", 
                 },
             },
             Targeting = Ballistics_Gatlings_Targeting_T1,

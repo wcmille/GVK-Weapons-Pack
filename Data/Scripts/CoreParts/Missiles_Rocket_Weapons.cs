@@ -52,12 +52,22 @@ namespace Scripts
                     new MountPointDef
                     {
                         SubtypeId = "LargeMissileTurret",
-                        SpinPartId = "Boomsticks", // For weapons with a spinning barrel such as Gatling Guns
+                        SpinPartId = "None", // For weapons with a spinning barrel such as Gatling Guns
                         MuzzlePartId = "MissileTurretBarrels",
                         AzimuthPartId = "MissileTurretBase1",
                         ElevationPartId = "MissileTurretBarrels",
                         DurabilityMod = 0.5f,
-                        IconName = "TestIcon.dds",
+                        IconName = "",
+                    },
+                    new MountPointDef
+                    {
+                        SubtypeId = "LargeMissileTurretReskin",
+                        SpinPartId = "None", // For weapons with a spinning barrel such as Gatling Guns
+                        MuzzlePartId = "MissileTurretBarrels",
+                        AzimuthPartId = "MissileTurretBase1",
+                        ElevationPartId = "MissileTurretBarrels",
+                        DurabilityMod = 0.5f,
+                        IconName = "",
                     },
                 },
                 Muzzles = new[]
@@ -121,6 +131,16 @@ namespace Scripts
                     new MountPointDef
                     {
                         SubtypeId = "SmallMissileTurret",
+                        SpinPartId = "Boomsticks", // For weapons with a spinning barrel such as Gatling Guns
+                        MuzzlePartId = "MissileTurretBarrels",
+                        AzimuthPartId = "MissileTurretBase1",
+                        ElevationPartId = "MissileTurretBarrels",
+                        DurabilityMod = 0.5f,
+                        IconName = "TestIcon.dds",
+                    },
+                    new MountPointDef
+                    {
+                        SubtypeId = "SmallMissileTurretReskin",
                         SpinPartId = "Boomsticks", // For weapons with a spinning barrel such as Gatling Guns
                         MuzzlePartId = "MissileTurretBarrels",
                         AzimuthPartId = "MissileTurretBase1",

@@ -31,8 +31,12 @@
         <Block Type="MyObjectBuilder_InteriorTurret" Subtype="LargeInteriorTurret"/>
         <Block Type="MyObjectBuilder_LargeGatlingTurret" Subtype=""/>
         <Block Type="MyObjectBuilder_LargeGatlingTurret" Subtype="SmallGatlingTurret"/>
+        <Block Type="MyObjectBuilder_LargeGatlingTurret" Subtype="LargeGatlingTurretReskin"/>
+        <Block Type="MyObjectBuilder_LargeGatlingTurret" Subtype="SmallGatlingTurretReskin"/>
         <Block Type="MyObjectBuilder_LargeMissileTurret" Subtype=""/>
         <Block Type="MyObjectBuilder_LargeMissileTurret" Subtype="SmallMissileTurret"/>
+        <Block Type="MyObjectBuilder_LargeMissileTurret" Subtype="LargeMissileTurretReskin"/>
+        <Block Type="MyObjectBuilder_LargeMissileTurret" Subtype="SmallMissileTurretReskin"/>
         <Block Type="MyObjectBuilder_LargeMissileTurret" Subtype="SentinelTurret"/>
 				<Block Type="MyObjectBuilder_LargeMissileTurret" Subtype="AutoCannonTurret"/> 
         <Block Type="MyObjectBuilder_LargeMissileTurret" Subtype="LargeBlockMediumCalibreTurret"/>

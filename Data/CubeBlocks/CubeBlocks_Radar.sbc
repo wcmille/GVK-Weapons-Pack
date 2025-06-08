@@ -70,6 +70,8 @@
     <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
     <DestroySound>WepSmallWarheadExpl</DestroySound>
     <PCU>100</PCU>
+    <UpCameraOffset>1.25</UpCameraOffset>
+    <ForwardCameraOffset>1.25</ForwardCameraOffset>
   </Definition>
   </CubeBlocks>
 </Definitions>

@@ -188,15 +188,16 @@
 				<SubtypeId>Missiles_Missile</SubtypeId>
 			</Id>
 			<DisplayName>Missile</DisplayName>
-			<Icon>Textures\GUI\Icons\MXA_Archer_Missile_Ammo.png</Icon>
-			<Size>
+			<Icon>Textures\GUI\Icons\ammo\Small_Rocket.dds</Icon>
+      <Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
+      <Size>
 				<X>0.25</X>
 				<Y>0.2</Y>
 				<Z>0.2</Z>
 			</Size>
 			<Mass>90</Mass>
 			<Volume>60</Volume>
-			<Model>Models\Missiles\MXA_Archer_Missile.mwm</Model>
+			<Model>Models\Weapons\Projectile_Missile.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>1</Capacity>
 			<AmmoDefinitionId Subtype="Blank"/>

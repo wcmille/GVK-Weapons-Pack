@@ -94,6 +94,7 @@
 			<ForwardCameraOffset>0.5</ForwardCameraOffset>
 			<AiEnabled>false</AiEnabled>
 		</Definition>
+    <!-- Medium Caliber Turret-->
 		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
 			<Id>
 				<TypeId>LargeMissileTurret</TypeId>
@@ -184,6 +185,7 @@
 			<ForwardCameraOffset>0.5</ForwardCameraOffset>
 			<AiEnabled>false</AiEnabled>
 		</Definition>
+    <!-- Medium Caliber Fixed-->
 		<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
 			<Id>
 				<TypeId>SmallMissileLauncherReload</TypeId>

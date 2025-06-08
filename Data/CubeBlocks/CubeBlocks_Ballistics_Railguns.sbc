@@ -72,12 +72,6 @@
       <Model>Models\Cubes\Small\RailGun.mwm</Model>
       <Components>
         <Component Subtype="SteelPlate" Count="5"/>
-        <Component Subtype="GV_Elite_Tech" Count="1">
-          <DeconstructId>
-            <TypeId>Ore</TypeId>
-            <SubtypeId>Scrap</SubtypeId>
-          </DeconstructId>
-        </Component>
         <Component Subtype="Construction" Count="20"/>
         <Component Subtype="Superconductor" Count="20"/>
         <Component Subtype="LargeTube" Count="6"/>

@@ -17,10 +17,14 @@
 				<string>LargeWarhead</string>
 				<string>LargeInteriorTurret</string>
 				<string>SentinelTurret</string>
-				<string>LargeMissileTurret/(null)</string>
-				<string>SmallGatlingTurret</string>
-				<string>SmallMissileTurret</string>
-				<string>LargeMissileLauncher</string>
+        <string>SmallGatlingTurret</string>
+        <string>SmallGatlingTurretReskin</string>
+        <string>LargeGatlingTurretReskin</string>
+        <string>LargeMissileTurret/(null)</string>
+        <string>SmallMissileTurret</string>
+        <string>LargeMissileTurretReskin</string>
+        <string>SmallMissileTurretReskin</string>
+        <string>LargeMissileLauncher</string>
 				<string>SmallGatlingGun/(null)</string>
 				<string>SmallMissileLauncher/(null)</string>
 				<string>SmallRocketLauncherReload</string>
