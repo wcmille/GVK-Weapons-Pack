@@ -171,8 +171,7 @@
       <TargetingGroups>
         <string>Weapons</string>
       </TargetingGroups>
-    </Definition>
-    
+    </Definition>  
     <Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
       <Id>
         <TypeId>ConveyorSorter</TypeId>
@@ -188,13 +187,6 @@
       <Model>Models\Cubes\Large\RailGun.mwm</Model>
       <Components>
         <Component Subtype="SteelPlate" Count="50"/>
-        <Component Subtype="GV_Elite_Tech" Count="3">
-          <DeconstructId>
-            <TypeId>Ore</TypeId>
-            <SubtypeId>Scrap</SubtypeId>
-          </DeconstructId>
-        </Component>
-        <Component Subtype="GV_Elite_Tech" Count="7"/>
         <Component Subtype="Construction" Count="150"/>
         <Component Subtype="Superconductor" Count="150"/>
         <Component Subtype="LargeTube" Count="60"/>
