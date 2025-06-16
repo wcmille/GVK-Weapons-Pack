@@ -69,6 +69,7 @@
     <EmissiveColorPreset>Default</EmissiveColorPreset>
     <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
     <DestroySound>WepSmallWarheadExpl</DestroySound>
+    <IsAirTight>false</IsAirTight>
     <PCU>100</PCU>
     <UpCameraOffset>1.25</UpCameraOffset>
     <ForwardCameraOffset>1.25</ForwardCameraOffset>

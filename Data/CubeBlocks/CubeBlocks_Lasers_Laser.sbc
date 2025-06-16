@@ -139,7 +139,8 @@
 			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
 			<AiEnabled>false</AiEnabled>
-		</Definition>
+      <IsAirTight>true</IsAirTight>
+    </Definition>
 		<!-- Receptor Turret -->
 		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
 			<Id>
