@@ -57,13 +57,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Scripts\CoreParts\Armor_Blocks.cs" />
-    <Compile Include="Data\Scripts\CoreParts\Ballistics_Cannon_Ammos.cs" />
-    <Compile Include="Data\Scripts\CoreParts\Ballistics_Cannon_Weapons.cs" />
-    <Compile Include="Data\Scripts\CoreParts\Ballistics_Chaingun_Ammos.cs" />
-    <Compile Include="Data\Scripts\CoreParts\Ballistics_Chaingun_Weapons.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Ballistics_ArtilleryCannon_Ammos.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Ballistics_ArtilleryCannon_Weapons.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Ballistics_Autocannon_Ammos.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Ballistics_Autocannon_Weapons.cs" />
     <Compile Include="Data\Scripts\CoreParts\Ballistics_Common_Ammo.cs" />
-    <Compile Include="Data\Scripts\CoreParts\Ballistics_Flak_Ammos.cs" />
-    <Compile Include="Data\Scripts\CoreParts\Ballistics_Flak_Weapons.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Ballistics_AssaultCannon_Ammos.cs" />
+    <Compile Include="Data\Scripts\CoreParts\Ballistics_AssaultCannon_Weapons.cs" />
     <Compile Include="Data\Scripts\CoreParts\Ballistics_Gatling_Ammos.cs" />
     <Compile Include="Data\Scripts\CoreParts\Ballistics_Gatling_Animations.cs" />
     <Compile Include="Data\Scripts\CoreParts\Ballistics_Gatling_Weapons.cs" />
@@ -72,8 +72,6 @@
     <Compile Include="Data\Scripts\CoreParts\Ballistics_Railgun_Ammo.cs" />
     <Compile Include="Data\Scripts\CoreParts\Ballistics_Railgun_Animations.cs" />
     <Compile Include="Data\Scripts\CoreParts\Ballistics_Railgun_Weapons.cs" />
-    <Compile Include="Data\Scripts\CoreParts\Designator-Honir-Ammo.cs" />
-    <Compile Include="Data\Scripts\CoreParts\Designator-Honir-Weapons.cs" />
     <Compile Include="Data\Scripts\CoreParts\Designator_Ammo.cs" />
     <Compile Include="Data\Scripts\CoreParts\Designator_Weapon.cs" />
     <Compile Include="Data\Scripts\CoreParts\Lasers_AMS_Ammos.cs" />
@@ -82,10 +80,8 @@
     <Compile Include="Data\Scripts\CoreParts\Lasers_Laser_Animations_PDX.cs" />
     <Compile Include="Data\Scripts\CoreParts\Lasers_Laser_Weapons.cs" />
     <Compile Include="Data\Scripts\CoreParts\Missiles_Common_Ammo.cs" />
-    <Compile Include="Data\Scripts\CoreParts\Missiles_HeavyMissile_Ammos.cs" />
     <Compile Include="Data\Scripts\CoreParts\Missiles_Missile_Ammo.cs" />
     <Compile Include="Data\Scripts\CoreParts\Missiles_Missile_Weapons.cs" />
-    <Compile Include="Data\Scripts\CoreParts\Missiles_Rocket_Ammos.cs" />
     <Compile Include="Data\Scripts\CoreParts\Missiles_Rocket_Weapons.cs" />
     <Compile Include="Data\Scripts\CoreParts\Missiles_Torpedo_Ammos.cs" />
     <Compile Include="Data\Scripts\CoreParts\Missiles_Torpedo_Animations_Crusader.cs" />
