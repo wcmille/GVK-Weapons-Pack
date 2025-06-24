@@ -119,7 +119,7 @@ namespace Scripts
                                 Enable = true,
                                 Length = 10f,
                                 Width = 0.3f,
-                                Color = Color(red: 30f, green: 6f, blue: 1.5f, alpha: 1f),
+                                Color = Color(red: 30f, green: 0f, blue: 8f, alpha: 1f),
                                 AlwaysDraw = false, // Prevents this tracer from being culled.  Only use if you have a reason too (very long tracers/trails).
                                 Textures = new[] { "MD_MissileThrustFlame", },// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
                             },

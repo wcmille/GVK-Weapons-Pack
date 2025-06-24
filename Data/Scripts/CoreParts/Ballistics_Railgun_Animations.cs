@@ -2,8 +2,6 @@
 using static Scripts.Structure.WeaponDefinition;
 using static Scripts.Structure.WeaponDefinition.AnimationDef;
 using static Scripts.Structure.WeaponDefinition.AnimationDef.PartAnimationSetDef.EventTriggers;
-using static Scripts.Structure.WeaponDefinition.AnimationDef.RelMove.MoveType;
-using static Scripts.Structure.WeaponDefinition.AnimationDef.RelMove;
 
 namespace Scripts
 { // Don't edit above this line
