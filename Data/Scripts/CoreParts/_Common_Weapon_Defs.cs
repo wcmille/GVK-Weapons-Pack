@@ -38,8 +38,8 @@ namespace Scripts
 				Grids,
 			},
 			SubSystems = new[] {
-				Any,
-			},
+                Any
+            },
 			ClosestFirst = false, // tries to pick closest targets first (blocks on grids, projectiles, etc...).
 			IgnoreDumbProjectiles = false, // Don't fire at non-smart projectiles.
 			LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.

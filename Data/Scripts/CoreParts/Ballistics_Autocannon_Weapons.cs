@@ -149,7 +149,7 @@ namespace Scripts
             Targeting = new TargetingDef
             {
 				Threats = new[] {
-					Grids,   // threats percieved automatically without changing menu settings
+					Grids, Characters, Projectiles  // threats percieved automatically without changing menu settings
 				},
                 SubSystems = new[] {
                     Thrust, Utility, Offense, Power, Production, Jumping, Steering, Any,
@@ -232,7 +232,7 @@ namespace Scripts
             Targeting = new TargetingDef
             {
 				Threats = new[] {
-					Grids,   // threats percieved automatically without changing menu settings
+					Grids // threats percieved automatically without changing menu settings
 				},
                 SubSystems = new[] {
                     Thrust, Utility, Offense, Power, Production, Jumping, Steering, Any,

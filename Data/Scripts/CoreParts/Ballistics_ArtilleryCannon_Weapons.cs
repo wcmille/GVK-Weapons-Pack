@@ -17,7 +17,7 @@ namespace Scripts
         {
             Threats = new[]
             {
-                Grids,
+                Grids, Characters,
             },
             SubSystems = new[]
             {

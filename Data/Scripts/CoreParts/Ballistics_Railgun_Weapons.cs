@@ -70,8 +70,8 @@ namespace Scripts
                     TrajectilesPerBarrel = 1, // Number of projectiles per muzzle per fire event.
                     ReloadTime = 60*23+26, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 1, // Number of physical magazines to consume on reload.
-                    DelayUntilFire = 30, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    StayCharged = false, // Will start recharging whenever power cap is not full.
+                    DelayUntilFire = 120, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    StayCharged = false, // Will start recharging whenever power cap is not full.                   
                 },
                 Audio = new HardPointAudioDef
                 {
