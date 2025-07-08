@@ -72,7 +72,7 @@ namespace Scripts
                 Ai = Common_Weapons_Hardpoint_Ai_FullDisable,
                 HardWare = new HardwareDef
                 {
-                    InventorySize = 0.396f, // Inventory capacity in kL.
+                    InventorySize = 0.032f, // Inventory capacity in kL.
                     IdlePower = 0.32f, // Constant base power draw in MW.
                     Offset = Vector(x: 0, y: 0, z: 0), // Offsets the aiming/firing line of the weapon, in metres.
                     Type = BlockWeapon, // What type of weapon this is; BlockWeapon, HandWeapon, Phantom 
@@ -165,7 +165,7 @@ namespace Scripts
                 Ai = Common_Weapons_Hardpoint_Ai_FullDisable,
                 HardWare = new HardwareDef
                 {
-                    InventorySize = 0.132f, // Inventory capacity in kL.
+                    InventorySize = 0.006f, // Inventory capacity in kL.
                     IdlePower = 0.25f, // Constant base power draw in MW.
                     Offset = Vector(x: 0, y: 0, z: 0), // Offsets the aiming/firing line of the weapon, in metres.
                     Type = BlockWeapon, // What type of weapon this is; BlockWeapon, HandWeapon, Phantom 
